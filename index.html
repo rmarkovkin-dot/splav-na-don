@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сплав по Дону на плоту с баней | Аренда плавучего дома до 12 человек</title>
+    <meta name="description" content="Премиальный сплав по Дону на двухэтажном плоту с баней. Всё включено: капитан, мангал, палатки, генератор. Идеально для компании до 12 человек. Цены от 29 000 ₽/сутки.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Alpine.js для интерактивности -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#1B262C',
+                            blue: '#0F4C75',
+                            orange: '#E36414',
+                            sand: '#F5F5F0'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- SEO Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Сплав по Дону на двухэтажном плоту с баней",
+      "image": "https://rostur.expert/images/plot-don.jpg",
+      "description": "Аренда уникального двухэтажного плота с баней на Дону для компании до 12 человек. Всё включено: капитан, мангал, палатки, генератор, морозильная камера.",
+      "brand": {
+        "@type": "Brand",
+        "name": "РосТур"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "29000",
+        "highPrice": "33000",
+        "priceCurrency": "RUB",
+        "availability": "https://schema.org/InStock",
+        "url": "https://rostur.expert/splav-po-dony-na-ploty"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Сколько человек помещается на плоту?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Плот комфортно размещает до 12 человек. При необходимости можно разместить и больше гостей, уточните детали при бронировании."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Что входит в стоимость аренды?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "В стоимость включено всё для комфортного отдыха: услуги капитана, палатки и коврики, мангал, коптильня, морозильная камера 200 л, генератор, спасательные жилеты и баня на воде."
+        }
+      }]
+    }
+    </script>
+</head>
+<body class="bg-brand-sand text-brand-dark antialiased">
+
+    <!-- Навигация -->
+    <header x-data="{ open: false }" class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="font-serif text-2xl font-bold text-brand-blue">РосТур</span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#features" class="text-slate-600 hover:text-brand-orange font-medium transition">Оснащение</a>
+                    <a href="#pricing" class="text-slate-600 hover:text-brand-orange font-medium transition">Цены</a>
+                    <a href="#reviews" class="text-slate-600 hover:text-brand-orange font-medium transition">Отзывы</a>
+                    <a href="#faq" class="text-slate-600 hover:text-brand-orange font-medium transition">Вопросы</a>
+                </nav>
+                <div class="hidden md:flex items-center">
+                    <a href="tel:+79990000000" class="text-brand-dark font-bold mr-4">+7 (999) 000-00-00</a>
+                    <a href="#contact" class="bg-brand-orange text-white px-6 py-2.5 rounded-full font-semibold hover:bg-orange-700 transition shadow-lg shadow-orange-500/30">Забронировать</a>
+                </div>
+                <!-- Мобильная кнопка -->
+                <div class="md:hidden flex items-center">
+                    <button @click="open = !open" class="text-slate-600 hover:text-brand-dark focus:outline-none">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Мобильное меню -->
+        <div x-show="open" class="md:hidden bg-white border-t" x-transition>
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#features" class="block px-3 py-2 text-base font-medium text-slate-700 hover:bg-slate-50 rounded-md">Оснащение</a>
+                <a href="#pricing" class="block px-3 py-2 text-base font-medium text-slate-700 hover:bg-slate-50 rounded-md">Цены</a>
+                <a href="#reviews" class="block px-3 py-2 text-base font-medium text-slate-700 hover:bg-slate-50 rounded-md">Отзывы</a>
+                <a href="tel:+79990000000" class="block px-3 py-2 text-base font-bold text-brand-blue">+7 (999) 000-00-00</a>
+                <a href="#contact" class="block mt-4 text-center bg-brand-orange text-white px-6 py-3 rounded-xl font-bold">Забронировать дату</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop" alt="Сплав по Дону на плоту" class="w-full h-full object-cover" loading="eager" decoding="async">
+                <div class="absolute inset-0 bg-gradient-to-b from-brand-dark/70 via-brand-dark/50 to-brand-sand"></div>
+            </div>
+            
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <span class="inline-block py-1 px-3 rounded-full bg-brand-orange/20 text-orange-300 border border-brand-orange/30 text-sm font-semibold mb-6 backdrop-blur-sm">
+                    ⚡ Бронируйте выходные за 2-3 недели
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-serif font-bold text-white leading-tight mb-6">
+                    Сплав по Дону на плоту <br class="hidden md:block" /> с собственной баней
+                </h1>
+                <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-200 mb-10">
+                    Премиальный отдых на воде для компании до 12 человек. Всё включено: капитан, мангал, палатки, генератор и морозильная камера. Ваша плавучая усадьба ждет.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#contact" class="bg-brand-orange text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-700 transition shadow-xl shadow-orange-600/30 transform hover:-translate-y-1">
+                        Узнать свободные даты
+                    </a>
+                    <a href="#features" class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition">
+                        Что есть на борту
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Эмоциональный блок (PAS) -->
+        <section class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-dark mb-6">Представьте путешествие, которое станет <span class="text-brand-orange">вашей главной историей</span> этого года</h2>
+                <p class="text-lg text-slate-600 leading-relaxed mb-6">
+                    Это не просто аренда плота. Это ваше плавучее убежище от городского шума. Вас ждут спокойные плёсы, где вода кажется застывшим зеркалом, и оживлённые перекаты с игривым течением. 
+                </p>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    После дня, наполненного свежим воздухом, вас ждёт особый ритуал — <strong>баня на воде</strong>. Пар, смешиваясь с речной прохладой, снимет всю усталость. Вы вернётесь не просто с фотографиями, а с чувством внутренней тишины и лёгкости.
+                </p>
+            </div>
+        </section>
+
+        <!-- Оснащение (Features) -->
+        <section id="features" class="py-20 bg-brand-sand">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-dark mb-4">Что уже включено в стоимость</h2>
+                    <p class="text-slate-600 text-lg">Никаких скрытых доплат. Мы продумали каждую деталь вашего комфорта.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 border border-slate-100">
+                        <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6 text-3xl">🔥</div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">Баня на воде</h3>
+                        <p class="text-slate-600">Даст жара и привнесет изюминку в отдых. Доступна в любое время суток.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 border border-slate-100">
+                        <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-3xl">❄️</div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">Морозильная камера 200 л</h3>
+                        <p class="text-slate-600">Любые продукты и напитки всегда будут нужной температуры на протяжении всего сплава.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 border border-slate-100">
+                        <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6 text-3xl">⛺</div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">Палатки и коврики</h3>
+                        <p class="text-slate-600">Просторные двух- и трехместные палатки с удобными ковриками для сна уже установлены.</p>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 border border-slate-100">
+                        <div class="w-14 h-14 bg-yellow-100 rounded-xl flex items-center justify-center mb-6 text-3xl">🍖</div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">Мангал и коптильня</h3>
+                        <p class="text-slate-600">Вся необходимая посуда и оборудование для приготовления ваших кулинарных шедевров.</p>
+                    </div>
+                    <!-- Feature 5 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 border border-slate-100">
+                        <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6 text-3xl">🔊</div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">Музыка и генератор</h3>
+                        <p class="text-slate-600">Мощная колонка для дискотек (после 23:00 без ограничений) и генератор для зарядки гаджетов.</p>
+                    </div>
+                    <!-- Feature 6 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 border border-slate-100">
+                        <div class="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center mb-6 text-3xl">🚤</div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">Капитан и мотор</h3>
+                        <p class="text-slate-600">Профессиональный шкипер управляет плотом, обеспечивая полную безопасность и свободу передвижения.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Цены -->
+        <section id="pricing" class="py-20 bg-white">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-dark mb-4">Стоимость аренды плота на Дону в 2026 году</h2>
+                    <p class="text-slate-600 text-lg">Максимальное количество участников: 12 человек (возможно увеличение по договоренности)</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Будни -->
+                    <div class="relative bg-brand-sand rounded-3xl p-8 border-2 border-transparent hover:border-brand-blue transition duration-300">
+                        <div class="absolute top-0 right-0 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-2xl">ВЫГОДНО</div>
+                        <h3 class="text-2xl font-bold text-brand-dark mb-2">Будни (Пн-Чт)</h3>
+                        <div class="flex items-baseline mb-6">
+                            <span class="text-5xl font-extrabold text-brand-blue">29 000</span>
+                            <span class="text-slate-600 ml-2">₽ / сутки</span>
+                        </div>
+                        <ul class="space-y-4 mb-8 text-slate-700">
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Полное оснащение (см. выше)</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Услуги капитана</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Свободный выбор маршрута и стоянок</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Лучшие точки для рыбалки и купания</li>
+                        </ul>
+                        <a href="#contact" class="block w-full text-center bg-brand-blue text-white py-4 rounded-xl font-bold hover:bg-blue-900 transition">Забронировать будни</a>
+                    </div>
+
+                    <!-- Выходные -->
+                    <div class="relative bg-brand-dark rounded-3xl p-8 border-2 border-brand-orange shadow-2xl shadow-orange-900/20 transform md:-translate-y-4">
+                        <div class="absolute top-0 right-0 bg-brand-orange text-white text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-2xl">ТОП ВЫБОР</div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Выходные и праздники</h3>
+                        <div class="flex items-baseline mb-6">
+                            <span class="text-5xl font-extrabold text-brand-orange">33 000</span>
+                            <span class="text-slate-300 ml-2">₽ / сутки</span>
+                        </div>
+                        <ul class="space-y-4 mb-8 text-slate-200">
+                            <li class="flex items-start"><span class="text-brand-orange mr-2">✓</span> Всё, что включено в тариф "Будни"</li>
+                            <li class="flex items-start"><span class="text-brand-orange mr-2">✓</span> Атмосфера максимального релакса</li>
+                            <li class="flex items-start"><span class="text-brand-orange mr-2">✓</span> <strong>Бонус:</strong> Постоянным гостям выходные по цене будней!</li>
+                        </ul>
+                        <a href="#contact" class="block w-full text-center bg-brand-orange text-white py-4 rounded-xl font-bold hover:bg-orange-700 transition">Забронировать выходные</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Отзывы -->
+        <section id="reviews" class="py-20 bg-brand-sand">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-dark text-center mb-12">Отзывы гостей: реальные эмоции с воды</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <article class="bg-white p-8 rounded-2xl shadow-sm">
+                        <div class="flex text-yellow-400 mb-4 text-xl">★★★★★</div>
+                        <p class="text-slate-700 text-lg italic mb-6">“Если вы ищете нестандартный отдых — берите этот тур. Сплав по Дону с палатками, рыбалкой и купанием — это лучше любой базы отдыха. Организация на высшем уровне.”</p>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-brand-blue rounded-full flex items-center justify-center text-white font-bold mr-3">Д</div>
+                            <div>
+                                <p class="font-bold text-brand-dark">Даниил</p>
+                                <p class="text-sm text-slate-500">Тамбов, 14.08.2025</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="bg-white p-8 rounded-2xl shadow-sm">
+                        <div class="flex text-yellow-400 mb-4 text-xl">★★★★★</div>
+                        <p class="text-slate-700 text-lg italic mb-6">“Люблю активный отдых, и этот сплав точно входит в топ! Дон невероятно живописный, особенно на рассвете. Баня на плоту после заплыва — это нечто. Обязательно приеду снова.”</p>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-brand-orange rounded-full flex items-center justify-center text-white font-bold mr-3">А</div>
+                            <div>
+                                <p class="font-bold text-brand-dark">Артём</p>
+                                <p class="text-sm text-slate-500">Воронеж, 01.07.2025</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ (Schema.org ready) -->
+        <section id="faq" class="py-20 bg-white">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-dark text-center mb-12">Частые вопросы о сплаве</h2>
+                <div x-data="{ active: null }" class="space-y-4">
+                    <div class="border border-slate-200 rounded-xl overflow-hidden">
+                        <button @click="active === 1 ? active = null : active = 1" class="w-full flex justify-between items-center p-6 bg-slate-50 hover:bg-slate-100 transition text-left">
+                            <span class="font-bold text-brand-dark text-lg">Сколько человек помещается на плоту?</span>
+                            <span x-text="active === 1 ? '−' : '+'" class="text-2xl text-brand-orange font-bold"></span>
+                        </button>
+                        <div x-show="active === 1" x-collapse class="p-6 text-slate-600 bg-white">
+                            Плот комфортно размещает до 12 человек. При необходимости можно разместить и больше гостей, уточните детали при бронировании.
+                        </div>
+                    </div>
+                    <div class="border border-slate-200 rounded-xl overflow-hidden">
+                        <button @click="active === 2 ? active = null : active = 2" class="w-full flex justify-between items-center p-6 bg-slate-50 hover:bg-slate-100 transition text-left">
+                            <span class="font-bold text-brand-dark text-lg">Что входит в стоимость аренды?</span>
+                            <span x-text="active === 2 ? '−' : '+'" class="text-2xl text-brand-orange font-bold"></span>
+                        </button>
+                        <div x-show="active === 2" x-collapse class="p-6 text-slate-600 bg-white">
+                            В стоимость включено всё для комфортного отдыха: услуги капитана, палатки и коврики, мангал, коптильня, морозильная камера 200 л, генератор, спасательные жилеты и баня на воде.
+                        </div>
+                    </div>
+                    <div class="border border-slate-200 rounded-xl overflow-hidden">
+                        <button @click="active === 3 ? active = null : active = 3" class="w-full flex justify-between items-center p-6 bg-slate-50 hover:bg-slate-100 transition text-left">
+                            <span class="font-bold text-brand-dark text-lg">Можно ли со своими алкогольными напитками?</span>
+                            <span x-text="active === 3 ? '−' : '+'" class="text-2xl text-brand-orange font-bold"></span>
+                        </button>
+                        <div x-show="active === 3" x-collapse class="p-6 text-slate-600 bg-white">
+                            Да, вы можете брать с собой любые продукты и напитки. На борту есть морозильная камера на 200 литров, чтобы всё оставалось холодным.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA / Контакты -->
+        <section id="contact" class="py-20 bg-brand-dark text-white relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+            <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+                <h2 class="text-3xl md:text-5xl font-serif font-bold mb-6">Готовы к приключению на Дону?</h2>
+                <p class="text-xl text-slate-300 mb-10">Оставьте заявку или позвоните нам прямо сейчас. Даты на выходные раскупают за 2-3 недели.</p>
+                
+                <form class="max-w-md mx-auto bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20" onsubmit="event.preventDefault(); alert('Спасибо! Мы свяжемся с вами в течение 15 минут.');">
+                    <div class="mb-4">
+                        <input type="text" placeholder="Ваше имя" required class="w-full px-4 py-3 rounded-lg bg-white/90 text-brand-dark placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-orange">
+                    </div>
+                    <div class="mb-6">
+                        <input type="tel" placeholder="+7 (___) ___-__-__" required class="w-full px-4 py-3 rounded-lg bg-white/90 text-brand-dark placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-orange">
+                    </div>
+                    <button type="submit" class="w-full bg-brand-orange text-white font-bold py-4 rounded-lg hover:bg-orange-700 transition transform hover:scale-[1.02] shadow-lg">
+                        Забронировать плот
+                    </button>
+                    <p class="text-xs text-slate-400 mt-4">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.</p>
+                </form>
+                
+                <div class="mt-12 flex flex-col md:flex-row justify-center items-center gap-6 text-lg">
+                    <a href="tel:+79990000000" class="flex items-center hover:text-brand-orange transition">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        +7 (999) 000-00-00
+                    </a>
+                    <a href="https://wa.me/79990000000" class="flex items-center hover:text-green-400 transition">
+                        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        Написать в WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-brand-dark border-t border-white/10 py-8 text-center text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>&copy; 2026 РосТур. Сплав по Дону на плоту с баней. Все права защищены.</p>
+            <p class="mt-2">ИП Иванов И.И. | ИНН 0000000000 | Политика конфиденциальности</p>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 p-4 md:hidden z-50 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
+        <a href="#contact" class="block w-full bg-brand-orange text-white text-center font-bold py-3.5 rounded-xl shadow-lg hover:bg-orange-700 transition">
+            Забронировать плот
+        </a>
+    </div>
+
+</body>
+</html>
