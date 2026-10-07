@@ -19,7 +19,7 @@
 ## УДАЛЯЕМЫЕ СТРАНИЦЫ → 301 на ближайшую по смыслу остающуюся
 | Удаляемый URL | 301 → | Обоснование |
 |---|---|---|
-| /hunting-and-fishing-in-the-volgograd-and-saratov-badger | /fishing... → /camp/ | охот. тематика сворачивается; camp — рыбалка+природа |
+| /hunting-and-fishing-in-the-volgograd-and-saratov-badger | /camp/ | охот. тематика сворачивается; camp — рыбалка+природа |
 | /hunting-and-fishing-in-the-volgograd-and-saratov-beaver | /camp/ | то же |
 | /hunting-and-fishing-in-the-volgograd-and-saratov-fox | /camp/ | то же |
 | /hunting-and-fishing-in-the-volgograd-and-saratov-groundhog | /camp/ | то же |
