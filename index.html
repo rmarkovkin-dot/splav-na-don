@@ -756,7 +756,7 @@ tailwind.config = {
     <div x-data="{ playing: false }" @keydown.escape.window="playing = false"
          class="mt-8 ratio-16-9 w-full max-w-4xl mx-auto rounded-3xl overflow-hidden bg-river-deep relative group">
       <img x-show="!playing" x-cloak src="https://pic.rtbcdn.ru/video/2026-06-06/4e/8f/4e8fc3ce098ed35ae4f28270a06571e0.jpg"
-           alt="Видеообзор плавучего дома с баней от РосТур Эксперт" loading="lazy" decoding="async"
+           alt="Видеообзор плавучего дома с баней от РосТур Эксперт" loading="lazy" decoding="async" width="640" height="360"
            class="video-poster absolute inset-0 h-full w-full object-cover opacity-90 group-hover:opacity-100 transition">
       <button type="button" x-show="!playing" x-cloak @click="playing = true"
               class="absolute inset-0 grid place-items-center" aria-label="Смотреть видеообзор плота">
