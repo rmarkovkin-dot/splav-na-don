@@ -1086,7 +1086,7 @@ tailwind.config = {
 </footer>
 
 <!-- ═══ Sticky mobile CTA (всегда на виду, safe-area) ═══ -->
-<div x-data="{showForm:false}" @in-view.window="null" class="mobile-cta md:hidden fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-t border-slate-200 px-3 py-2 flex gap-2 shadow-[0_-8px_30px_-12px_rgba(8,47,73,.3)] transition-transform duration-300" :class="showForm ? 'translate-y-full opacity-0 pointer-events-none' : ''" x-init="const io=new IntersectionObserver(([e])=>showForm=e.isIntersecting,{threshold:.3}); io.observe(document.getElementById('zayavka'))">
+<div x-data="{showForm:false}" class="mobile-cta md:hidden fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-t border-slate-200 px-3 py-2 flex gap-2 shadow-[0_-8px_30px_-12px_rgba(8,47,73,.3)] transition-transform duration-300" :class="showForm ? 'translate-y-full opacity-0 pointer-events-none' : ''" x-init="const io=new IntersectionObserver(([e])=>showForm=e.isIntersecting,{threshold:.3}); io.observe(document.getElementById('zayavka'))">
   <a href="tel:+79950320002" class="flex-1 text-center border-2 border-river text-river font-extrabold py-3 rounded-xl active:scale-95 transition">Позвонить</a>
   <a href="#zayavka" class="flex-[1.4] text-center bg-ember text-white font-extrabold py-3 rounded-xl shadow-cta active:scale-95 transition">Забронировать от 29 000 ₽</a>
 </div>
