@@ -294,6 +294,7 @@ tailwind.config = {
   "@type": "LocalBusiness",
   "@id": "https://rostur.expert/#business",
   "name": "РосТур Эксперт — сплавы по Дону",
+  "image": "https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/f8338fed-2aeb-4566-8c5b-08698e4296f9/f8338fed-2aeb-4566-8c5b-08698e4296f9-15734331.jpeg",
   "url": "https://rostur.expert",
   "telephone": "+79950320002",
   "priceRange": "29000-33000 ₽/сутки",
@@ -302,6 +303,11 @@ tailwind.config = {
     "addressCountry": "RU",
     "addressRegion": "Волгоградская область",
     "addressLocality": "хутор Вертячий"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "48.6167",
+    "longitude": "44.5167"
   },
   "sameAs": [
     "https://vk.com/rosturexpert"
@@ -899,8 +905,8 @@ tailwind.config = {
             <span x-show="sending" x-cloak>Отправляем…</span>
             <span x-show="submitted" x-cloak>✓ Заявка принята!</span>
           </button>
-          <p x-show="sendError && !sending" x-cloak x-transition class="text-rose-300 text-sm font-bold">Проверьте имя и телефон (не менее 10 цифр). Если не получилось — позвоните нам: +7 (995) 032-00-02.</p>
-          <p x-show="submitted" x-cloak x-transition class="text-emerald-300 text-sm font-bold">Спасибо! Мы свяжемся с вами в течение рабочего дня (Пн–Вс, 10:00–20:00).</p>
+          <p x-show="sendError && !sending" x-cloak x-transition role="alert" aria-live="assertive" class="text-rose-300 text-sm font-bold">Проверьте имя и телефон (не менее 10 цифр). Если не получилось — позвоните нам: +7 (995) 032-00-02.</p>
+          <p x-show="submitted" x-cloak x-transition role="status" aria-live="polite" class="text-emerald-300 text-sm font-bold">Спасибо! Мы свяжемся с вами в течение рабочего дня (Пн–Вс, 10:00–20:00).</p>
           <p class="text-xs text-white/50">Нажимая кнопку, вы соглашаетесь на обработку персональных данных. Без спама: один звонок по делу.</p>
         </form>
         <div class="mt-8 pt-6 border-t border-white/15 flex flex-wrap gap-4 items-center justify-between">
