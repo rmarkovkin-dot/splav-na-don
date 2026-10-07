@@ -1,0 +1,400 @@
+      <span>РосТур Эксперт</span>
+    </a>
+    <nav aria-label="Основная навигация" class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-600">
+      <a href="#on-plotu" class="hover:text-ember transition">Что на плоту</a>
+      <a href="#tseny" class="hover:text-ember transition">Цены</a>
+      <a href="#marshrut" class="hover:text-ember transition">Программа</a>
+      <a href="#foto" class="hover:text-ember transition">Фото</a>
+      <a href="#otzyvy" class="hover:text-ember transition">Отзывы</a>
+      <a href="#faq" class="hover:text-ember transition">Вопросы</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="#zayavka" class="hidden sm:inline-flex items-center gap-2 bg-ember hover:bg-ember-dark text-white font-bold px-5 py-2.5 rounded-xl shadow-cta transition active:scale-95">Забронировать</a>
+      <button type="button" @click="mobileNav=!mobileNav" :aria-expanded="mobileNav" aria-controls="mobileMenu" aria-label="Открыть меню"
+              class="lg:hidden grid place-items-center w-11 h-11 rounded-xl border border-slate-200 text-river-deep">
+        <svg x-show="!mobileNav" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg x-show="mobileNav" x-cloak class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+  <!-- Мобильное меню -->
+  <div id="mobileMenu" x-show="mobileNav" x-cloak x-transition
+       class="lg:hidden border-t border-slate-200 bg-white px-4 pb-4 pt-2 space-y-1 text-base font-semibold">
+    <a @click="mobileNav=false" href="#on-plotu" class="block py-3 border-b border-slate-100">Что на плоту</a>
+    <a @click="mobileNav=false" href="#tseny" class="block py-3 border-b border-slate-100">Цены 2026</a>
+    <a @click="mobileNav=false" href="#marshrut" class="block py-3 border-b border-slate-100">Программа тура</a>
+    <a @click="mobileNav=false" href="#foto" class="block py-3 border-b border-slate-100">Фото и видео</a>
+    <a @click="mobileNav=false" href="#otzyvy" class="block py-3 border-b border-slate-100">Отзывы</a>
+    <a @click="mobileNav=false" href="#faq" class="block py-3 border-b border-slate-100">Вопрос-ответ</a>
+    <div class="grid grid-cols-2 gap-3 pt-3">
+      <a href="tel:+79950320002" class="text-center border-2 border-river text-river font-bold py-3 rounded-xl">Позвонить</a>
+      <a @click="mobileNav=false" href="#zayavka" class="text-center bg-ember text-white font-bold py-3 rounded-xl">Забронировать</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ═══ HERO (LCP оптимизация: preload + fetchpriority + width/height) ═══ -->
+<section class="relative isolate overflow-hidden bg-river-deep text-white">
+  <img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/f8338fed-2aeb-4566-8c5b-08698e4296f9/f8338fed-2aeb-4566-8c5b-08698e4296f9-15734331.jpeg"
+       alt="Двухэтажный плот «Бульбусик» с тентом идёт по Дону среди зелёных берегов"
+       width="1280" height="853" fetchpriority="high" decoding="async"
+       class="absolute inset-0 -z-10 h-full w-full object-cover">
+  <div class="absolute inset-0 -z-10 bg-gradient-to-b from-river-deep/85 via-river-deep/60 to-river-deep/80" aria-hidden="true"></div>
+
+  <div class="max-w-7xl mx-auto px-4 pt-12 pb-16 md:pt-20 md:pb-28">
+    <div class="max-w-3xl">
+      <p class="inline-flex items-center gap-2 rounded-full bg-white/10 ring-1 ring-white/25 px-4 py-1.5 text-xs md:text-sm font-bold tracking-wide uppercase">
+        <span class="w-2 h-2 rounded-full bg-gold animate-pulse" aria-hidden="true"></span>
+        Сезон 2026 · даты тают
+      </p>
+      <h1 class="h-hero font-extrabold mt-5">Сплав на плоту по&nbsp;Дону <span class="text-gold">с собственной баней</span></h1>
+      <p class="mt-4 text-lg md:text-2xl text-white/90 font-medium leading-snug max-w-2xl">
+        Двухэтажный плавучий дом на 96&nbsp;м² для компании до&nbsp;12&nbsp;человек. Капитан, рыбалка, купания и парилка на воде — <strong class="text-gold">всё включено от 29&nbsp;000&nbsp;₽/сутки</strong>.
+      </p>
+      <ul class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm md:text-base font-semibold text-white/90">
+        <li class="flex items-center gap-2"><svg class="w-5 h-5 text-gold shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-7.5 7.5a1 1 0 0 1-1.4 0L3.3 9.7a1 1 0 1 1 1.4-1.4l3.8 3.8 6.8-6.8a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>До 12 человек</li>
+        <li class="flex items-center gap-2"><svg class="w-5 h-5 text-gold shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-7.5 7.5a1 1 0 0 1-1.4 0L3.3 9.7a1 1 0 1 1 1.4-1.4l3.8 3.8 6.8-6.8a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>Баня в любое время</li>
+        <li class="flex items-center gap-2"><svg class="w-5 h-5 text-gold shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-7.5 7.5a1 1 0 0 1-1.4 0L3.3 9.7a1 1 0 1 1 1.4-1.4l3.8 3.8 6.8-6.8a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>Маршрут выбираете вы</li>
+        <li class="flex items-center gap-2"><svg class="w-5 h-5 text-gold shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-7.5 7.5a1 1 0 0 1-1.4 0L3.3 9.7a1 1 0 1 1 1.4-1.4l3.8 3.8 6.8-6.8a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>От 1 суток</li>
+      </ul>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="#zayavka" class="pulse-cta inline-flex justify-center items-center gap-2 bg-ember hover:bg-ember-dark text-white text-lg font-extrabold px-8 py-4 rounded-2xl shadow-cta transition active:scale-95">Забронировать даты</a>
+        <a href="tel:+79950320002" class="inline-flex justify-center items-center gap-2 border-2 border-white/50 hover:border-white hover:bg-white/10 text-white text-lg font-bold px-8 py-4 rounded-2xl transition active:scale-95"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.879a1.5 1.5 0 0 1 1.448 1.09l.637 2.125a1.5 1.5 0 0 1-.58 1.612L5.5 7.97a11.03 11.03 0 0 0 5.53 5.53l1.043-1.884a1.5 1.5 0 0 1 1.612-.58l2.125.637A1.5 1.5 0 0 1 17 13.62v1.879a1.5 1.5 0 0 1-1.5 1.5A14.5 14.5 0 0 1 2 3.5Z"/></svg>
+          +7 (995) 032-00-02
+        </a>
+      </div>
+      <p class="mt-4 text-sm text-white/70">Предоплата всего 30% — даты сразу снимаем с продажи. Не подошли? Переносим без потерь.</p>
+    </div>
+
+    <!-- Trust-bar: конкретика вместо «воды» -->
+    <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl">
+      <div class="rounded-2xl bg-white/10 ring-1 ring-white/20 backdrop-blur p-4 text-center">
+        <p class="text-2xl md:text-3xl font-extrabold text-gold">8 лет</p>
+        <p class="text-xs md:text-sm text-white/80 mt-1">водим сплавы по южным рекам</p>
+      </div>
+      <div class="rounded-2xl bg-white/10 ring-1 ring-white/20 backdrop-blur p-4 text-center">
+        <p class="text-2xl md:text-3xl font-extrabold text-gold">96 м²</p>
+        <p class="text-xs md:text-sm text-white/80 mt-1">две палубы: 54 + 42</p>
+      </div>
+      <div class="rounded-2xl bg-white/10 ring-1 ring-white/20 backdrop-blur p-4 text-center">
+        <p class="text-2xl md:text-3xl font-extrabold text-gold">5.0 ★</p>
+        <p class="text-xs md:text-sm text-white/80 mt-1">средняя оценка гостей</p>
+      </div>
+      <div class="rounded-2xl bg-white/10 ring-1 ring-white/20 backdrop-blur p-4 text-center">
+        <p class="text-2xl md:text-3xl font-extrabold text-gold">12</p>
+        <p class="text-xs md:text-sm text-white/80 mt-1">максимум людей на борту</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ USP-лента: снимает главный страх «а что с собой везти?» ═══ -->
+<section class="bg-gold text-river-deep">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm md:text-base font-bold">
+    <span>🛋 Палатки, коврики и спальники уже на борту</span>
+    <span>🎣 Коптильня для собственного улова</span>
+    <span>🧊 Морозилка 200 л</span>
+    <span>⚡ Генератор для гаджетов</span>
+    <span>🚤 Капитан-проводник</span>
+  </div>
+</section>
+
+<!-- ═══ Что есть на плоту ═══ -->
+<section id="on-plotu" class="bg-sand py-16 md:py-24">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="h-sec font-extrabold text-river-deep max-w-3xl">Плот «Бульбусик»: плавучий дом, в котором есть всё</h2>
+    <p class="mt-3 text-lg text-slate-600 max-w-3xl">Вы приезжаете только со своими вещами, водой и продуктами. Остальное уже загружено и проверено перед каждым выходом.</p>
+    <div class="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      <div class="bg-white rounded-2xl p-5 shadow-card hover:-translate-y-1 hover:shadow-lg transition duration-300 ">
+        <div class="w-11 h-11 rounded-xl bg-river-light grid place-items-center text-2xl" aria-hidden="true">🍳</div>
+        <h3 class="mt-3 font-extrabold text-river-deep">Кухня и мангал</h3>
+        <p class="mt-1 text-sm text-slate-600">Посуда, большие столы на всю компанию, мангал и коптильня для рыбы.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-5 shadow-card hover:-translate-y-1 hover:shadow-lg transition duration-300 ">
+        <div class="w-11 h-11 rounded-xl bg-river-light grid place-items-center text-2xl" aria-hidden="true">⛺</div>
+        <h3 class="mt-3 font-extrabold text-river-deep">Спальные места</h3>
+        <p class="mt-1 text-sm text-slate-600">2- и 3-местные палатки, коврики и спальники на обеих палубах.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-5 shadow-card hover:-translate-y-1 hover:shadow-lg transition duration-300 ">
+        <div class="w-11 h-11 rounded-xl bg-river-light grid place-items-center text-2xl" aria-hidden="true">🧊</div>
+        <h3 class="mt-3 font-extrabold text-river-deep">Морозилка 200 л</h3>
+        <p class="mt-1 text-sm text-slate-600">Продукты и напитки всю дорогу нужной температуры.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-5 shadow-card hover:-translate-y-1 hover:shadow-lg transition duration-300 ring-2 ring-ember/40">
+        <div class="w-11 h-11 rounded-xl bg-ember/10 grid place-items-center text-2xl" aria-hidden="true">🧖</div>
+        <h3 class="mt-3 font-extrabold text-river-deep">Баня на воде</h3>
+        <p class="mt-1 text-sm text-slate-600">Парилка прямо на плоту — в любое время, без записи и соседей.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-5 shadow-card hover:-translate-y-1 hover:shadow-lg transition duration-300 ">
+        <div class="w-11 h-11 rounded-xl bg-river-light grid place-items-center text-2xl" aria-hidden="true">🚤</div>
+        <h3 class="mt-3 font-extrabold text-river-deep">Мотор и капитан</h3>
+        <p class="mt-1 text-sm text-slate-600">Полная свобода движения: куда захотели, там и встали.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-5 shadow-card hover:-translate-y-1 hover:shadow-lg transition duration-300 ">
+        <div class="w-11 h-11 rounded-xl bg-river-light grid place-items-center text-2xl" aria-hidden="true">🦺</div>
+        <h3 class="mt-3 font-extrabold text-river-deep">Безопасность</h3>
+        <p class="mt-1 text-sm text-slate-600">Спасжилеты на каждого, весла, инструктаж перед стартом.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-5 shadow-card hover:-translate-y-1 hover:shadow-lg transition duration-300 ">
+        <div class="w-11 h-11 rounded-xl bg-river-light grid place-items-center text-2xl" aria-hidden="true">🔊</div>
+        <h3 class="mt-3 font-extrabold text-river-deep">Музыка до утра</h3>
+        <p class="mt-1 text-sm text-slate-600">Колонка: после 23:00 дискотека на полную — соседей нет.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-5 shadow-card hover:-translate-y-1 hover:shadow-lg transition duration-300 ">
+        <div class="w-11 h-11 rounded-xl bg-river-light grid place-items-center text-2xl" aria-hidden="true">⚡</div>
+        <h3 class="mt-3 font-extrabold text-river-deep">Генератор</h3>
+        <p class="mt-1 text-sm text-slate-600">Телефоны, пауэрбанки и свет работают всегда.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-5 shadow-card hover:-translate-y-1 hover:shadow-lg transition duration-300 ">
+        <div class="w-11 h-11 rounded-xl bg-river-light grid place-items-center text-2xl" aria-hidden="true">🪑</div>
+        <h3 class="mt-3 font-extrabold text-river-deep">Мебель для 12</h3>
+        <p class="mt-1 text-sm text-slate-600">Столы и скамейки — место точно хватит всем.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-5 shadow-card hover:-translate-y-1 hover:shadow-lg transition duration-300 ">
+        <div class="w-11 h-11 rounded-xl bg-river-light grid place-items-center text-2xl" aria-hidden="true">🌅</div>
+        <h3 class="mt-3 font-extrabold text-river-deep">Релакс-палуба 2 этажа</h3>
+        <p class="mt-1 text-sm text-slate-600">Коктейльный столик и лежаки под звёздным небом.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ЦЕНЫ ═══ -->
+<section id="tseny" class="py-16 md:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+      <div>
+        <h2 class="h-sec font-extrabold text-river-deep">Цены на аренду плота по Дону в 2026 году</h2>
+        <p class="mt-3 text-lg text-slate-600 max-w-2xl">Формат «всё включено». Дополнительно нужен только бензин 92 для мотора и генератора — <strong>не более 10 л/сутки</strong>.</p>
+      </div>
+      <p class="shrink-0 rounded-full bg-emerald-50 text-emerald-700 ring-1 ring-emerald-200 px-4 py-2 text-sm font-bold">★ Постоянным гостям выходные — по цене будней</p>
+    </div>
+
+    <div class="mt-10 grid md:grid-cols-2 gap-6 max-w-4xl">
+      <div class="relative rounded-3xl border-2 border-river/15 bg-sand p-8 flex flex-col">
+        <p class="text-sm font-bold uppercase tracking-wider text-river-mid">Выгодно · будни</p>
+        <p class="price-num font-extrabold text-river-deep mt-2">29 000 <span class="text-xl align-top">₽</span><span class="text-lg font-bold text-slate-500"> / сутки</span></p>
+        <ul class="mt-6 space-y-3 text-slate-700 flex-1">
+          <li class="flex gap-3"><svg class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-7.5 7.5a1 1 0 0 1-1.4 0L3.3 9.7a1 1 0 1 1 1.4-1.4l3.8 3.8 6.8-6.8a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>Капитан, знающий каждую излучину Дона</li>
+          <li class="flex gap-3"><svg class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-7.5 7.5a1 1 0 0 1-1.4 0L3.3 9.7a1 1 0 1 1 1.4-1.4l3.8 3.8 6.8-6.8a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>Свободный выбор маршрута и мест стоянок</li>
+          <li class="flex gap-3"><svg class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-7.5 7.5a1 1 0 0 1-1.4 0L3.3 9.7a1 1 0 1 1 1.4-1.4l3.8 3.8 6.8-6.8a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>Лучшие точки для рыбалки и купания</li>
+          <li class="flex gap-3"><svg class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-7.5 7.5a1 1 0 0 1-1.4 0L3.3 9.7a1 1 0 1 1 1.4-1.4l3.8 3.8 6.8-6.8a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>Баня — доступна в любое время</li>
+        </ul>
+        <a href="#zayavka" class="mt-8 block text-center bg-river hover:bg-river-deep text-white font-extrabold py-4 rounded-2xl transition active:scale-[.98]">Выбрать будни</a>
+      </div>
+      <div class="relative rounded-3xl border-2 border-ember bg-white p-8 flex flex-col shadow-cta overflow-hidden">
+        <span class="absolute top-5 -right-12 rotate-45 bg-ember text-white text-xs font-extrabold px-14 py-1.5">ТОП</span>
+        <p class="text-sm font-bold uppercase tracking-wider text-ember">Выходные и праздники</p>
+        <p class="price-num font-extrabold text-river-deep mt-2">33 000 <span class="text-xl align-top">₽</span><span class="text-lg font-bold text-slate-500"> / сутки</span></p>
+        <ul class="mt-6 space-y-3 text-slate-700 flex-1">
+          <li class="flex gap-3"><svg class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-7.5 7.5a1 1 0 0 1-1.4 0L3.3 9.7a1 1 0 1 1 1.4-1.4l3.8 3.8 6.8-6.8a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>Всё из тарифа «будни» без изменений</li>
+          <li class="flex gap-3"><svg class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-7.5 7.5a1 1 0 0 1-1.4 0L3.3 9.7a1 1 0 1 1 1.4-1.4l3.8 3.8 6.8-6.8a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>Идеально для тура выходного дня с пятницы</li>
+          <li class="flex gap-3"><svg class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-7.5 7.5a1 1 0 0 1-1.4 0L3.3 9.7a1 1 0 1 1 1.4-1.4l3.8 3.8 6.8-6.8a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>Майские и новогодние — бронируйте за 2–3 месяца</li>
+          <li class="flex gap-3"><svg class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-7.5 7.5a1 1 0 0 1-1.4 0L3.3 9.7a1 1 0 1 1 1.4-1.4l3.8 3.8 6.8-6.8a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>Не первый раз? Выездные дни по цене будней</li>
+        </ul>
+        <a href="#zayavka" class="mt-8 block text-center bg-ember hover:bg-ember-dark text-white font-extrabold py-4 rounded-2xl shadow-cta transition active:scale-[.98]">Забронировать выходные</a>
+      </div>
+    </div>
+
+    <div class="mt-8 grid sm:grid-cols-3 gap-4 max-w-4xl text-sm">
+      <div class="rounded-2xl bg-river-light p-5">
+        <p class="font-extrabold text-river-deep">Предоплата 30%</p>
+        <p class="mt-1 text-slate-600">После оплаты снимаем даты с продажи и оставляем их за вами.</p>
+      </div>
+      <div class="rounded-2xl bg-river-light p-5">
+        <p class="font-extrabold text-river-deep">Перенос вместо потери</p>
+        <p class="mt-1 text-slate-600">Отмена позже 30 дней до старта — перенесём даты, предоплата сохранится.</p>
+      </div>
+      <div class="rounded-2xl bg-river-light p-5">
+        <p class="font-extrabold text-river-deep">Договор заранее</p>
+        <p class="mt-1 text-slate-600">Присылаем типовой договор и ТБ на почту — знакомитесь спокойно.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Свободные даты (FOMO-блок) ═══ -->
+<section class="bg-white pb-16 md:pb-24">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="rounded-3xl bg-river-deep text-white p-8 md:p-12 relative overflow-hidden">
+      <div class="absolute -top-10 -right-10 w-56 h-56 rounded-full bg-ember/20 blur-2xl animate-floaty" aria-hidden="true"></div>
+      <div class="md:flex md:items-start md:gap-12 relative">
+        <div class="md:w-1/3">
+          <h2 class="h-sec font-extrabold">Свободные даты на 2026</h2>
+          <p class="mt-3 text-white/80">Плот «Бульбусик» один — и он часто занят. Лучшие выходные разлетаются за месяц.</p>
+          <p class="mt-4 text-sm text-white/60">Нужных дат нет? Подберём альтернативу у проверенных партнёров — <a href="https://splav34.ru/big-raft/" target="_blank" rel="noopener nofollow" class="underline text-gold hover:no-underline font-semibold">большой плот на splav34.ru</a>.</p>
+        </div>
+        <div class="mt-6 md:mt-0 md:w-2/3">
+          <div :class="clipDates ? 'dates-clipped' : ''">
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 text-center">
+              <a href="#zayavka" aria-disabled="true" class="block rounded-2xl p-4 transition bg-white/5 text-white/35 pointer-events-none">
+                <p class="font-extrabold">Май</p>
+                <p class="text-lg font-extrabold text-gold">1–10</p>
+                <p class="text-xs uppercase tracking-wide mt-1 text-white/40">занято</p>
+              </a>
+              <a href="#zayavka" class="block rounded-2xl p-4 transition bg-white/10 ring-1 ring-white/25 hover:bg-white/20 cursor-pointer">
+                <p class="font-extrabold">Июнь</p>
+                <p class="text-lg font-extrabold text-gold">12–15</p>
+                <p class="text-xs uppercase tracking-wide mt-1 text-emerald-300">свободно</p>
+              </a>
+              <a href="#zayavka" class="block rounded-2xl p-4 transition bg-white/10 ring-1 ring-white/25 hover:bg-white/20 cursor-pointer">
+                <p class="font-extrabold">Июнь</p>
+                <p class="text-lg font-extrabold text-gold">21–24</p>
+                <p class="text-xs uppercase tracking-wide mt-1 text-emerald-300">свободно</p>
+              </a>
+              <a href="#zayavka" aria-disabled="true" class="block rounded-2xl p-4 transition bg-white/5 text-white/35 pointer-events-none">
+                <p class="font-extrabold">Июль</p>
+                <p class="text-lg font-extrabold text-gold">4–7</p>
+                <p class="text-xs uppercase tracking-wide mt-1 text-white/40">занято</p>
+              </a>
+              <a href="#zayavka" class="block rounded-2xl p-4 transition bg-white/10 ring-1 ring-white/25 hover:bg-white/20 cursor-pointer">
+                <p class="font-extrabold">Июль</p>
+                <p class="text-lg font-extrabold text-gold">18–25</p>
+                <p class="text-xs uppercase tracking-wide mt-1 text-emerald-300">свободно</p>
+              </a>
+              <a href="#zayavka" aria-disabled="true" class="block rounded-2xl p-4 transition bg-white/5 text-white/35 pointer-events-none">
+                <p class="font-extrabold">Август</p>
+                <p class="text-lg font-extrabold text-gold">1–10</p>
+                <p class="text-xs uppercase tracking-wide mt-1 text-white/40">занято</p>
+              </a>
+              <a href="#zayavka" class="block rounded-2xl p-4 transition bg-white/10 ring-1 ring-white/25 hover:bg-white/20 cursor-pointer">
+                <p class="font-extrabold">Август</p>
+                <p class="text-lg font-extrabold text-gold">23–31</p>
+                <p class="text-xs uppercase tracking-wide mt-1 text-emerald-300">свободно</p>
+              </a>
+              <a href="#zayavka" class="block rounded-2xl p-4 transition bg-white/10 ring-1 ring-white/25 hover:bg-white/20 cursor-pointer">
+                <p class="font-extrabold">Сентябрь</p>
+                <p class="text-lg font-extrabold text-gold">5–14</p>
+                <p class="text-xs uppercase tracking-wide mt-1 text-emerald-300">свободно</p>
+              </a>
+              <a href="#zayavka" class="block rounded-2xl p-4 transition bg-white/10 ring-1 ring-white/25 hover:bg-white/20 cursor-pointer">
+                <p class="font-extrabold">Сентябрь</p>
+                <p class="text-lg font-extrabold text-gold">19–22</p>
+                <p class="text-xs uppercase tracking-wide mt-1 text-emerald-300">свободно</p>
+              </a>
+              <a href="#zayavka" class="block rounded-2xl p-4 transition bg-white/10 ring-1 ring-white/25 hover:bg-white/20 cursor-pointer">
+                <p class="font-extrabold">Октябрь</p>
+                <p class="text-lg font-extrabold text-gold">3–6</p>
+                <p class="text-xs uppercase tracking-wide mt-1 text-emerald-300">бархатный</p>
+              </a>
+              <a href="#zayavka" class="block rounded-2xl p-4 transition bg-white/10 ring-1 ring-white/25 hover:bg-white/20 cursor-pointer">
+                <p class="font-extrabold">Октябрь</p>
+                <p class="text-lg font-extrabold text-gold">10–19</p>
+                <p class="text-xs uppercase tracking-wide mt-1 text-emerald-300">свободно</p>
+              </a>
+              <a href="#zayavka" class="block rounded-2xl p-4 transition bg-white/10 ring-1 ring-white/25 hover:bg-white/20 cursor-pointer">
+                <p class="font-extrabold">Ноябрь</p>
+                <p class="text-lg font-extrabold text-gold">по запросу</p>
+                <p class="text-xs uppercase tracking-wide mt-1 text-emerald-300">рыбалка</p>
+              </a>
+            </div>
+          </div>
+          <button type="button" @click="clipDates=!clipDates" :aria-expanded="!clipDates"
+                  class="mt-4 text-sm font-bold text-gold underline underline-offset-4 hover:no-underline"
+                  x-text="clipDates ? 'Показать все даты ▾' : 'Свернуть список ▴'"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Программа тура (таймлайн) ═══ -->
+<section id="marshrut" class="py-16 md:py-24 bg-sand">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="h-sec font-extrabold text-river-deep">Как проходит сплав: пример тура выходного дня</h2>
+    <p class="mt-3 text-lg text-slate-600 max-w-3xl">Плотом управляет опытный капитан — он знает, где лучший клёв, где песчаный пляж, а где докупить провиант и дрова. Вам остаётся только отдыхать.</p>
+
+    <ol class="mt-10 relative border-l-2 border-river/20 ml-3 md:ml-6 space-y-8">
+      <li class="pl-6 md:pl-8 relative">
+        <span class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-ember ring-4 ring-white" aria-hidden="true"></span>
+        <p class="text-sm font-extrabold uppercase tracking-wide text-ember">День 1 · 12:00</p>
+        <h3 class="text-xl font-extrabold text-river-deep mt-1">Приезжаете на базу в х. Вертячий</h3>
+        <p class="mt-1 text-slate-600">Машина остаётся на охраняемой парковке турбазы. Инструктаж, знакомство с капитаном и плотом — и мы отчаливаем.</p>
+      </li>
+      <li class="pl-6 md:pl-8 relative">
+        <span class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-river ring-4 ring-white" aria-hidden="true"></span>
+        <p class="text-sm font-extrabold uppercase tracking-wide text-river-mid">12:00 — 21:00</p>
+        <h3 class="text-xl font-extrabold text-river-deep mt-1">Сплав с подъёмом вверх по Дону</h3>
+        <p class="mt-1 text-slate-600">Остановки для купания, фотосессий и рыбалки. Улов сразу идёт в коптильню.</p>
+      </li>
+      <li class="pl-6 md:pl-8 relative">
+        <span class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-river-deep ring-4 ring-white" aria-hidden="true"></span>
+        <p class="text-sm font-extrabold uppercase tracking-wide text-river-deep">21:00 — 10:00</p>
+        <h3 class="text-xl font-extrabold text-river-deep mt-1">Ночная стоянка у костра</h3>
+        <p class="mt-1 text-slate-600">Песни под гитару, мясо на мангале, игры. По желанию — баня на воде: пар, речная прохлада и ноль соседей.</p>
+      </li>
+      <li class="pl-6 md:pl-8 relative">
+        <span class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-ember ring-4 ring-white" aria-hidden="true"></span>
+        <p class="text-sm font-extrabold uppercase tracking-wide text-ember">День 2 · 10:00 — 20:00</p>
+        <h3 class="text-xl font-extrabold text-river-deep mt-1">Спуск по течению</h3>
+        <p class="mt-1 text-slate-600">Медленный ритм реки: купаемся, загораем на верхней палубе, останавливаемся на перекатах, фоткаемся и делимся кадрами в соцсетях.</p>
+      </li>
+      <li class="pl-6 md:pl-8 relative">
+        <span class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-river ring-4 ring-white" aria-hidden="true"></span>
+        <p class="text-sm font-extrabold uppercase tracking-wide text-river-mid">День 3 · 09:00 — 12:00</p>
+        <h3 class="text-xl font-extrabold text-river-deep mt-1">Возвращение на базу</h3>
+        <p class="mt-1 text-slate-600">Маршрут заканчивается — но обычно гости планируют следующий выезд уже на обратной дороге.</p>
+      </li>
+    </ol>
+
+    <div class="mt-10 flex flex-col sm:flex-row gap-4 max-w-3xl">
+      <a href="#zayavka" class="flex-1 text-center bg-ember hover:bg-ember-dark text-white font-extrabold py-4 rounded-2xl shadow-cta transition active:scale-[.98]">Хочу на этот маршрут</a>
+      <a href="tel:+79950320002" class="flex-1 text-center border-2 border-river text-river hover:bg-river hover:text-white font-extrabold py-4 rounded-2xl transition">Обсудить свой маршрут</a>
+    </div>
+    <p class="mt-3 text-sm text-slate-500 max-w-3xl">Маршрут — не шаблон: рисуем его под вас. Уединённый отдых для двоих, семейное путешествие или шумный корпоратив на 12 человек.</p>
+  </div>
+</section>
+
+<!-- ═══ Фото + видео ═══ -->
+<section id="foto" class="py-16 md:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="h-sec font-extrabold text-river-deep">Фото и видео наших сплавов</h2>
+    <p class="mt-3 text-lg text-slate-600 max-w-2xl">Никаких стоковых картинок — всё снято гостями и капитанами «Бульбусика» на Дону.</p>
+
+    <!-- Видео: lite-подход — iframe Rutube грузится только по клику (экономит ~1 МБ) -->
+    <div x-data="{ playing: false }" @keydown.escape.window="playing = false"
+         class="mt-8 ratio-16-9 w-full max-w-4xl mx-auto rounded-3xl overflow-hidden bg-river-deep relative group">
+      <img x-show="!playing" x-cloak src="https://pic.rtbcdn.ru/video/2026-06-06/4e/8f/4e8fc3ce098ed35ae4f28270a06571e0.jpg"
+           alt="Видеообзор плавучего дома с баней от РосТур Эксперт" loading="lazy" decoding="async" width="640" height="360"
+           class="video-poster absolute inset-0 h-full w-full object-cover opacity-90 group-hover:opacity-100 transition">
+      <button type="button" x-show="!playing" x-cloak @click="playing = true"
+              class="absolute inset-0 grid place-items-center" aria-label="Смотреть видеообзор плота">
+        <span class="grid place-items-center w-20 h-20 rounded-full bg-ember/95 text-white shadow-cta group-hover:scale-110 transition">
+          <svg class="w-8 h-8 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.5v15l13-7.5-13-7.5Z"/></svg>
+        </span>
+      </button>
+      <p x-show="!playing" x-cloak class="video-caption absolute bottom-3 left-4 text-white/90 text-sm font-bold drop-shadow pointer-events-none">▶ Видеообзор плавучего дома с баней</p>
+
+      <!-- iframe Rutube монтируется только после клика — экономим ~1 МБ трафика и CWV -->
+      <template x-if="playing">
+        <iframe class="absolute inset-0 h-full w-full"
+                src="https://rutube.ru/play/embed/3b75064c4a9d6b0ea348d6c54cb9c076/"
+                title="Видеообзор плота с баней на Дону"
+                allow="autoplay; encrypted-media; fullscreen"
+                allowfullscreen
+                loading="lazy"></iframe>
+      </template>
+    </div>
+
+    <!-- Галерея: фиксированные ratios + width/height (CLS≈0), lazy, осмысленные alt -->
+    <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3">
+      <figure class="col-span-2 row-span-2 ratio-16-9 md:md-square rounded-2xl overflow-hidden">
+        <img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/c536481e-69d9-475f-897c-3e19fd645c6d/c536481e-69d9-475f-897c-3e19fd645c6d-6112334.jpeg"
+             alt="Гости парятся в бане на плоту во время сплава по Дону" loading="lazy" decoding="async" width="800" height="800"
+             class="h-full w-full object-cover hover:scale-[1.03] transition duration-500">
+      </figure>
+      <figure class="ratio-1-1 rounded-2xl overflow-hidden">
+        <img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/9a4dcf4d-d001-410b-b651-c28af757ece7/9a4dcf4d-d001-410b-b651-c28af757ece7-14399116.jpeg"
+             alt="Утренний туман над Доном: плот начинает маршрут" loading="lazy" decoding="async" width="400" height="400"
+             class="h-full w-full object-cover hover:scale-[1.03] transition duration-500">
+      </figure>
+      <figure class="ratio-1-1 rounded-2xl overflow-hidden">
+        <img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/c007ab14-59f5-4300-9750-186cd0ded371/c007ab14-59f5-4300-9750-186cd0ded371-14399305.jpeg"
+             alt="Туристы на плоту плывут по Дону среди зелёных берегов" loading="lazy" decoding="async" width="400" height="400"
+             class="h-full w-full object-cover hover:scale-[1.03] transition duration-500">
+      </figure>
+      <figure class="ratio-1-1 rounded-2xl overflow-hidden">
+        <img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/2d2a920c-1ba8-47f4-8f5f-ca884bd334d7/2d2a920c-1ba8-47f4-8f5f-ca884bd334d7-15917195.jpeg"
+             alt="Улов дня: турист демонстрирует рыбу, пойманную на сплаве" loading="lazy" decoding="async" width="400" height="400"
+             class="h-full w-full object-cover hover:scale-[1.03] transition duration-500">
