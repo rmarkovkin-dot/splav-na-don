@@ -78,9 +78,9 @@ tailwind.config = {
   .animate-pulse-cta{animation:pulsecta 2.4s ease-in-out infinite}
   .mark-yellow{background:linear-gradient(180deg,transparent 55%,rgba(251,191,36,.55) 55%);padding:0 .15em}
   .mark-yellow-dim{background:linear-gradient(180deg,transparent 62%,rgba(251,191,36,.35) 62%);padding:0 .1em}
-  /* Липкая мобильная панель compensated by body padding-bottom; скрывается, когда форма на экране */
-  #mobilebar.is-hidden{transform:translateY(110%)}
-  @media (min-width:768px){ body{padding-bottom:0} #mobilebar{display:none} }
+  /* Компенсация высоты липкой мобильной панели + скрытие панели, когда форма заявки в зоне видимости */
+  .mobile-cta.is-hidden{transform:translateY(110%)}
+  @media (min-width:768px){ body{padding-bottom:0} .mobile-cta{display:none} }
   @media (prefers-reduced-motion:reduce){ .animate-floaty,.animate-pulse-cta{animation:none} *{scroll-behavior:auto!important} }
   a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #ea580c;outline-offset:2px;border-radius:.25rem}
 </style>
@@ -414,7 +414,7 @@ tailwind.config = {
       <p class="mt-6 text-sm text-river-deep/60">Или сразу звоните: <a href="tel:+79965117659" class="font-extrabold text-river hover:text-ember transition">+7 (996) 511-76-59</a></p>
     </div>
     <div class="bg-white rounded-3xl shadow-card border border-river-light p-6 md:p-8">
-      <form x-show="form.status!=='submitted'" @submit.prevent="submitForm()" novalidate>
+      <form x-show="form.status!=='submitted'" @submit.prevent="submitForm()" novalidate data-form-root>
         <label class="block text-sm font-extrabold mb-1" for="f-name">Имя</label>
         <input id="f-name" type="text" required autocomplete="name" placeholder="Как к вам обращаться"
                x-model="form.name" class="w-full rounded-xl border-2 border-river-light focus:border-river px-4 py-3 mb-4 outline-none">
@@ -499,13 +499,24 @@ tailwind.config = {
 </footer>
 
 <!-- STICKY MOBILE CTA -->
-<div id="mobilebar" class="fixed bottom-0 inset-x-0 z-50 md:hidden bg-white border-t border-river-light shadow-[0_-8px_30px_-12px_rgba(8,47,73,.3)] px-3 py-2.5 transition-transform duration-300"
-     x-data x-effect="$el.classList.toggle('is-hidden', $globals.scrollY > 0 && document.getElementById('zayavka') && document.getElementById('zayavka').getBoundingClientRect().bottom < window.innerHeight * 0.85)">
+<div class="mobile-cta fixed bottom-0 inset-x-0 z-50 md:hidden bg-white border-t border-river-light shadow-[0_-8px_30px_-12px_rgba(8,47,73,.3)] px-3 py-2.5 transition-transform duration-300">
   <div class="flex gap-2">
     <a href="tel:+79965117659" aria-label="Позвонить и забронировать место" class="flex-1 text-center border-2 border-river text-river font-extrabold px-3 py-3 rounded-xl">📞 Позвонить</a>
     <a href="#zayavka" class="flex-[1.4] text-center bg-ember text-white font-extrabold px-3 py-3 rounded-xl shadow-cta">Забронировать</a>
   </div>
 </div>
+
+<script>
+  // Скрытие липкой панели, когда форма заявки в зоне видимости (IntersectionObserver, no-JS-safe)
+  (function(){
+    var bar = document.querySelector('.mobile-cta');
+    var form = document.querySelector('[data-form-root]');
+    if (!bar || !form || !('IntersectionObserver' in window)) return;
+    new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ bar.classList.toggle('is-hidden', en.isIntersecting); });
+    }, { threshold: 0.25 }).observe(form);
+  })();
+</script>
 
 <!-- Кнопка «наверх» -->
 <button type="button" aria-label="Прокрутить страницу наверх" onclick="window.scrollTo({top:0,behavior:'smooth'})"
