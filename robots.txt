@@ -1,0 +1,57 @@
+# ═══════════════════════════════════════════════════════
+# robots.txt для rostur.expert
+# Обновлено: 2026-10-09 (AI-парсеры разрешены: ставка на GEO/AEO)
+# ═══════════════════════════════════════════════════════
+
+User-agent: *
+Allow: /
+
+# Служебные папки (не деплоятся как контент)
+Disallow: /_constructor/
+Disallow: /_inventory/
+Disallow: /assets/private/
+
+# Убираем дубли с UTM-метками из индекса
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&yclid&gclid&fbclid /
+
+# Поисковики
+User-agent: Yandex
+Allow: /
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&yclid&gclid&fbclid /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Mail.Ru
+Allow: /
+
+# AI-ассистенты: РАЗРЕШЕНО (цитирование = новый трафик)
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+
+# Агрессивные скрейперы и парсеры SEO-сервисов: заблокированы
+User-agent: Scrapy
+Disallow: /
+User-agent: DataForSeoBot
+Disallow: /
+User-agent: AhrefsBot
+Disallow: /
+User-agent: SemrushBot
+Disallow: /
+User-agent: MJ12bot
+Disallow: /
+
+# Карта сайта
+Sitemap: https://rostur.expert/sitemap.xml
