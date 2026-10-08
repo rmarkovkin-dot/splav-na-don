@@ -14,7 +14,7 @@
         m[i].l=1*new Date();
         for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
         k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.webvisor.org/metrika/tag_ww.js?id=91421476', 'ym');
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=91421476', 'ym');
     ym(91421476, 'init', {ssr:true, webvisor:true, trackHash:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/91421476" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
@@ -31,14 +31,15 @@
 <meta name="twitter:description" content="Двухэтажный плавучий дом 96 м² для компании до 12 человек. Капитан, рыбалка, купания и парилка на воде — всё включено от 29 000 ₽/сутки.">
 <meta name="twitter:image" content="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/f8338fed-2aeb-4566-8c5b-08698e4296f9/f8338fed-2aeb-4566-8c5b-08698e4296f9-15734331.jpeg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230c4a6e'/%3E%3Cpath d='M20 62h60l-8 16H28z' fill='%23fbbf24'/%3E%3Crect x='34' y='40' width='32' height='18' rx='3' fill='%23fff'/%3E%3Cpath d='M50 22c6 8 10 12 10 16a10 10 0 1 1-20 0c0-4 4-8 10-16z' fill='%23fb7185'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://cdn.tailwindcss.com">
-<link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+
 <link rel="preconnect" href="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap">
 <link rel="preload" as="image" href="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/f8338fed-2aeb-4566-8c5b-08698e4296f9/f8338fed-2aeb-4566-8c5b-08698e4296f9-15734331.jpeg" fetchpriority="high">
-<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preload" href="/assets/js/tailwind.js" as="script">
+<script src="/assets/js/tailwind.js"></script>
 <script>
 tailwind.config = {
 theme: {
@@ -58,7 +59,7 @@ card: '0 8px 30px -12px rgba(8,47,73,.18)'
 }
 }
 </script>
-<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+<script defer src="/assets/js/alpine.min.js"></script>
 <style>
 [x-cloak]{display:none!important}
 html,body{ overflow-x:clip; }
@@ -817,6 +818,48 @@ bar.style.width=Math.round((i+1)/entries.length*100)+'%';
 });
 },{threshold:.6});
 entries.forEach(function(en){ io.observe(en); });
+})();
+</script>
+<script>
+/* === Заявки → Telegram (send.php) === */
+(function(){
+  function canon(k){
+    k=(k||'').toLowerCase();
+    if(k.indexOf('имя')>-1)return 'name';
+    if(k.indexOf('елефон')>-1||k==='tel')return 'phone';
+    if(k.indexOf('дат')>-1||k.indexOf('числ')>-1)return 'dates';
+    if(k.indexOf('оммент')>-1)return 'comment';
+    if(k.indexOf('еловек')>-1)return 'people';
+    if(k.indexOf('суток')>-1||k.indexOf('дней')>-1)return 'days';
+    if(k.indexOf('зон')>-1)return 'zone';
+    if(k.indexOf('лини')>-1)return 'line';
+    if(k.indexOf('ормат')>-1)return 'format';
+    return k;
+  }
+  function keyOf(el,i){
+    var k=el.name||el.id||el.getAttribute('placeholder')||'';
+    if(!k){var lb=el.closest('label');k=lb?lb.textContent.trim():('pole'+(i+1));}
+    return canon(k);
+  }
+  document.addEventListener('submit',function(e){
+    var f=e.target;
+    if(!f||f.tagName!=='FORM')return;
+    try{
+      var p=[];
+      var els=f.querySelectorAll('input,select,textarea');
+      for(var i=0;i<els.length;i++){
+        var el=els[i];
+        if(el.type==='checkbox'){if(el.checked)p.push([keyOf(el,i),'yes']);continue;}
+        if(el.type==='radio'&&!el.checked)continue;
+        var v=(el.value||'').trim();
+        if(v)p.push([keyOf(el,i),v]);
+      }
+      p.push(['source',location.pathname]);
+      var body=p.map(function(x){return encodeURIComponent(x[0])+'='+encodeURIComponent(x[1]);}).join('&');
+      if(window.fetch){fetch('/send.php',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body}).catch(function(){});}
+      else{var r=new XMLHttpRequest();r.open('POST','/send.php',true);r.setRequestHeader('Content-Type','application/x-www-form-urlencoded');r.send(body);}
+    }catch(err){}
+  },true);
 })();
 </script>
 </body>
