@@ -15,6 +15,9 @@
 <meta property="og:description" content="Два формата отдыха на Дону: плот с баней (от 29 000 ₽/сут) и кемпинг «Парк Вертячий» (от 250 ₽/чел). Рыбалка, природа, 50 км от Волгограда.">
 <meta property="og:image" content="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/41bee1e5-c0c2-4d21-984b-e58b7e85084e/41bee1e5-c0c2-4d21-984b-e58b7e85084e-16582868.png">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="РосТур Эксперт — сплавы на плоту и кемпинг в Волгоградской области">
+<meta name="twitter:description" content="Два формата отдыха на Дону: плот с баней (от 29 000 ₽/сут) и кемпинг «Парк Вертячий» (от 250 ₽/чел). Рыбалка, природа, 50 км от Волгограда.">
+<meta name="twitter:image" content="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/41bee1e5-c0c2-4d21-984b-e58b7e85084e/41bee1e5-c0c2-4d21-984b-e58b7e85084e-16582868.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230c4a6e'/%3E%3Cpath d='M20 62h60l-8 16H28z' fill='%23fbbf24'/%3E%3Crect x='34' y='40' width='32' height='18' rx='3' fill='%23fff'/%3E%3Cpath d='M50 22c6 8 10 12 10 16a10 10 0 1 1-20 0c0-4 4-8 10-16z' fill='%23fb7185'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://cdn.tailwindcss.com">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
@@ -65,147 +68,145 @@ background-repeat:no-repeat; background-size:100% .52em; background-position:0 8
 @keyframes quizIn{ 0%{opacity:0;transform:translateY(20px);} 100%{opacity:1;transform:translateY(0);} }
 .quiz-option{ transition:all .2s; cursor:pointer; }
 .quiz-option:hover{ transform:translateY(-2px); box-shadow:0 10px 30px -10px rgba(234,88,12,.3); }
-.quiz-option.selected{ background:#ea580c !important; color:#fff !important; border-color:#ea580c !important; }
 @keyframes countUp{ 0%{opacity:0;transform:translateY(10px);} 100%{opacity:1;transform:translateY(0);} }
 .stat-counter{ animation:countUp .6s ease-out; }
-.faq-item{ border-bottom:1px solid #e2e8f0; }
-.faq-question{ cursor:pointer; transition:all .2s; }
-.faq-question:hover{ background:#f8fafc; }
-.faq-answer{ max-height:0; overflow:hidden; transition:max-height .3s ease; }
-.faq-item.open .faq-answer{ max-height:500px; }
-.faq-item.open .faq-icon{ transform:rotate(180deg); }
-.faq-icon{ transition:transform .3s; }
-@keyframes pulse-cta{ 0%,100%{box-shadow:0 10px 30px -8px rgba(234,88,12,.5);} 50%{box-shadow:0 10px 40px -8px rgba(234,88,12,.8);} }
-.pulse-cta{ animation:pulse-cta 2s ease-in-out infinite; }
-/* Карточки-табы направлений */
 .dir-card{ transition:all .35s cubic-bezier(.4,0,.2,1); cursor:pointer; position:relative; overflow:hidden; }
-.dir-card::before{ content:""; position:absolute; inset:0; background:linear-gradient(135deg, rgba(251,191,36,.0) 0%, rgba(251,191,36,.08) 100%); opacity:0; transition:opacity .3s; pointer-events:none; }
 .dir-card:hover{ transform:translateY(-4px); }
-.dir-card:hover::before{ opacity:1; }
 .dir-card.active{ border-color:#fbbf24 !important; box-shadow:0 0 0 3px rgba(251,191,36,.4), 0 20px 40px -12px rgba(251,191,36,.35); transform:translateY(-4px); }
-.dir-card.active::before{ opacity:1; }
 .dir-card.active .dir-badge{ background:#fbbf24; color:#082f49; }
 .dir-content{ display:none; }
 .dir-content.active{ display:block; animation:fadeUp .4s ease-out; }
 @keyframes fadeUp{ 0%{opacity:0;transform:translateY(10px);} 100%{opacity:1;transform:translateY(0);} }
-/* Калькулятор в тёмной теме */
-.calc-panel{ background:linear-gradient(135deg, #082f49 0%, #0c4a6e 50%, #0369a1 100%); position:relative; overflow:hidden; }
-.calc-panel::before{ content:""; position:absolute; top:-50%; right:-20%; width:600px; height:600px; background:radial-gradient(circle, rgba(251,191,36,.12) 0%, transparent 70%); border-radius:50%; pointer-events:none; }
-.calc-input-dark{ width:100%; padding:.65rem .75rem; background:rgba(255,255,255,.08); border:2px solid rgba(255,255,255,.15); border-radius:.75rem; text-align:center; font-weight:700; font-size:1.1rem; color:#fff; transition:all .2s; }
+@media (max-width:768px){
+.dir-card{ cursor:default; }
+.dir-card:hover{ transform:none; }
+.dir-content{ display:block !important; animation:none !important; margin-top:1rem; }
+}
+.faq-item{ border-bottom:1px solid #e2e8f0; }
+.faq-question{ cursor:pointer; transition:all .2s; }
+.faq-question:hover{ background:#f8fafc; }
+.faq-answer{ max-height:0; overflow:hidden; transition:max-height .3s ease; }
+.faq-item.open .faq-answer{ max-height:600px; }
+.faq-item.open .faq-icon{ transform:rotate(180deg); }
+.faq-icon{ transition:transform .3s; }
+@keyframes pulse-cta{ 0%,100%{box-shadow:0 10px 30px -8px rgba(234,88,12,.5);} 50%{box-shadow:0 10px 40px -8px rgba(234,88,12,.8);} }
+.pulse-cta{ animation:pulse-cta 2s ease-in-out infinite; }
+.article-card{ transition:all .25s; }
+.article-card:hover{ transform:translateY(-4px); box-shadow:0 18px 40px -16px rgba(8,47,73,.25); }
+.article-card:hover img{ transform:scale(1.05); }
+.article-card img{ transition:transform .5s; }
+.calc-input-dark{ width:100%; padding:.65rem .75rem; background:rgba(255,255,255,.08); border:2px solid rgba(255,255,255,.15); border-radius:.75rem; text-align:center; font-weight:700; font-size:1.05rem; color:#fff; transition:all .2s; }
 .calc-input-dark:focus{ outline:none; border-color:#fbbf24; background:rgba(255,255,255,.12); }
 .calc-input-dark option{ background:#082f49; color:#fff; }
-.calc-label{ color:rgba(255,255,255,.7); font-size:.8rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em; }
+.calc-label{ color:rgba(255,255,255,.7); font-size:.75rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em; }
 .mode-toggle{ display:flex; background:rgba(255,255,255,.08); border-radius:.75rem; padding:4px; gap:4px; }
 .mode-btn{ flex:1; padding:.5rem; border-radius:.5rem; font-weight:700; font-size:.85rem; color:rgba(255,255,255,.7); cursor:pointer; transition:all .2s; text-align:center; border:none; background:transparent; }
 .mode-btn.active{ background:#fbbf24; color:#082f49; box-shadow:0 4px 12px -4px rgba(251,191,36,.5); }
-/* Корпоративный блок — на всю ширину */
-.corp-block{ background:linear-gradient(135deg, #082f49 0%, #0c4a6e 50%, #0369a1 100%); position:relative; overflow:hidden; }
-.corp-block::before{ content:""; position:absolute; top:-50%; right:-20%; width:600px; height:600px; background:radial-gradient(circle, rgba(251,191,36,.15) 0%, transparent 70%); border-radius:50%; pointer-events:none; }
-/* Мобильная адаптация */
-@media (max-width: 768px){
-#routes .relative.rounded-3xl{ aspect-ratio:4/3 !important; min-height:220px !important; }
-#routes .absolute[style*="left:"]{ transform:scale(.85); transform-origin:center; }
-#routes .absolute[style*="left:"] p{ font-size:10px !important; padding:2px 6px !important; white-space:nowrap; }
-#routes .w-4{ width:10px !important; height:10px !important; border-width:3px !important; }
-#routes .w-3{ width:7px !important; height:7px !important; }
-#directions .dir-card{ cursor:default; }
-#directions .dir-card::before{ display:none; }
-#directions .dir-card:hover{ transform:none; }
-#directions .dir-content{ display:block !important; animation:none !important; margin-top:1rem; }
-#directions .dir-card .dir-badge{ font-size:10px; padding:4px 10px; }
-#directions .dir-card h3{ font-size:1.25rem; }
-#directions .dir-card p.text-sm{ font-size:.8rem; }
-#directions .dir-card ul li{ font-size:.8rem; }
-#directions .dir-card .text-2xl{ font-size:1.25rem; }
-.mobile-flex-order{ display:flex; flex-direction:column; gap:0; }
-.mobile-flex-order > section{ padding-left:0; padding-right:0; max-width:100%; }
-}
-@media (min-width: 769px){
-.mobile-flex-order{ display:block !important; }
-.mobile-flex-order > section:not(#corporate){ margin-left:auto; margin-right:auto; max-width:72rem; }
-#corporate{ width:100%; max-width:100%; margin-left:0; margin-right:0; }
-}
-/* Иконки-пиктограммы */
-.icon-svg{ width:28px; height:28px; flex:none; }
 </style>
 <script type="application/ld+json">
 {
 "@context": "https://schema.org",
 "@graph": [
-{"@type":"WebSite","name":"РосТур Эксперт","url":"https://rostur.expert/"},
-{"@type":"Organization","name":"РосТур Эксперт","url":"https://rostur.expert/","telephone":["+79950320002","+79965117659"],"address":{"@type":"PostalAddress","addressCountry":"RU","addressRegion":"Волгоградская область","addressLocality":"хутор Вертячий"},"sameAs":["https://vk.com/rosturexpert"]},
-{"@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Сколько стоит сплав на плоту?","acceptedAnswer":{"@type":"Answer","text":"Аренда плота от 29 000 ₽/сутки в будни (Пн–Чт) и 33 000 ₽/сутки в выходные (Пт–Вс). Плот вмещает до 12 человек. В стоимость включены баня, мангал, коптильня и всё снаряжение."}},
-{"@type":"Question","name":"Сколько стоит кемпинг «Парк Вертячий»?","acceptedAnswer":{"@type":"Answer","text":"250 ₽/сутки с человека (пеший турист), 1 000 ₽/сутки за машину (до 4 человек, включает парковку). Душ, туалет и мангалы — бесплатно."}},
-{"@type":"Question","name":"Как далеко от Волгограда?","acceptedAnswer":{"@type":"Answer","text":"50 км от центра Волгограда, 38 минут на машине. Старт маршрутов — хутор Вертячий, Волгоградская область."}},
-{"@type":"Question","name":"Нужна ли предоплата?","acceptedAnswer":{"@type":"Answer","text":"Для плота — предоплата 30% для фиксации даты. Для кемпинга — оплата на месте при заезде."}}
-]}
+{
+"@type": "WebSite",
+"name": "РосТур Эксперт",
+"url": "https://rostur.expert/",
+"description": "Сплавы на плоту по Дону и кемпинг «Парк Вертячий» в Волгоградской области",
+"inLanguage": "ru-RU"
+},
+{
+"@type": "Organization",
+"@id": "https://rostur.expert/#org",
+"name": "РосТур Эксперт",
+"url": "https://rostur.expert/",
+"telephone": ["+79950320002", "+79965117659"],
+"email": "zakaz@rostur.expert",
+"foundingDate": "2018",
+"sameAs": ["https://vk.com/o_t_d_ix"],
+"aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "247" },
+"address": {
+"@type": "PostalAddress",
+"addressCountry": "RU",
+"addressRegion": "Волгоградская область",
+"addressLocality": "хутор Вертячий"
+}
+},
+{
+"@type": "FAQPage",
+"mainEntity": [
+{"@type":"Question","name":"Чем плот отличается от кемпинга и что выбрать?","acceptedAnswer":{"@type":"Answer","text":"Плот — это плавучий дом с баней и капитаном: вы ночуете на воде и каждый день новая стоянка. Кемпинг — стационарная охраняемая поляна на берегу с душем и мангалами. Хотите движения и бани на воде — плот; хотите палатку у воды с комфортом и бюджетом от 250 ₽ — кемпинг."}},
+{"@type":"Question","name":"Сколько стоит отдых?","acceptedAnswer":{"@type":"Answer","text":"Плот: 29 000 ₽/сутки в будни и 33 000 ₽/сутки в выходные за весь плот до 12 человек. Кемпинг: 250 ₽/чел/сутки пеший, 750 ₽/сутки машина во 2-й линии, 1 000 ₽/сутки машина в 1-й линии у воды."}},
+{"@type":"Question","name":"Как далеко от Волгограда?","acceptedAnswer":{"@type":"Answer","text":"50 км от центра Волгограда, 38 минут на машине. Старт обоих направлений — хутор Вертячий, Волгоградская область."}},
+{"@type":"Question","name":"Нужна ли предоплата?","acceptedAnswer":{"@type":"Answer","text":"Для плота — предоплата 30% фиксирует дату и маршрут. Для кемпинга предоплата 30% снимает поляну с продажи, остаток при заезде."}},
+{"@type":"Question","name":"Можно ли с детьми и животными?","acceptedAnswer":{"@type":"Answer","text":"Да. На плоту детские спасжилеты всех размеров и огороженная палуба. В кемпинге питомцы — по предварительному согласованию с администратором."}},
+{"@type":"Question","name":"Что взять с собой?","acceptedAnswer":{"@type":"Answer","text":"Личные вещи, воду и продукты. На плоту уже есть посуда, мангал, коптильня, палатки и спальники; в кемпинге — мангальные зоны, дрова, столы, душ и туалеты."}}
+]
+}
 ]
 }
 </script>
 </head>
 <body class="bg-white text-slate-800 antialiased pb-[52px] md:pb-0">
-<!-- ═══ Header с кнопками звонка ═══ -->
+<!-- ═══ Header ═══ -->
 <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm" x-data="{ m:false }">
 <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-3">
-<a href="." class="flex items-center gap-2 font-extrabold text-river-deep text-lg leading-none shrink-0">
+<a href="./" class="flex items-center gap-2 font-extrabold text-river-deep text-lg leading-none shrink-0">
 <span class="grid place-items-center w-9 h-9 rounded-xl bg-river text-white text-sm">РТ</span>
-<span class="hidden sm:inline">РосТур Эксперт</span>
+<span class="text-base sm:text-lg whitespace-nowrap">РосТур Эксперт</span>
 </a>
-<nav class="hidden lg:flex items-center gap-5 text-sm font-semibold text-slate-600">
+<nav class="hidden lg:flex items-center gap-5 text-sm font-semibold text-slate-600" aria-label="Основная навигация">
 <a href="#directions" class="hover:text-ember transition">Направления</a>
 <a href="#calculator" class="hover:text-ember transition">Калькулятор</a>
 <a href="#corporate" class="hover:text-ember transition">Корпоратив</a>
 <a href="#routes" class="hover:text-ember transition">Маршруты</a>
 <a href="#gallery" class="hover:text-ember transition">Фото</a>
+<a href="#articles" class="hover:text-ember transition">Статьи</a>
 <a href="#faq" class="hover:text-ember transition">Вопросы</a>
 </nav>
 <div class="flex items-center gap-2">
-<a href="tel:+79950320002" class="hidden md:inline-flex items-center gap-1.5 border border-river/30 text-river font-bold text-xs px-3 py-2 rounded-lg hover:bg-river hover:text-white transition" title="Позвонить по плотам">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3l2 5-2.5 1.5a11 11 0 005 5L13 12l5 2v3a2 2 0 01-2 2A16 16 0 013 5z"/></svg>
-<span class="hidden xl:inline">Плоты</span>
-</a>
-<a href="tel:+79965117659" class="hidden md:inline-flex items-center gap-1.5 border border-river/30 text-river font-bold text-xs px-3 py-2 rounded-lg hover:bg-river hover:text-white transition" title="Позвонить по кемпингу">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3l2 5-2.5 1.5a11 11 0 005 5L13 12l5 2v3a2 2 0 01-2 2A16 16 0 013 5z"/></svg>
-<span class="hidden xl:inline">Кемпинг</span>
-</a>
+<a href="tel:+79950320002" class="hidden md:inline-flex items-center gap-1.5 border border-river/30 text-river font-bold text-xs px-3 py-2 rounded-lg hover:bg-river hover:text-white transition">🚢 Плоты</a>
+<a href="tel:+79965117659" class="hidden md:inline-flex items-center gap-1.5 border border-river/30 text-river font-bold text-xs px-3 py-2 rounded-lg hover:bg-river hover:text-white transition">🏕 Кемпинг</a>
 <a href="#quiz" class="hidden sm:inline-flex items-center gap-2 bg-ember hover:bg-ember-dark text-white font-bold px-4 py-2 rounded-xl shadow-cta transition active:scale-95 text-sm">Найти отдых ↓</a>
-<button type="button" @click="m=!m" :aria-expanded="m" aria-label="Меню" class="md:hidden grid place-items-center w-11 h-11 rounded-xl border border-slate-200 text-river-deep">
-<svg x-show="!m" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
-<svg x-show="m" x-cloak class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+<button type="button" @click="m=!m" :aria-expanded="m" aria-label="Меню" class="lg:hidden grid place-items-center w-11 h-11 rounded-xl border border-slate-200 text-river-deep">
+<svg x-show="!m" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+<svg x-show="m" x-cloak class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
 </button>
 </div>
 </div>
-<div x-show="m" x-cloak x-transition class="md:hidden border-t border-slate-200 bg-white px-4 pb-4 pt-2 space-y-1 text-base font-semibold">
+<div x-show="m" x-cloak x-transition class="lg:hidden border-t border-slate-200 bg-white px-4 pb-4 pt-2 space-y-1 text-base font-semibold">
 <a @click="m=false" href="#directions" class="block py-3 border-b border-slate-100">Направления</a>
 <a @click="m=false" href="#calculator" class="block py-3 border-b border-slate-100">Калькулятор</a>
 <a @click="m=false" href="#corporate" class="block py-3 border-b border-slate-100">Корпоратив</a>
 <a @click="m=false" href="#routes" class="block py-3 border-b border-slate-100">Маршруты</a>
 <a @click="m=false" href="#gallery" class="block py-3 border-b border-slate-100">Фото</a>
+<a @click="m=false" href="#articles" class="block py-3 border-b border-slate-100">Статьи</a>
 <a @click="m=false" href="#faq" class="block py-3 border-b border-slate-100">Вопросы</a>
-<a href="tel:+79950320002" class="block py-3 border-b border-slate-100 text-river font-bold"> Плоты: +7 (995) 032-00-02</a>
-<a href="tel:+79965117659" class="block py-3 border-b border-slate-100 text-river font-bold">📞 Кемпинг: +7 (996) 511-76-59</a>
+<a href="tel:+79950320002" class="block py-3 border-b border-slate-100 text-river font-bold">🚢 Плоты: +7 (995) 032-00-02</a>
+<a href="tel:+79965117659" class="block py-3 border-b border-slate-100 text-river font-bold">🏕 Кемпинг: +7 (996) 511-76-59</a>
 <a @click="m=false" href="#quiz" class="block text-center bg-ember text-white font-bold py-3 rounded-xl mt-2">Найти отдых ↓</a>
 </div>
 </header>
 <main>
-<!-- ══ Hero с квизом ═══ -->
+<!-- ═══ Hero с квизом ═══ -->
 <section class="river-bg text-white relative overflow-hidden">
-<div class="absolute inset-0 opacity-20" style="background-image:url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'100\'><path d=\'M0 50 Q 25 30 50 50 T 100 50\' stroke=\'%23fff\' stroke-width=\'2\' fill=\'none\' opacity=\'0.3\'/></svg>'); background-size:100px 100px;"></div>
+<div class="absolute inset-0 opacity-20" style="background-image:url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'100\'><path d=\'M0 50 Q 25 30 50 50 T 100 50\' stroke=\'%23fff\' stroke-width=\'2\' fill=\'none\' opacity=\'0.3\'/></svg>'); background-size:100px 100px;" aria-hidden="true"></div>
 <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 relative">
-<nav class="text-xs font-semibold text-white/70 mb-6"><ol class="flex items-center gap-1.5"><li class="text-gold">Главная</li></ol></nav>
-<div class="grid md:grid-cols-2 gap-8 items-center">
-<div>
-<p class="inline-flex items-center gap-2 rounded-full bg-gold/20 border border-gold/40 text-gold px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest mb-4">🏕️ 8 лет на реке · Рейтинг 5.0★</p>
+<nav aria-label="Хлебные крошки" class="text-xs font-semibold text-white/70 mb-6">
+<ol class="flex items-center gap-1.5"><li class="text-gold">Главная</li></ol>
+</nav>
+<div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+<div class="min-w-0">
+<p class="inline-flex items-center gap-2 rounded-full bg-gold/15 border border-gold/40 text-gold px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest mb-4">🏕 8 лет на реке · рейтинг 5.0★</p>
 <h1 class="h-hero font-extrabold mb-4">Отдых на Дону, <span class="text-gold">который запомнится навсегда</span></h1>
-<p class="text-lg md:text-xl text-white/90 leading-relaxed mb-6">Два формата активного отдыха в 50 км от Волгограда: сплав на двухэтажном плоту с баней или кемпинг «Парк Вертячий» на берегу Дона. Рыбалка, природа, тишина.</p>
+<p class="text-lg md:text-xl text-white/90 leading-relaxed mb-6 max-w-xl">Два формата активного отдыха в 50 км от Волгограда: сплав на двухэтажном плоту с баней или кемпинг «Парк Вертячий» на берегу Дона. Рыбалка, природа, тишина.</p>
 <div class="flex flex-wrap gap-3">
 <a href="#quiz" class="inline-flex items-center gap-2 bg-ember hover:bg-ember-dark text-white font-extrabold px-6 py-3 rounded-xl shadow-cta transition active:scale-95 pulse-cta">Найти свой отдых ↓</a>
 <a href="#directions" class="inline-flex items-center gap-2 border-2 border-white/50 hover:border-white hover:bg-white/10 text-white font-bold px-6 py-3 rounded-xl transition">Смотреть варианты</a>
 </div>
+<p class="mt-4 text-xs text-white/70">Сезон 2027 открыт · бронь на выходные — за 4–12 недель вперёд</p>
 </div>
-<div id="quiz" class="bg-white/10 backdrop-blur border border-white/20 rounded-3xl p-6 md:p-8">
-<p class="text-xs font-extrabold uppercase tracking-widest text-gold mb-3">🎯 Найди свой формат за 60 секунд</p>
+<div id="quiz" class="min-w-0 bg-white/10 backdrop-blur border border-white/20 rounded-3xl p-6 md:p-8">
+<p class="text-xs font-extrabold uppercase tracking-widest text-gold mb-3">🎯 Подбор формата за 60 секунд</p>
 <div id="quiz-container">
 <div class="quiz-step active" data-step="1">
 <p class="text-lg font-extrabold mb-4">С кем планируете отдых?</p>
@@ -219,7 +220,7 @@ background-repeat:no-repeat; background-size:100% .52em; background-position:0 8
 <div class="quiz-step" data-step="2">
 <p class="text-lg font-extrabold mb-4">Что для вас важнее?</p>
 <div class="space-y-3">
-<button type="button" class="quiz-option w-full text-left bg-white/10 border-2 border-white/20 rounded-xl p-4" data-answer="fishing"><p class="font-bold"> Рыбалка и тишина</p><p class="text-sm text-white/70 mt-1">Судак, сом, щука — трофейный улов</p></button>
+<button type="button" class="quiz-option w-full text-left bg-white/10 border-2 border-white/20 rounded-xl p-4" data-answer="fishing"><p class="font-bold">🎣 Рыбалка и тишина</p><p class="text-sm text-white/70 mt-1">Судак, сом, щука — трофейный улов</p></button>
 <button type="button" class="quiz-option w-full text-left bg-white/10 border-2 border-white/20 rounded-xl p-4" data-answer="active"><p class="font-bold">🏄 Активности и движение</p><p class="text-sm text-white/70 mt-1">САП, волейбол, прогулки</p></button>
 <button type="button" class="quiz-option w-full text-left bg-white/10 border-2 border-white/20 rounded-xl p-4" data-answer="relax"><p class="font-bold">🧘 Релакс и комфорт</p><p class="text-sm text-white/70 mt-1">Баня, мангал, звёзды</p></button>
 </div>
@@ -247,24 +248,22 @@ background-repeat:no-repeat; background-size:100% .52em; background-position:0 8
 <section class="bg-sand py-10 md:py-14">
 <div class="max-w-6xl mx-auto px-4">
 <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-<div class="text-center"><p class="text-4xl md:text-5xl font-extrabold text-river-deep stat-counter" data-target="247">0</p><p class="mt-2 text-sm text-slate-600 font-semibold">Семей отдохнули в 2026</p></div>
-<div class="text-center"><p class="text-4xl md:text-5xl font-extrabold text-river-deep stat-counter" data-target="8">0</p><p class="mt-2 text-sm text-slate-600 font-semibold">Лет на реке</p></div>
-<div class="text-center"><p class="text-4xl md:text-5xl font-extrabold text-river-deep stat-counter" data-target="50">0</p><p class="mt-2 text-sm text-slate-600 font-semibold">Км от Волгограда</p></div>
-<div class="text-center"><p class="text-4xl md:text-5xl font-extrabold text-river-deep stat-counter" data-target="5">0</p><p class="mt-2 text-sm text-slate-600 font-semibold">Рейтинг ★</p></div>
+<div class="text-center"><p class="text-4xl md:text-5xl font-extrabold text-river-deep stat-counter" data-target="247">0</p><p class="mt-2 text-sm text-slate-600 font-semibold">семей отдохнули в 2026</p></div>
+<div class="text-center"><p class="text-4xl md:text-5xl font-extrabold text-river-deep stat-counter" data-target="8">0</p><p class="mt-2 text-sm text-slate-600 font-semibold">лет на реке, с 2018 года</p></div>
+<div class="text-center"><p class="text-4xl md:text-5xl font-extrabold text-river-deep stat-counter" data-target="50">0</p><p class="mt-2 text-sm text-slate-600 font-semibold">км от Волгограда</p></div>
+<div class="text-center"><p class="text-4xl md:text-5xl font-extrabold text-river-deep">5.0 ★</p><p class="mt-2 text-sm text-slate-600 font-semibold">247 отзывов гостей</p></div>
 </div>
 </div>
 </section>
-<!-- ══ Направления: две большие карточки-превью ═══ -->
-<div class="mobile-flex-order">
-<section id="directions" class="py-10 md:py-14">
+<!-- ═══ Направления ═══ -->
+<section id="directions" class="py-12 md:py-16">
 <div class="max-w-6xl mx-auto px-4">
 <h2 class="h-sec font-extrabold text-river-deep text-center mb-3">Выберите <span class="mark-yellow">своё приключение</span></h2>
 <p class="text-center text-slate-600 mb-10 max-w-2xl mx-auto">Два формата, одна река. <span class="mark-yellow">Нажмите на карточку — увидите подробности и цены</span>.</p>
 <div class="grid md:grid-cols-2 gap-6 mb-10">
-<!-- Карточка Плот -->
 <div class="dir-card active rounded-3xl border-2 border-slate-200 bg-white overflow-hidden" data-dir="raft" role="button" tabindex="0" aria-pressed="true">
 <div class="ratio-16-9 overflow-hidden">
-<img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/41bee1e5-c0c2-4d21-984b-e58b7e85084e/41bee1e5-c0c2-4d21-984b-e58b7e85084e-16582868.png" alt="Двухэтажный плот с баней на Дону" width="1200" height="675" loading="lazy" decoding="async" class="h-full w-full object-cover">
+<img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/41bee1e5-c0c2-4d21-984b-e58b7e85084e/41bee1e5-c0c2-4d21-984b-e58b7e85084e-16582868.png" alt="Двухэтажный плот с баней на Дону среди меловых гор" width="1200" height="675" loading="lazy" decoding="async" class="h-full w-full object-cover">
 </div>
 <div class="p-6">
 <div class="flex items-center gap-2 mb-3">
@@ -275,7 +274,7 @@ background-repeat:no-repeat; background-size:100% .52em; background-position:0 8
 <p class="text-sm text-slate-600 mb-4 leading-relaxed">«Бульбусик» — плавучий дом 96 м². Баня на воде, коптильня, капитан, рыбалка с палубы. До 12 человек.</p>
 <ul class="space-y-1.5 text-sm text-slate-700 mb-5">
 <li class="flex items-start gap-2"><span class="text-ember font-bold">✓</span> Баня, мангал, коптильня — всё на борту</li>
-<li class="flex items-start gap-2"><span class="text-ember font-bold">✓</span>  Трофейная рыбалка: судак, сом, щука, лещ</li>
+<li class="flex items-start gap-2"><span class="text-ember font-bold">✓</span> 🎣 Трофейная рыбалка: судак, сом, щука, лещ</li>
 <li class="flex items-start gap-2"><span class="text-ember font-bold">✓</span> Маршруты 1–7 суток из х. Вертячий</li>
 </ul>
 <div class="flex items-end justify-between pt-4 border-t border-slate-100">
@@ -284,22 +283,21 @@ background-repeat:no-repeat; background-size:100% .52em; background-position:0 8
 </div>
 </div>
 </div>
-<!-- Карточка Кемпинг -->
 <div class="dir-card rounded-3xl border-2 border-slate-200 bg-white overflow-hidden" data-dir="camp" role="button" tabindex="0" aria-pressed="false">
 <div class="ratio-16-9 overflow-hidden">
-<img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/8bb1474b-a50d-44aa-9a55-fde931c85572/8bb1474b-a50d-44aa-9a55-fde931c85572-13865644.jpeg" alt="Кемпинг Парк Вертячий на берегу Дона" width="1200" height="675" loading="lazy" decoding="async" class="h-full w-full object-cover">
+<img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/8bb1474b-a50d-44aa-9a55-fde931c85572/8bb1474b-a50d-44aa-9a55-fde931c85572-13865644.jpeg" alt="Кемпинг Парк Вертячий: палатки на берегу Дона на закате" width="1200" height="675" loading="lazy" decoding="async" class="h-full w-full object-cover">
 </div>
 <div class="p-6">
 <div class="flex items-center gap-2 mb-3">
-<span class="dir-badge inline-flex items-center gap-1.5 rounded-full bg-river text-white px-3 py-1 text-xs font-extrabold uppercase tracking-wider transition">🏕️ Круглый год</span>
+<span class="dir-badge inline-flex items-center gap-1.5 rounded-full bg-river text-white px-3 py-1 text-xs font-extrabold uppercase tracking-wider transition">🏕 Круглый год</span>
 <span class="text-xs font-bold text-slate-500">Направление №2</span>
 </div>
 <h3 class="text-2xl font-extrabold text-river-deep mb-2">Кемпинг «Парк Вертячий»</h3>
 <p class="text-sm text-slate-600 mb-4 leading-relaxed">Охраняемый берег Дона в 38 минутах от города. Столы, кострища, душ — и лучшая рыбалка области.</p>
 <ul class="space-y-1.5 text-sm text-slate-700 mb-5">
-<li class="flex items-start gap-2"><span class="text-ember font-bold">✓</span> ️ Охрана, парковка, душ — бесплатно</li>
+<li class="flex items-start gap-2"><span class="text-ember font-bold">✓</span> 🛡 Охрана, парковка, душ — включены</li>
 <li class="flex items-start gap-2"><span class="text-ember font-bold">✓</span> 🎣 Рыбалка в 50 метрах от палатки</li>
-<li class="flex items-start gap-2"><span class="text-ember font-bold">✓</span> 📍 50 км от Волгограда, без предоплаты</li>
+<li class="flex items-start gap-2"><span class="text-ember font-bold">✓</span> 39 полян: 15 у воды, 20 в лесу, 4 приватных</li>
 </ul>
 <div class="flex items-end justify-between pt-4 border-t border-slate-100">
 <div><p class="text-xs text-slate-500 mb-1">от</p><p class="text-2xl font-extrabold text-river-deep">250 ₽ <span class="text-sm font-normal text-slate-500">/ чел / сутки</span></p></div>
@@ -308,30 +306,20 @@ background-repeat:no-repeat; background-size:100% .52em; background-position:0 8
 </div>
 </div>
 </div>
-<!-- Подробный блок ПЛОТ (тёмный) -->
 <div class="dir-content active" data-content="raft">
 <div class="rounded-3xl bg-gradient-to-br from-river-deep to-river text-white p-6 md:p-10 shadow-card">
 <div class="grid md:grid-cols-2 gap-8 items-center">
-<div>
+<div class="min-w-0">
 <h3 class="text-2xl md:text-3xl font-extrabold mb-4">Сплав на плоту по Дону</h3>
 <p class="text-white/85 mb-6 leading-relaxed">Двухэтажный плот «Бульбусик» — ваш плавучий дом на 96 м². Баня, мангал, коптильня, рыбалка прямо с борта. До 12 человек, маршруты от 1 до 7 суток.</p>
-<div class="space-y-4 mb-6">
-<div class="flex items-start gap-3">
-<svg class="icon-svg mt-0.5" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2"><path d="M4 10h16v8a2 2 0 01-2 2H6a2 2 0 01-2-2v-8z"/><path d="M8 10V6a4 4 0 018 0v4"/><path d="M12 14v2"/></svg>
-<div><p class="font-extrabold text-lg">Баня на борту</p><p class="text-sm text-white/70">Настоящая парная с вениками</p></div>
-</div>
-<div class="flex items-start gap-3">
-<svg class="icon-svg mt-0.5" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2"><path d="M3 12c3-4 6-4 9 0s6 4 9 0"/><path d="M12 12v8"/><path d="M8 16c2 2 6 2 8 0"/></svg>
-<div><p class="font-extrabold text-lg">Трофейная рыбалка</p><p class="text-sm text-white/70">Судак, сом, щука, лещ</p></div>
-</div>
-<div class="flex items-start gap-3">
-<svg class="icon-svg mt-0.5" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2"><path d="M6 3h12v4H6z"/><path d="M8 7v10a2 2 0 002 2h4a2 2 0 002-2V7"/><path d="M10 12h4"/></svg>
-<div><p class="font-extrabold text-lg">Мангал и коптильня</p><p class="text-sm text-white/70">Готовьте уху из свежего улова</p></div>
-</div>
+<div class="space-y-3 mb-6">
+<div class="flex items-center gap-3"><span class="text-2xl" aria-hidden="true">🧖</span><div><p class="font-extrabold">Баня на борту</p><p class="text-sm text-white/70">Настоящая парная с вениками</p></div></div>
+<div class="flex items-center gap-3"><span class="text-2xl" aria-hidden="true">🎣</span><div><p class="font-extrabold">Трофейная рыбалка</p><p class="text-sm text-white/70">Судак, сом, щука, лещ</p></div></div>
+<div class="flex items-center gap-3"><span class="text-2xl" aria-hidden="true">🍖</span><div><p class="font-extrabold">Мангал и коптильня</p><p class="text-sm text-white/70">Готовьте уху из свежего улова</p></div></div>
 </div>
 <a href="splav-po-dony-na-ploty/" class="inline-flex items-center gap-2 bg-ember hover:bg-ember-dark text-white font-extrabold px-6 py-3 rounded-xl shadow-cta transition active:scale-95">Подробнее о сплаве →</a>
 </div>
-<div class="rounded-2xl bg-white/10 border border-white/20 backdrop-blur p-6">
+<div class="min-w-0 rounded-2xl bg-white/10 border border-white/20 backdrop-blur p-6">
 <p class="text-xs font-extrabold uppercase tracking-widest text-gold mb-3">Стоимость</p>
 <p class="text-3xl font-extrabold mb-1">29 000 ₽ <span class="text-base font-normal text-white/70">/ сутки (будни)</span></p>
 <p class="text-3xl font-extrabold mb-4">33 000 ₽ <span class="text-base font-normal text-white/70">/ сутки (выходные)</span></p>
@@ -344,70 +332,51 @@ background-repeat:no-repeat; background-size:100% .52em; background-position:0 8
 </div>
 </div>
 </div>
-<!-- Подробный блок КЕМПИНГ (тёмный, в том же стиле) -->
 <div class="dir-content" data-content="camp">
-<div class="rounded-3xl bg-gradient-to-br from-river-deep to-river text-white p-6 md:p-10 shadow-card">
+<div class="rounded-3xl bg-gradient-to-br from-sand via-white to-river-light border-2 border-slate-200 p-6 md:p-10 shadow-card">
 <div class="grid md:grid-cols-2 gap-8 items-center">
-<div>
-<h3 class="text-2xl md:text-3xl font-extrabold mb-4">Кемпинг «Парк Вертячий»</h3>
-<p class="text-white/85 mb-6 leading-relaxed">Охраняемый берег Дона в 38 минутах от города. Столы, кострища, санузлы и душ — бесплатно. Приезжайте со своей палаткой или берите поляну у воды на машине. Отдельная история — рыбалка: судак, сом, щука и трофейный лещ прямо от берега.</p>
-<div class="space-y-4 mb-6">
-<div class="flex items-start gap-3">
-<svg class="icon-svg mt-0.5" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
-<div><p class="font-extrabold text-lg">Охраняемая территория</p><p class="text-sm text-white/70">Машина и вещи под присмотром</p></div>
+<div class="min-w-0 order-2 md:order-1">
+<div class="rounded-2xl bg-river-deep text-white p-6 mb-6">
+<p class="text-xs font-extrabold uppercase tracking-widest text-gold mb-3">Тарифы кемпинга</p>
+<div class="space-y-3">
+<div class="flex items-center justify-between pb-3 border-b border-white/20"><div><p class="font-extrabold">🚶 Пеший турист</p><p class="text-xs text-white/70">Без машины</p></div><p class="text-2xl font-extrabold text-gold">250 ₽<span class="text-xs font-normal text-white/70">/сутки</span></p></div>
+<div class="flex items-center justify-between pb-3 border-b border-white/20"><div><p class="font-extrabold">🚗 Машина · 2-я линия</p><p class="text-xs text-white/70">Тень леса, 25 м от воды</p></div><p class="text-2xl font-extrabold text-gold">750 ₽<span class="text-xs font-normal text-white/70">/сутки</span></p></div>
+<div class="flex items-center justify-between"><div><p class="font-extrabold">🚗 Машина · 1-я линия</p><p class="text-xs text-white/70">У самой воды</p></div><p class="text-2xl font-extrabold text-gold">1 000 ₽<span class="text-xs font-normal text-white/70">/сутки</span></p></div>
 </div>
-<div class="flex items-start gap-3">
-<svg class="icon-svg mt-0.5" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2"><path d="M4 12h16"/><path d="M4 12v6a2 2 0 002 2h12a2 2 0 002-2v-6"/><path d="M8 12V8a4 4 0 018 0v4"/></svg>
-<div><p class="font-extrabold text-lg">Душ и туалет</p><p class="text-sm text-white/70">Бесплатно для гостей</p></div>
-</div>
-<div class="flex items-start gap-3">
-<svg class="icon-svg mt-0.5" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2"><path d="M3 12c3-4 6-4 9 0s6 4 9 0"/><path d="M12 12v8"/><path d="M8 16c2 2 6 2 8 0"/></svg>
-<div><p class="font-extrabold text-lg">Рыбалка у берега</p><p class="text-sm text-white/70">Судак, сом, щука прямо от палатки</p></div>
-</div>
+<p class="text-xs text-white/70 mt-4 pt-3 border-t border-white/20">Душ, туалет, мангалы — включены для всех гостей</p>
 </div>
 <a href="camp/" class="inline-flex items-center gap-2 bg-ember hover:bg-ember-dark text-white font-extrabold px-6 py-3 rounded-xl shadow-cta transition active:scale-95">Подробнее о кемпинге →</a>
 </div>
-<div class="rounded-2xl bg-white/10 border border-white/20 backdrop-blur p-6">
-<p class="text-xs font-extrabold uppercase tracking-widest text-gold mb-4">Тарифы</p>
-<div class="space-y-4">
-<div class="pb-4 border-b border-white/20">
-<p class="text-xs text-white/70 mb-1">Пеший турист</p>
-<p class="text-3xl font-extrabold text-gold">250 ₽ <span class="text-sm font-normal text-white/70">/ чел / сутки</span></p>
+<div class="min-w-0 order-1 md:order-2">
+<h3 class="text-2xl md:text-3xl font-extrabold text-river-deep mb-4">Кемпинг «Парк Вертячий»</h3>
+<p class="text-slate-600 mb-6 leading-relaxed">Охраняемый кемпинг на берегу Дона. Столы, кострища, мангалы, душ, туалет — всё включено. Рыбалка мирового уровня в 50 метрах от палатки.</p>
+<div class="space-y-3">
+<div class="flex items-center gap-3"><span class="text-2xl" aria-hidden="true">🛡</span><div><p class="font-extrabold text-river-deep">Охраняемая территория</p><p class="text-sm text-slate-600">Машина и вещи под присмотром</p></div></div>
+<div class="flex items-center gap-3"><span class="text-2xl" aria-hidden="true">🚿</span><div><p class="font-extrabold text-river-deep">Душ и туалет</p><p class="text-sm text-slate-600">Горячая вода круглосуточно</p></div></div>
+<div class="flex items-center gap-3"><span class="text-2xl" aria-hidden="true">🎣</span><div><p class="font-extrabold text-river-deep">Рыбалка у берега</p><p class="text-sm text-slate-600">Судак, сом, щука прямо от палатки</p></div></div>
 </div>
-<div class="pb-4 border-b border-white/20">
-<p class="text-xs text-white/70 mb-1">Машина · 2-я линия</p>
-<p class="text-3xl font-extrabold text-gold">750 ₽ <span class="text-sm font-normal text-white/70">/ сутки</span></p>
-</div>
-<div>
-<p class="text-xs text-white/70 mb-1">Машина · 1-я линия (у воды)</p>
-<p class="text-3xl font-extrabold text-gold">1 000 ₽ <span class="text-sm font-normal text-white/70">/ сутки</span></p>
-</div>
-</div>
-<div class="space-y-2 text-xs text-white/80 mt-5 pt-4 border-t border-white/20">
-<p>✓ До 5 человек + машина на поляне</p>
-<p>✓ Мангал, стол, кострище — включено</p>
-<p>✓ Без предоплаты · оплата на месте</p>
-</div>
+<p class="mt-5 text-sm text-slate-600">Сравниваете площадки? Смотрите <a href="camping/" class="text-ember font-bold underline underline-offset-2 hover:no-underline">независимый рейтинг 18 кемпингов области</a> и <a href="fishing-volgograd-oblast/" class="text-ember font-bold underline underline-offset-2 hover:no-underline">карту рыбных мест Волгоградской области</a>.</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- ═══ Калькулятор в тёмной теме ═══ -->
-<section id="calculator" class="py-10 md:py-14">
+<!-- ═══ Калькулятор ═══ -->
+<section id="calculator" class="py-12 md:py-16">
 <div class="max-w-5xl mx-auto px-4">
 <h2 class="h-sec font-extrabold text-river-deep text-center mb-3">Калькулятор <span class="mark-yellow">стоимости отдыха</span></h2>
 <p class="text-center text-slate-600 mb-10">Рассчитайте точную стоимость за 30 секунд</p>
-<div class="calc-panel rounded-3xl p-6 md:p-10 shadow-card">
+<div class="rounded-3xl p-6 md:p-10 shadow-card relative overflow-hidden bg-gradient-to-br from-river-deep via-river to-river-mid text-white">
+<span class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-gold/10 blur-3xl" aria-hidden="true"></span>
 <div class="grid md:grid-cols-5 gap-8 relative">
-<div class="md:col-span-3 space-y-5">
+<div class="md:col-span-3 min-w-0 space-y-5">
 <p class="text-xs font-extrabold uppercase tracking-widest text-gold mb-2">Параметры отдыха</p>
 <div>
-<label class="calc-label block mb-2">Тип отдыха</label>
+<label class="calc-label block mb-2" for="calc-type">Тип отдыха</label>
 <select id="calc-type" class="calc-input-dark">
-<option value="raft"> Плот с баней</option>
-<option value="camp">🏕️ Кемпинг</option>
+<option value="raft">🚢 Плот с баней</option>
+<option value="camp">🏕 Кемпинг</option>
 </select>
 </div>
 <div id="camp-mode-wrap" style="display:none">
@@ -420,44 +389,45 @@ background-repeat:no-repeat; background-size:100% .52em; background-position:0 8
 </div>
 <div class="grid grid-cols-2 gap-4">
 <div>
-<label class="calc-label block mb-2" id="label-people">Количество человек</label>
+<label class="calc-label block mb-2" for="calc-people">Количество человек</label>
 <input type="number" id="calc-people" class="calc-input-dark" value="4" min="1" max="50">
 </div>
 <div>
-<label class="calc-label block mb-2">Количество суток</label>
+<label class="calc-label block mb-2" for="calc-days">Количество суток</label>
 <input type="number" id="calc-days" class="calc-input-dark" value="2" min="1" max="14">
 </div>
 </div>
 <div id="tariff-wrap">
-<label class="calc-label block mb-2">Тариф</label>
+<label class="calc-label block mb-2" for="calc-tariff">Тариф</label>
 <select id="calc-tariff" class="calc-input-dark">
 <option value="weekday">Будни (Пн–Чт)</option>
 <option value="weekend">Выходные (Пт–Вс)</option>
 </select>
 </div>
 </div>
-<div class="md:col-span-2 flex flex-col justify-center">
+<div class="md:col-span-2 min-w-0 flex flex-col justify-center">
 <div class="rounded-2xl bg-white/5 border border-white/10 backdrop-blur p-6 text-center">
 <p class="text-xs font-extrabold uppercase tracking-widest text-gold mb-3">Итоговая стоимость</p>
-<p class="text-5xl md:text-6xl font-extrabold text-gold leading-none mb-3" id="calc-total">0 ₽</p>
+<p class="text-5xl md:text-6xl font-extrabold text-gold leading-none mb-3 err-num"><span id="calc-total">0</span> ₽</p>
 <p class="text-sm text-white/80 mb-5" id="calc-details"></p>
 <div class="space-y-2 text-xs text-white/70 text-left pt-4 border-t border-white/10">
 <p class="flex items-start gap-2"><span class="text-gold font-bold">✓</span> Предоплата 30% фиксирует дату</p>
-<p class="flex items-start gap-2"><span class="text-gold font-bold">✓</span> Оплата на месте при заезде</p>
-<p class="flex items-start gap-2"><span class="text-gold font-bold">✓</span> Отмена без штрафов за 7 дней</p>
+<p class="flex items-start gap-2"><span class="text-gold font-bold">✓</span> Перенос вместо потери при отмене</p>
+<p class="flex items-start gap-2"><span class="text-gold font-bold">✓</span> Договор и ТБ присылаем заранее</p>
 </div>
-<a href="#quiz" class="mt-6 inline-flex items-center justify-center gap-2 w-full bg-ember hover:bg-ember-dark text-white font-extrabold px-6 py-3 rounded-xl shadow-cta transition active:scale-95">Забронировать →</a>
+<a href="#directions" class="mt-6 inline-flex items-center justify-center gap-2 w-full bg-ember hover:bg-ember-dark text-white font-extrabold px-6 py-3 rounded-xl shadow-cta transition active:scale-95">Выбрать направление →</a>
 </div>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- ═══ Корпоративный блок — на всю ширину ═══ -->
-<section id="corporate" class="corp-block text-white py-14 md:py-20 w-full">
+<!-- ═══ Корпоратив ═══ -->
+<section id="corporate" class="py-14 md:py-20 bg-gradient-to-br from-river-deep via-river to-river-mid text-white relative overflow-hidden">
+<span class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-gold/10 blur-3xl" aria-hidden="true"></span>
 <div class="max-w-6xl mx-auto px-4 relative">
 <div class="grid md:grid-cols-2 gap-10 items-center">
-<div>
+<div class="min-w-0">
 <p class="inline-flex items-center gap-2 rounded-full bg-gold/20 border border-gold/40 text-gold px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest mb-4">🏢 Для HR и руководителей</p>
 <h2 class="h-sec font-extrabold mb-4">Корпоративный сплав: <span class="text-gold">тимбилдинг, который работает</span></h2>
 <p class="text-lg text-white/90 leading-relaxed mb-6">Забудьте про скучные офисные посиделки. Сплав на плоту — это 2–3 дня совместного маршрута, где команда становится семьёй. Баня, рыбалка, вечер у костра — и ваши сотрудники возвращаются в офис с новым уровнем доверия.</p>
@@ -472,19 +442,19 @@ background-repeat:no-repeat; background-size:100% .52em; background-position:0 8
 <a href="tel:+79950320002" class="inline-flex items-center justify-center gap-2 border-2 border-white/50 hover:border-white hover:bg-white/10 text-white font-bold px-6 py-3 rounded-xl transition">📞 +7 (995) 032-00-02</a>
 </div>
 </div>
-<div class="space-y-4">
+<div class="min-w-0 space-y-4">
 <div class="rounded-2xl bg-white/10 border border-white/20 backdrop-blur p-5"><p class="font-extrabold text-gold text-lg">✓ Готовая программа под ключ</p><p class="text-sm text-white/85 mt-1">Маршрут, питание, активности, вечерняя программа — всё включено. Вам нужно только привезти команду.</p></div>
-<div class="rounded-2xl bg-white/10 border border-white/20 backdrop-blur p-5"><p class="font-extrabold text-gold text-lg">✓ Отчётные документы</p><p class="text-sm text-white/85 mt-1">Договор, акт, счёт-фактура — работаем с юрлицами и ИП. НДС, безналичный расчёт.</p></div>
+<div class="rounded-2xl bg-white/10 border border-white/20 backdrop-blur p-5"><p class="font-extrabold text-gold text-lg">✓ Отчётные документы</p><p class="text-sm text-white/85 mt-1">Договор, акт, счёт-фактура — работаем с юрлицами и ИП. Безналичный расчёт.</p></div>
 <div class="rounded-2xl bg-white/10 border border-white/20 backdrop-blur p-5"><p class="font-extrabold text-gold text-lg">✓ Безопасность по ГОСТ</p><p class="text-sm text-white/85 mt-1">Капитан с нормами ГИМС, спасжилеты на каждого, аптечка, инструктаж. Страхование включено.</p></div>
 </div>
 </div>
 </div>
 </section>
-<!-- ═══ Карта маршрутов ═══ -->
-<section id="routes" class="py-10 md:py-14">
+<!-- ═══ Маршруты ═══ -->
+<section id="routes" class="py-12 md:py-16 bg-sand">
 <div class="max-w-6xl mx-auto px-4">
 <h2 class="h-sec font-extrabold text-river-deep text-center mb-4">Карта <span class="mark-yellow">маршрутов по Дону</span></h2>
-<p class="text-center text-slate-600 mb-8 max-w-2xl mx-auto">Три проверенных маршрута разной сложности. От спокойной семейной прогулки до многодневной экспедиции.</p>
+<p class="text-center text-slate-600 mb-8 max-w-2xl mx-auto">Три проверенных маршрута разной сложности. Полный разбор стоянок, километража и сезонности — в <a href="polnyj-gid-po-splavu-po-donu/" class="text-ember font-bold underline underline-offset-2 hover:no-underline">большом гиде по маршрутам Дона</a>.</p>
 <div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-river-light via-white to-sand border border-slate-200 shadow-card" style="aspect-ratio:16/10; min-height:260px">
 <svg viewBox="0 0 800 450" class="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
 <defs><linearGradient id="water" x1="0" x2="1"><stop offset="0" stop-color="#0369a1" stop-opacity=".3"/><stop offset="1" stop-color="#0c4a6e" stop-opacity=".2"/></linearGradient></defs>
@@ -507,57 +477,107 @@ background-repeat:no-repeat; background-size:100% .52em; background-position:0 8
 </div>
 </section>
 <!-- ═══ Галерея ═══ -->
-<section id="gallery" class="py-10 md:py-14">
+<section id="gallery" class="py-12 md:py-16">
 <div class="max-w-6xl mx-auto px-4">
 <h2 class="h-sec font-extrabold text-river-deep text-center mb-4">Живые <span class="mark-yellow">моменты</span> с отдыха на Дону</h2>
-<p class="text-center text-slate-600 mb-8">Реальные фото наших гостей — без фотошопа и стоков</p>
+<p class="text-center text-slate-600 mb-8">Реальные фото гостей обоих направлений — без фотошопа и стоков.</p>
 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-<div class="ratio-4-3 rounded-2xl overflow-hidden shadow-card"><img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/41bee1e5-c0c2-4d21-984b-e58b7e85084e/41bee1e5-c0c2-4d21-984b-e58b7e85084e-16582868.png" alt="Двухэтажный плот на Дону" width="800" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover hover:scale-105 transition duration-500"></div>
-<div class="ratio-4-3 rounded-2xl overflow-hidden shadow-card"><img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/8bb1474b-a50d-44aa-9a55-fde931c85572/8bb1474b-a50d-44aa-9a55-fde931c85572-13865644.jpeg" alt="Кемпинг Парк Вертячий" width="800" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover hover:scale-105 transition duration-500"></div>
+<div class="ratio-4-3 rounded-2xl overflow-hidden shadow-card"><img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/41bee1e5-c0c2-4d21-984b-e58b7e85084e/41bee1e5-c0c2-4d21-984b-e58b7e85084e-16582868.png" alt="Двухэтажный плот на Дону с высоты" width="800" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover hover:scale-105 transition duration-500"></div>
+<div class="ratio-4-3 rounded-2xl overflow-hidden shadow-card"><img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/8bb1474b-a50d-44aa-9a55-fde931c85572/8bb1474b-a50d-44aa-9a55-fde931c85572-13865644.jpeg" alt="Кемпинг Парк Вертячий на берегу Дона" width="800" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover hover:scale-105 transition duration-500"></div>
 <div class="ratio-4-3 rounded-2xl overflow-hidden shadow-card"><img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/2d2a920c-1ba8-47f4-8f5f-ca884bd334d7/2d2a920c-1ba8-47f4-8f5f-ca884bd334d7-15917195.jpeg" alt="Трофейная рыбалка на Дону" width="800" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover hover:scale-105 transition duration-500"></div>
-<div class="ratio-4-3 rounded-2xl overflow-hidden shadow-card"><img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/99dba1f2-e3a8-4c29-8885-9f4330784abb/99dba1f2-e3a8-4c29-8885-9f4330784abb-15917310.jpeg" alt="Закат на Дону с плота" width="800" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover hover:scale-105 transition duration-500"></div>
-<div class="ratio-4-3 rounded-2xl overflow-hidden shadow-card"><img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/c007ab14-59f5-4300-9750-186cd0ded371/c007ab14-59f5-4300-9750-186cd0ded371-14399305.jpeg" alt="Вечер у костра в кемпинге" width="800" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover hover:scale-105 transition duration-500"></div>
+<div class="ratio-4-3 rounded-2xl overflow-hidden shadow-card"><img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/99dba1f2-e3a8-4c29-8885-9f4330784abb/99dba1f2-e3a8-4c29-8885-9f4330784abb-15917310.jpeg" alt="Закат на Дону с палубы плота" width="800" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover hover:scale-105 transition duration-500"></div>
+<div class="ratio-4-3 rounded-2xl overflow-hidden shadow-card"><img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/e1c1449b-1841-440b-bf12-3ecc5a2aa076/e1c1449b-1841-440b-bf12-3ecc5a2aa076-14399211.jpeg" alt="Приготовление ухи на мангале плота" width="800" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover hover:scale-105 transition duration-500"></div>
+<div class="ratio-4-3 rounded-2xl overflow-hidden shadow-card"><img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/330f560b-55a7-49de-9c3e-82bcb3ccda80/330f560b-55a7-49de-9c3e-82bcb3ccda80-14290296.jpeg" alt="Общий вид кемпинга Парк Вертячий" width="800" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover hover:scale-105 transition duration-500"></div>
+<div class="ratio-4-3 rounded-2xl overflow-hidden shadow-card"><img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/c6a20da7-a9bc-455b-86cc-969ba8f04a40/c6a20da7-a9bc-455b-86cc-969ba8f04a40-15917332.jpeg" alt="Ночёвка на плоту: палатки на палубе" width="800" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover hover:scale-105 transition duration-500"></div>
+<div class="ratio-4-3 rounded-2xl overflow-hidden shadow-card"><img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/5bc54447-6afe-4251-9ab8-b2fcf969bd27/5bc54447-6afe-4251-9ab8-b2fcf969bd27-4737840.jpeg" alt="Вечерний костёр на стоянке сплава" width="800" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover hover:scale-105 transition duration-500"></div>
 <div class="ratio-4-3 rounded-2xl overflow-hidden shadow-card"><img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/a55743de-5007-4613-9837-85647f2f006b/a55743de-5007-4613-9837-85647f2f006b-4737841.jpeg" alt="Панорама Дона с дрона" width="800" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover hover:scale-105 transition duration-500"></div>
 </div>
 </div>
 </section>
-</div>
 <!-- ═══ Отзывы ═══ -->
-<section class="bg-sand py-10 md:py-14">
+<section id="reviews" class="py-12 md:py-16 bg-sand">
 <div class="max-w-6xl mx-auto px-4">
-<h2 class="h-sec font-extrabold text-river-deep text-center mb-8">Что говорят <span class="mark-yellow">наши гости</span></h2>
+<h2 class="h-sec font-extrabold text-river-deep text-center mb-8">Что говорят <span class="mark-yellow">наши гости</span> · сезон 2026</h2>
 <div class="grid md:grid-cols-3 gap-6">
-<div class="bg-white rounded-2xl p-6 shadow-card"><div class="flex items-center gap-1 mb-3"><span class="text-gold">★★★★★</span></div><p class="text-slate-700 mb-4 leading-relaxed">«Это был лучший отдых за последние годы! Плот огромный, баня — огонь, рыбалка — сказка. Дети в восторге, взрослые тоже. Обязательно вернёмся!»</p><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-river-light grid place-items-center font-extrabold text-river-deep">А</div><div><p class="font-extrabold text-river-deep text-sm">Анна К.</p><p class="text-xs text-slate-500">Июль 2026 · Семья с детьми</p></div></div></div>
-<div class="bg-white rounded-2xl p-6 shadow-card"><div class="flex items-center gap-1 mb-3"><span class="text-gold">★★★★★</span></div><p class="text-slate-700 mb-4 leading-relaxed">«Корпоратив на плоту — это нечто! Команда сплотилась как никогда. Баня, рыбалка, вечер у костра — всё идеально организовано. Спасибо!»</p><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-river-light grid place-items-center font-extrabold text-river-deep">М</div><div><p class="font-extrabold text-river-deep text-sm">Михаил С.</p><p class="text-xs text-slate-500">Август 2026 · Корпоратив</p></div></div></div>
-<div class="bg-white rounded-2xl p-6 shadow-card"><div class="flex items-center gap-1 mb-3"><span class="text-gold">★★★★★</span></div><p class="text-slate-700 mb-4 leading-relaxed">«Кемпинг — просто рай! Чисто, уютно, охрана, душ. Рыбалка прямо от палатки — поймал судака на 3 кг. Цены адекватные, персонал дружелюбный.»</p><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-river-light grid place-items-center font-extrabold text-river-deep">Д</div><div><p class="font-extrabold text-river-deep text-sm">Дмитрий В.</p><p class="text-xs text-slate-500">Сентябрь 2026 · Кемпинг</p></div></div></div>
+<div class="bg-white rounded-2xl p-6 shadow-card"><p class="text-gold text-lg" aria-label="Оценка 5 из 5">★★★★★</p><p class="mt-3 text-sm text-slate-700 leading-relaxed">«Это был лучший отдых за последние годы! Плот огромный, баня — огонь, рыбалка — сказка. Дети в восторге, взрослые тоже. Обязательно вернёмся!»</p><p class="mt-4 text-sm font-extrabold text-river-deep">Анна К. <span class="font-normal text-slate-500">· июль 2026 · семья с детьми</span></p></div>
+<div class="bg-white rounded-2xl p-6 shadow-card"><p class="text-gold text-lg" aria-label="Оценка 5 из 5">★★★★★</p><p class="mt-3 text-sm text-slate-700 leading-relaxed">«Корпоратив на плоту — это нечто! Команда сплотилась как никогда. Баня, рыбалка, вечер у костра — всё идеально организовано. Спасибо!»</p><p class="mt-4 text-sm font-extrabold text-river-deep">Михаил С. <span class="font-normal text-slate-500">· август 2026 · корпоратив</span></p></div>
+<div class="bg-white rounded-2xl p-6 shadow-card"><p class="text-gold text-lg" aria-label="Оценка 5 из 5">★★★★★</p><p class="mt-3 text-sm text-slate-700 leading-relaxed">«Кемпинг — просто рай! Чисто, уютно, охрана, душ. Рыбалка прямо от палатки — поймал судака на 3 кг. Цены адекватные, персонал дружелюбный.»</p><p class="mt-4 text-sm font-extrabold text-river-deep">Дмитрий В. <span class="font-normal text-slate-500">· сентябрь 2026 · кемпинг</span></p></div>
+</div>
+</div>
+</section>
+<!-- ═══ Хаб статей ═══ -->
+<section id="articles" class="py-12 md:py-16">
+<div class="max-w-6xl mx-auto px-4">
+<h2 class="h-sec font-extrabold text-river-deep text-center mb-3">Гиды и интерактивы: <span class="mark-yellow">весь опыт 8 сезонов</span></h2>
+<p class="text-center text-slate-600 mb-10 max-w-2xl mx-auto">Статьи-инструменты сгруппированы по задачам — выберите свой сценарий.</p>
+<p class="text-xs font-extrabold uppercase tracking-widest text-ember mb-3">Собираетесь впервые</p>
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
+<a href="10-oshibok-novichkov-na-splave/" class="article-card rounded-2xl border-2 border-slate-200 bg-white overflow-hidden flex flex-col">
+<div class="ratio-16-9 overflow-hidden"><img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/a3ff64dc-9370-4783-999f-8a88e13941bd/a3ff64dc-9370-4783-999f-8a88e13941bd-15767608.png" alt="Обложка: 10 ошибок новичков на сплаве" width="800" height="450" loading="lazy" decoding="async" class="h-full w-full object-cover"></div>
+<div class="p-6 flex-1 flex flex-col"><h3 class="font-extrabold text-river-deep text-lg leading-snug">10 ошибок новичков на сплаве</h3><p class="mt-2 text-sm text-slate-600">Интерактивный «фарватер»: шкала опасности у каждой ошибки.</p><p class="mt-auto pt-3 text-xs font-extrabold text-ember">Читать →</p></div>
+</a>
+<a href="chto-vzyat-na-splav/" class="article-card rounded-2xl border-2 border-slate-200 bg-white overflow-hidden flex flex-col">
+<div class="ratio-16-9 overflow-hidden"><img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/91b9146d-3f34-40e4-8247-c6156c521649/91b9146d-3f34-40e4-8247-c6156c521649-15767499.png" alt="Обложка: чек-лист что взять на сплав" width="800" height="450" loading="lazy" decoding="async" class="h-full w-full object-cover"></div>
+<div class="p-6 flex-1 flex flex-col"><h3 class="font-extrabold text-river-deep text-lg leading-snug">Что взять с собой на сплав</h3><p class="mt-2 text-sm text-slate-600">Чек-лист «Гермомешок»: отмечайте собранное и печатайте.</p><p class="mt-auto pt-3 text-xs font-extrabold text-ember">Открыть →</p></div>
+</a>
+<a href="foto-na-plotu-idei/" class="article-card rounded-2xl border-2 border-slate-200 bg-white overflow-hidden flex flex-col">
+<div class="ratio-16-9 overflow-hidden"><img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/99dba1f2-e3a8-4c29-8885-9f4330784abb/99dba1f2-e3a8-4c29-8885-9f4330784abb-15917310.jpeg" alt="Закат над Доном: 7 идей для фото на плоту" width="800" height="450" loading="lazy" decoding="async" class="h-full w-full object-cover"></div>
+<div class="p-6 flex-1 flex flex-col"><h3 class="font-extrabold text-river-deep text-lg leading-snug">7 идей для фото на плоту</h3><p class="mt-2 text-sm text-slate-600">Кадр-квест со съёмочным листом для телефона и камеры.</p><p class="mt-auto pt-3 text-xs font-extrabold text-ember">Начать квест →</p></div>
+</a>
+</div>
+<p class="text-xs font-extrabold uppercase tracking-widest text-ember mb-3">Готовитесь к маршруту</p>
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
+<a href="recepty-na-plotu/" class="article-card rounded-2xl border-2 border-slate-200 bg-white overflow-hidden flex flex-col">
+<div class="ratio-16-9 overflow-hidden"><img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/22dad369-6ae9-4a91-b665-14c11ee5df46/22dad369-6ae9-4a91-b665-14c11ee5df46-16622070.png" alt="Обложка: 5 блюд для мангала на плоту" width="800" height="450" loading="lazy" decoding="async" class="h-full w-full object-cover"></div>
+<div class="p-6 flex-1 flex flex-col"><h3 class="font-extrabold text-river-deep text-lg leading-snug">5 блюд для мангала на плоту</h3><p class="mt-2 text-sm text-slate-600">Гастро-меню с пересчётом порций под 4/8/12 человек.</p><p class="mt-auto pt-3 text-xs font-extrabold text-ember">Смотреть меню →</p></div>
+</a>
+<a href="recept-na-plotu/" class="article-card rounded-2xl border-2 border-slate-200 bg-white overflow-hidden flex flex-col">
+<div class="ratio-16-9 overflow-hidden"><img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/efcdea0e-d67b-4135-bfba-92cf3c04a61f/efcdea0e-d67b-4135-bfba-92cf3c04a61f-16583031.png" alt="Обложка: рецепт завтрака на плоту с таймером" width="800" height="450" loading="lazy" decoding="async" class="h-full w-full object-cover"></div>
+<div class="p-6 flex-1 flex flex-col"><h3 class="font-extrabold text-river-deep text-lg leading-snug">Речной скрэмбл за 15 минут</h3><p class="mt-2 text-sm text-slate-600">Пошаговый таймер приготовления прямо на странице.</p><p class="mt-auto pt-3 text-xs font-extrabold text-ember">Включить таймер →</p></div>
+</a>
+<a href="splav-po-donu-na-plotah/" class="article-card rounded-2xl border-2 border-slate-200 bg-white overflow-hidden flex flex-col">
+<div class="ratio-16-9 overflow-hidden"><img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/41bee1e5-c0c2-4d21-984b-e58b7e85084e/41bee1e5-c0c2-4d21-984b-e58b7e85084e-16582868.png" alt="Обложка: Русская Амазонка — 5 причин сплава" width="800" height="450" loading="lazy" decoding="async" class="h-full w-full object-cover"></div>
+<div class="p-6 flex-1 flex flex-col"><h3 class="font-extrabold text-river-deep text-lg leading-snug">Русская Амазонка: 5 причин</h3><p class="mt-2 text-sm text-slate-600">Экспедиция по ленте-карте Дона с бортовым журналом.</p><p class="mt-auto pt-3 text-xs font-extrabold text-ember">Выйти на маршрут →</p></div>
+</a>
+</div>
+<p class="text-xs font-extrabold uppercase tracking-widest text-ember mb-3">Изучаете регион и рынок</p>
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+<a href="fishing-volgograd-oblast/" class="article-card rounded-2xl border-2 border-slate-200 bg-white overflow-hidden flex flex-col">
+<div class="ratio-16-9 overflow-hidden"><img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/3463ee01-fb3b-4a7f-be55-a2ec2ffbc2f6/3463ee01-fb3b-4a7f-be55-a2ec2ffbc2f6-15917327.jpeg" alt="Утренняя рыбалка на Дону: карта рыбных мест области" width="800" height="450" loading="lazy" decoding="async" class="h-full w-full object-cover"></div>
+<div class="p-6 flex-1 flex flex-col"><h3 class="font-extrabold text-river-deep text-lg leading-snug">Рыбалка в Волгоградской области</h3><p class="mt-2 text-sm text-slate-600">Карта рыбных мест и 8 проверенных баз с контактами.</p><p class="mt-auto pt-3 text-xs font-extrabold text-ember">Открыть карту →</p></div>
+</a>
+<a href="polnyj-gid-po-splavu-po-donu/" class="article-card rounded-2xl border-2 border-slate-200 bg-white overflow-hidden flex flex-col">
+<div class="ratio-16-9 overflow-hidden"><img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/a55743de-5007-4613-9837-85647f2f006b/a55743de-5007-4613-9837-85647f2f006b-4737841.jpeg" alt="Панорама Дона с дрона: полный гид по маршрутам" width="800" height="450" loading="lazy" decoding="async" class="h-full w-full object-cover"></div>
+<div class="p-6 flex-1 flex flex-col"><h3 class="font-extrabold text-river-deep text-lg leading-snug">Полный гид по маршрутам Дона</h3><p class="mt-2 text-sm text-slate-600">Стоянки, километраж, сезонность и безопасность.</p><p class="mt-auto pt-3 text-xs font-extrabold text-ember">Читать гид →</p></div>
+</a>
+<a href="stoimost-arendy-plota/" class="article-card rounded-2xl border-2 border-slate-200 bg-white overflow-hidden flex flex-col">
+<div class="ratio-16-9 overflow-hidden"><img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/6912a60e-692a-499d-957d-627b1cfde70e/6912a60e-692a-499d-957d-627b1cfde70e-16622334.png" alt="Обложка: сколько стоит аренда плота на Дону" width="800" height="450" loading="lazy" decoding="async" class="h-full w-full object-cover"></div>
+<div class="p-6 flex-1 flex flex-col"><h3 class="font-extrabold text-river-deep text-lg leading-snug">Сколько стоит аренда плота</h3><p class="mt-2 text-sm text-slate-600">Разбор рынка: из чего складывается цена и где экономят.</p><p class="mt-auto pt-3 text-xs font-extrabold text-ember">Смотреть разбор →</p></div>
+</a>
+</div>
+<div class="mt-6 grid md:grid-cols-2 gap-5">
+<a href="camping/" class="article-card rounded-2xl border-2 border-slate-200 bg-white overflow-hidden grid sm:grid-cols-[220px_1fr]">
+<div class="ratio-16-9 sm:ratio-4-3 overflow-hidden"><img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/8bb1474b-a50d-44aa-9a55-fde931c85572/8bb1474b-a50d-44aa-9a55-fde931c85572-13865644.jpeg" alt="Рейтинг кемпингов Волгоградской области: 18 мест" width="800" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover"></div>
+<div class="p-6 min-w-0"><p class="text-[10px] font-extrabold uppercase tracking-widest text-ember">Независимый обзор</p><h3 class="mt-1 font-extrabold text-river-deep text-lg">ТОП кемпингов области: 18 мест</h3><p class="mt-2 text-sm text-slate-600">Подборщик по критериям, карта и сравнительная таблица.</p></div>
+</a>
+<a href="kak-organizovat-korporativnii-splav/" class="article-card rounded-2xl border-2 border-slate-200 bg-white overflow-hidden grid sm:grid-cols-[220px_1fr]">
+<div class="ratio-16-9 sm:ratio-4-3 overflow-hidden"><img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/b1bd0e45-1efc-45dc-a357-781e65672d6e/b1bd0e45-1efc-45dc-a357-781e65672d6e-15767723.png" alt="Обложка: как организовать корпоративный сплав" width="800" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover"></div>
+<div class="p-6 min-w-0"><p class="text-[10px] font-extrabold uppercase tracking-widest text-ember">Для HR</p><h3 class="mt-1 font-extrabold text-river-deep text-lg">Брифинг: корпоративный сплав</h3><p class="mt-2 text-sm text-slate-600">Калькулятор бюджета, таймлайн T-60…T-0 и программа по суткам.</p></div>
+</a>
 </div>
 </div>
 </section>
 <!-- ═══ FAQ ═══ -->
-<section id="faq" class="py-10 md:py-14">
+<section id="faq" class="py-12 md:py-16 bg-sand">
 <div class="max-w-4xl mx-auto px-4">
 <h2 class="h-sec font-extrabold text-river-deep text-center mb-8">Частые <span class="mark-yellow">вопросы</span></h2>
 <div class="space-y-4">
-<div class="faq-item bg-white rounded-2xl border border-slate-200 overflow-hidden">
-<button type="button" class="faq-question w-full text-left px-6 py-4 flex items-center justify-between gap-4"><span class="font-extrabold text-river-deep">Сколько стоит сплав на плоту?</span><span class="faq-icon text-2xl text-slate-400">⌄</span></button>
-<div class="faq-answer px-6"><p class="text-slate-600 leading-relaxed pb-4">Аренда плота от 29 000 ₽/сутки в будни (Пн–Чт) и 33 000 ₽/сутки в выходные (Пт–Вс). Плот вмещает до 12 человек. В стоимость включены баня, мангал, коптильня и всё снаряжение. Предоплата 30% для фиксации даты.</p></div>
-</div>
-<div class="faq-item bg-white rounded-2xl border border-slate-200 overflow-hidden">
-<button type="button" class="faq-question w-full text-left px-6 py-4 flex items-center justify-between gap-4"><span class="font-extrabold text-river-deep">Сколько стоит кемпинг «Парк Вертячий»?</span><span class="faq-icon text-2xl text-slate-400"></span></button>
-<div class="faq-answer px-6"><p class="text-slate-600 leading-relaxed pb-4">250 ₽/сутки с человека (пеший турист), 1 000 ₽/сутки за машину (до 4 человек, включает парковку). Душ, туалет и мангалы — бесплатно. Оплата на месте при заезде, без предоплаты.</p></div>
-</div>
-<div class="faq-item bg-white rounded-2xl border border-slate-200 overflow-hidden">
-<button type="button" class="faq-question w-full text-left px-6 py-4 flex items-center justify-between gap-4"><span class="font-extrabold text-river-deep">Как далеко от Волгограда?</span><span class="faq-icon text-2xl text-slate-400">⌄</span></button>
-<div class="faq-answer px-6"><p class="text-slate-600 leading-relaxed pb-4">50 км от центра Волгограда, 38 минут на машине. Старт маршрутов — хутор Вертячий, Волгоградская область. Есть парковка для гостей.</p></div>
-</div>
-<div class="faq-item bg-white rounded-2xl border border-slate-200 overflow-hidden">
-<button type="button" class="faq-question w-full text-left px-6 py-4 flex items-center justify-between gap-4"><span class="font-extrabold text-river-deep">Нужна ли предоплата?</span><span class="faq-icon text-2xl text-slate-400">⌄</span></button>
-<div class="faq-answer px-6"><p class="text-slate-600 leading-relaxed pb-4">Для плота — предоплата 30% для фиксации даты. Для кемпинга — оплата на месте при заезде. Если планы поменялись — просто предупредите, мы войдём в положение.</p></div>
-</div>
-<div class="faq-item bg-white rounded-2xl border border-slate-200 overflow-hidden">
-<button type="button" class="faq-question w-full text-left px-6 py-4 flex items-center justify-between gap-4"><span class="font-extrabold text-river-deep">Что взять с собой?</span><span class="faq-icon text-2xl text-slate-400"></span></button>
-<div class="faq-answer px-6"><p class="text-slate-600 leading-relaxed pb-4">Для плота: личные вещи, еду и напитки (можно заказать доставку), рыболовные снасти. Для кемпинга: палатку, спальник, еду. Всё остальное (мангалы, столы, душ) — на месте. Подробный чек-лист в статье «Что взять с собой на сплав».</p></div>
-</div>
+<div class="faq-item bg-white rounded-2xl border border-slate-200 overflow-hidden"><button type="button" class="faq-question w-full text-left px-6 py-4 flex items-center justify-between gap-4"><span class="font-extrabold text-river-deep">Чем плот отличается от кемпинга и что выбрать?</span><span class="faq-icon text-2xl text-slate-400" aria-hidden="true">⌄</span></button><div class="faq-answer px-6"><p class="text-slate-600 leading-relaxed pb-4">Плот — это плавучий дом с баней и капитаном: вы ночуете на воде и каждый день новая стоянка. Кемпинг — стационарная охраняемая поляна на берегу с душем и мангалами. Хотите движения и бани на воде — плот; хотите палатку у воды с комфортом и бюджетом от 250 ₽ — кемпинг.</p></div></div>
+<div class="faq-item bg-white rounded-2xl border border-slate-200 overflow-hidden"><button type="button" class="faq-question w-full text-left px-6 py-4 flex items-center justify-between gap-4"><span class="font-extrabold text-river-deep">Сколько стоит отдых?</span><span class="faq-icon text-2xl text-slate-400" aria-hidden="true">⌄</span></button><div class="faq-answer px-6"><p class="text-slate-600 leading-relaxed pb-4">Плот: 29 000 ₽/сутки в будни и 33 000 ₽/сутки в выходные за весь плот до 12 человек. Кемпинг: 250 ₽/чел/сутки пеший, 750 ₽/сутки машина во 2-й линии, 1 000 ₽/сутки машина в 1-й линии у воды.</p></div></div>
+<div class="faq-item bg-white rounded-2xl border border-slate-200 overflow-hidden"><button type="button" class="faq-question w-full text-left px-6 py-4 flex items-center justify-between gap-4"><span class="font-extrabold text-river-deep">Как далеко от Волгограда?</span><span class="faq-icon text-2xl text-slate-400" aria-hidden="true">⌄</span></button><div class="faq-answer px-6"><p class="text-slate-600 leading-relaxed pb-4">50 км от центра Волгограда, 38 минут на машине. Старт обоих направлений — хутор Вертячий, Волгоградская область.</p></div></div>
+<div class="faq-item bg-white rounded-2xl border border-slate-200 overflow-hidden"><button type="button" class="faq-question w-full text-left px-6 py-4 flex items-center justify-between gap-4"><span class="font-extrabold text-river-deep">Нужна ли предоплата?</span><span class="faq-icon text-2xl text-slate-400" aria-hidden="true">⌄</span></button><div class="faq-answer px-6"><p class="text-slate-600 leading-relaxed pb-4">Для плота — предоплата 30% фиксирует дату и маршрут. Для кемпинга предоплата 30% снимает поляну с продажи, остаток — при заезде.</p></div></div>
+<div class="faq-item bg-white rounded-2xl border border-slate-200 overflow-hidden"><button type="button" class="faq-question w-full text-left px-6 py-4 flex items-center justify-between gap-4"><span class="font-extrabold text-river-deep">Можно ли с детьми и животными?</span><span class="faq-icon text-2xl text-slate-400" aria-hidden="true">⌄</span></button><div class="faq-answer px-6"><p class="text-slate-600 leading-relaxed pb-4">Да. На плоту детские спасжилеты всех размеров и огороженная палуба. В кемпинге питомцы — по предварительному согласованию с администратором.</p></div></div>
+<div class="faq-item bg-white rounded-2xl border border-slate-200 overflow-hidden"><button type="button" class="faq-question w-full text-left px-6 py-4 flex items-center justify-between gap-4"><span class="font-extrabold text-river-deep">Что взять с собой?</span><span class="faq-icon text-2xl text-slate-400" aria-hidden="true">⌄</span></button><div class="faq-answer px-6"><p class="text-slate-600 leading-relaxed pb-4">Личные вещи, воду и продукты. На плоту уже есть посуда, мангал, коптильня, палатки и спальники; в кемпинге — мангальные зоны, дрова, столы, душ и туалеты.</p></div></div>
 </div>
 </div>
 </section>
@@ -566,7 +586,7 @@ background-repeat:no-repeat; background-size:100% .52em; background-position:0 8
 <div class="max-w-4xl mx-auto px-4 text-center">
 <p class="text-xs font-extrabold uppercase tracking-widest text-gold mb-4">Готовы к приключению?</p>
 <h2 class="h-sec font-extrabold mb-6">Забронируйте отдых <span class="text-gold">прямо сейчас</span></h2>
-<p class="text-lg text-white/80 mb-8 max-w-2xl mx-auto">Свободные даты на сезон ещё есть. Оставьте заявку или позвоните — зафиксируем бронь без предоплаты (для кемпинга) или с предоплатой 30% (для плота).</p>
+<p class="text-lg text-white/80 mb-8 max-w-2xl mx-auto">Свободные даты сезона 2027 ещё есть. Оставьте заявку или позвоните — зафиксируем бронь и пришлём договор заранее.</p>
 <div class="flex flex-col sm:flex-row justify-center gap-4">
 <a href="splav-po-dony-na-ploty/#zayavka" class="inline-flex items-center justify-center gap-2 bg-ember hover:bg-ember-dark text-white font-extrabold px-8 py-4 rounded-2xl shadow-cta transition active:scale-95 pulse-cta">Забронировать плот →</a>
 <a href="camp/#zayavka" class="inline-flex items-center justify-center gap-2 border-2 border-white/50 hover:border-white hover:bg-white/10 text-white font-bold px-8 py-4 rounded-2xl transition">Забронировать кемпинг</a>
@@ -575,178 +595,142 @@ background-repeat:no-repeat; background-size:100% .52em; background-position:0 8
 </div>
 </section>
 </main>
+<!-- ═══ Footer ═══ -->
 <footer class="bg-river-deep text-white/70 border-t border-white/10">
 <div class="max-w-7xl mx-auto px-4 py-12">
 <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
-<div><p class="font-extrabold text-white text-lg mb-2">Контакты</p><p class="text-sm">📞 <a href="tel:+79950320002" class="hover:text-gold transition">+7 (995) 032-00-02</a> (плоты, 10:00–20:00)</p><p class="text-sm">📞 <a href="tel:+79965117659" class="hover:text-gold transition">+7 (996) 511-76-59</a> (кемпинг, 10:00–19:00)</p><p class="text-sm mt-2">📍 Волгоградская область, х. Вертячий</p></div>
-<div><p class="font-extrabold text-white text-lg mb-2">Режим работы</p><p class="text-sm">Ежедневно: 10:00–20:00</p><p class="text-sm mt-2">️ <a href="mailto:zakaz@rostur.expert" class="hover:text-gold transition">zakaz@rostur.expert</a></p></div>
-<div><p class="font-extrabold text-white text-lg mb-2">Мы в соцсетях</p><a href="https://vk.com/rosturexpert" target="_blank" rel="noopener" class="text-sm hover:text-gold transition">ВКонтакте ↗</a></div>
+<div><p class="font-extrabold text-white text-lg mb-2">РосТур Эксперт</p><p class="text-sm">Сплавы по Дону на плотах и кемпинг «Парк Вертячий». Независимый проект: работаем с 2018 года.</p></div>
+<div><p class="font-extrabold text-white text-lg mb-2">Контакты</p><p class="text-sm">🚢 <a href="tel:+79950320002" class="hover:text-gold transition font-bold text-white/90">+7 (995) 032-00-02</a> (плоты, 10:00–20:00)</p><p class="text-sm mt-1">🏕 <a href="tel:+79965117659" class="hover:text-gold transition font-bold text-white/90">+7 (996) 511-76-59</a> (кемпинг, 10:00–19:00)</p><p class="text-sm mt-1">📍 х. Вертячий, Волгоградская область</p><p class="text-sm mt-1"><a href="https://vk.com/o_t_d_ix" target="_blank" rel="noopener" class="hover:text-gold transition">Мы ВКонтакте</a></p></div>
+<div><p class="font-extrabold text-white text-lg mb-2">Разделы</p><p class="text-sm"><a href="splav-po-dony-na-ploty/" class="hover:text-gold transition">Сплав на плоту с баней</a> · <a href="camp/" class="hover:text-gold transition">Кемпинг «Парк Вертячий»</a></p><p class="text-sm mt-1"><a href="camping/" class="hover:text-gold transition">Рейтинг кемпингов области</a> · <a href="fishing-volgograd-oblast/" class="hover:text-gold transition">Рыбалка в области</a></p></div>
 </div>
-<div class="border-t border-white/10 mt-8 pt-6 text-center text-xs text-white/50"><p>© 2026 · Волгоградская область · Информация на сайте не является публичной офертой</p></div>
+<div class="border-t border-white/10 mt-8 pt-6 text-center text-xs text-white/50"><p>© 2026 РосТур Эксперт · Волгоградская обл., х. Вертячий · Цены на сайте не являются публичной офертой</p></div>
 </div>
 </footer>
-<!-- ══ Sticky mobile CTA — две кнопки звонка ══ -->
+<!-- ══ Sticky mobile CTA ══ -->
 <div class="mobile-cta md:hidden fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-t border-slate-200/70 px-2 py-1.5 flex gap-1.5 shadow-[0_-4px_18px_-10px_rgba(8,47,73,.28)]">
-<a href="tel:+79950320002" class="flex-1 text-center border border-river/35 text-river font-bold text-xs py-2.5 rounded-lg active:scale-95 transition flex items-center justify-center gap-1">
-<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3l2 5-2.5 1.5a11 11 0 005 5L13 12l5 2v3a2 2 0 01-2 2A16 16 0 013 5z"/></svg>
-Плоты
-</a>
-<a href="tel:+79965117659" class="flex-1 text-center border border-river/35 text-river font-bold text-xs py-2.5 rounded-lg active:scale-95 transition flex items-center justify-center gap-1">
-<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3l2 5-2.5 1.5a11 11 0 005 5L13 12l5 2v3a2 2 0 01-2 2A16 16 0 013 5z"/></svg>
-Кемпинг
-</a>
-<a href="#quiz" class="flex-1 text-center bg-ember text-white font-bold text-xs py-2.5 rounded-lg shadow-cta active:scale-95 transition">Найти отдых</a>
+<a href="tel:+79950320002" class="flex-1 text-center border border-river/35 text-river font-bold text-xs py-2.5 rounded-lg active:scale-95 transition">🚢 Плоты</a>
+<a href="tel:+79965117659" class="flex-1 text-center border border-river/35 text-river font-bold text-xs py-2.5 rounded-lg active:scale-95 transition">🏕 Кемпинг</a>
+<a href="#quiz" class="flex-[1.2] text-center bg-ember text-white font-bold text-xs py-2.5 rounded-lg shadow-cta active:scale-95 transition">Подобрать</a>
 </div>
 <script>
 (function(){
-var quizSteps=document.querySelectorAll('.quiz-step');
-var quizOptions=document.querySelectorAll('.quiz-option');
-var quizBacks=document.querySelectorAll('.quiz-back');
+/* Квиз */
+var quizSteps=[].slice.call(document.querySelectorAll('.quiz-step'));
+var quizOptions=[].slice.call(document.querySelectorAll('.quiz-option'));
+var quizBacks=[].slice.call(document.querySelectorAll('.quiz-back'));
 var quizRestart=document.querySelector('.quiz-restart');
 var answers={};
 function showStep(n){
 quizSteps.forEach(function(s){ s.classList.remove('active'); });
-var target=document.querySelector('.quiz-step[data-step="'+n+'"]');
-if(target) target.classList.add('active');
+var t=document.querySelector('.quiz-step[data-step="'+n+'"]');
+if(t) t.classList.add('active');
 }
 quizOptions.forEach(function(opt){
 opt.addEventListener('click',function(){
 var step=opt.closest('.quiz-step').getAttribute('data-step');
-var answer=opt.getAttribute('data-answer');
-answers[step]=answer;
-var next=parseInt(step)+1;
+answers[step]=opt.getAttribute('data-answer');
+var next=parseInt(step,10)+1;
 if(next<=3){ showStep(next); } else { showResult(); }
 });
 });
 quizBacks.forEach(function(btn){
 btn.addEventListener('click',function(){
 var step=btn.closest('.quiz-step').getAttribute('data-step');
-showStep(parseInt(step)-1);
+showStep(parseInt(step,10)-1);
 });
 });
 if(quizRestart){ quizRestart.addEventListener('click',function(){ answers={}; showStep(1); }); }
 function showResult(){
-var resultDiv=document.getElementById('quiz-result');
-var recommendation='', link='', linkText='';
-if(answers['3']==='budget'){ recommendation='camp'; link='camp/'; linkText='Забронировать кемпинг →'; }
-else if(answers['3']==='premium'){ recommendation='raft'; link='splav-po-dony-na-ploty/'; linkText='Забронировать плот →'; }
-else {
-if(answers['1']==='corporate' || answers['1']==='friends'){ recommendation='raft'; link='splav-po-dony-na-ploty/'; linkText='Забронировать плот →'; }
-else { recommendation='camp'; link='camp/'; linkText='Забронировать кемпинг →'; }
-}
+var rec, link, text;
+if(answers['3']==='budget'){ rec='camp'; link='camp/'; text='Забронировать кемпинг →'; }
+else if(answers['3']==='premium'){ rec='raft'; link='splav-po-dony-na-ploty/'; text='Забронировать плот →'; }
+else if(answers['1']==='corporate'||answers['1']==='friends'){ rec='raft'; link='splav-po-dony-na-ploty/'; text='Забронировать плот →'; }
+else { rec='camp'; link='camp/'; text='Забронировать кемпинг →'; }
 var titles={raft:'Сплав на плоту по Дону',camp:'Кемпинг «Парк Вертячий»'};
-var descriptions={raft:'Двухэтажный плот с баней, мангалом и коптильней. До 12 человек, маршруты от 1 до 7 суток. Трофейная рыбалка прямо с борта.',camp:'Охраняемый кемпинг на берегу Дона. Столы, кострища, душ, туалет. Рыбалка в 50 метрах от палатки. Оплата на месте.'};
-resultDiv.innerHTML='<div class="bg-white/20 backdrop-blur rounded-2xl p-6 text-center"><p class="text-xs font-extrabold uppercase tracking-widest text-gold mb-2">Ваш идеальный отдых</p><h3 class="text-2xl font-extrabold mb-3">'+titles[recommendation]+'</h3><p class="text-white/90 mb-6">'+descriptions[recommendation]+'</p><a href="'+link+'" class="inline-block bg-ember hover:bg-ember-dark text-white font-extrabold px-8 py-4 rounded-2xl shadow-cta transition active:scale-95">'+linkText+'</a></div>';
+var descs={raft:'Двухэтажный плот с баней, мангалом и коптильней. До 12 человек, маршруты от 1 до 7 суток. Трофейная рыбалка прямо с борта.',camp:'Охраняемый кемпинг на берегу Дона: 39 полян, душ, мангалы, пирс. Рыбалка в 50 метрах от палатки.'};
+document.getElementById('quiz-result').innerHTML='<div class="bg-white/20 backdrop-blur rounded-2xl p-6 text-center"><p class="text-xs font-extrabold uppercase tracking-widest text-gold mb-2">Ваш идеальный отдых</p><h3 class="text-2xl font-extrabold mb-3">'+titles[rec]+'</h3><p class="text-white/90 mb-6">'+descs[rec]+'</p><a href="'+link+'" class="inline-block bg-ember hover:bg-ember-dark text-white font-extrabold px-8 py-4 rounded-2xl shadow-cta transition active:scale-95">'+text+'</a></div>';
 showStep('result');
 }
-var dirCards=document.querySelectorAll('.dir-card');
-var dirContents=document.querySelectorAll('.dir-content');
+/* Карточки направлений */
+var dirCards=[].slice.call(document.querySelectorAll('.dir-card'));
+var dirContents=[].slice.call(document.querySelectorAll('.dir-content'));
 dirCards.forEach(function(card){
 function activate(){
 var dir=card.getAttribute('data-dir');
 dirCards.forEach(function(c){ c.classList.remove('active'); c.setAttribute('aria-pressed','false'); });
-card.classList.add('active');
-card.setAttribute('aria-pressed','true');
+card.classList.add('active'); card.setAttribute('aria-pressed','true');
 dirContents.forEach(function(c){ c.classList.remove('active'); });
-var target=document.querySelector('.dir-content[data-content="'+dir+'"]');
-if(target) target.classList.add('active');
+var t=document.querySelector('.dir-content[data-content="'+dir+'"]');
+if(t) t.classList.add('active');
 }
 card.addEventListener('click',activate);
-card.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); activate(); }});
+card.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); activate(); } });
 });
-var faqItems=document.querySelectorAll('.faq-item');
-faqItems.forEach(function(item){
-var question=item.querySelector('.faq-question');
-question.addEventListener('click',function(){
-var isOpen=item.classList.contains('open');
-faqItems.forEach(function(i){ i.classList.remove('open'); });
-if(!isOpen) item.classList.add('open');
-});
-});
-var calcType=document.getElementById('calc-type');
-var calcPeople=document.getElementById('calc-people');
-var calcDays=document.getElementById('calc-days');
-var calcTariff=document.getElementById('calc-tariff');
-var calcTotal=document.getElementById('calc-total');
-var calcDetails=document.getElementById('calc-details');
-var campModeWrap=document.getElementById('camp-mode-wrap');
-var tariffWrap=document.getElementById('tariff-wrap');
-var labelPeople=document.getElementById('label-people');
-var modeHint=document.getElementById('mode-hint');
-var modeBtns=document.querySelectorAll('.mode-btn');
+/* Калькулятор */
+var calcType=document.getElementById('calc-type'), calcPeople=document.getElementById('calc-people'), calcDays=document.getElementById('calc-days'), calcTariff=document.getElementById('calc-tariff');
+var calcTotal=document.getElementById('calc-total'), calcDetails=document.getElementById('calc-details');
+var campModeWrap=document.getElementById('camp-mode-wrap'), tariffWrap=document.getElementById('tariff-wrap'), modeHint=document.getElementById('mode-hint');
+var modeBtns=[].slice.call(document.querySelectorAll('.mode-btn'));
 var currentMode='car';
+function fmt(n){ return n.toLocaleString('ru-RU'); }
 function setMode(mode){
 currentMode=mode;
-modeBtns.forEach(function(b){
-if(b.getAttribute('data-mode')===mode){ b.classList.add('active'); }
-else { b.classList.remove('active'); }
-});
-if(mode==='car'){ modeHint.textContent='До 4 человек в машине · 1 000 ₽/сутки включает парковку'; }
-else { modeHint.textContent='250 ₽/сутки с человека · без машины'; }
+modeBtns.forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-mode')===mode); });
+modeHint.textContent = mode==='car' ? 'До 4 человек в машине · 1 000 ₽/сутки включает парковку' : '250 ₽/сутки с человека · без машины';
 calculate();
 }
-modeBtns.forEach(function(btn){ btn.addEventListener('click',function(){ setMode(btn.getAttribute('data-mode')); }); });
+modeBtns.forEach(function(b){ b.addEventListener('click',function(){ setMode(b.getAttribute('data-mode')); }); });
 function updateUI(){
-var type=calcType.value;
-if(type==='camp'){
-campModeWrap.style.display='block';
-tariffWrap.style.display='none';
-labelPeople.textContent='Количество человек';
-} else {
-campModeWrap.style.display='none';
-tariffWrap.style.display='block';
-labelPeople.textContent='Количество человек';
-}
+if(calcType.value==='camp'){ campModeWrap.style.display='block'; tariffWrap.style.display='none'; }
+else { campModeWrap.style.display='none'; tariffWrap.style.display='block'; }
 }
 function calculate(){
-var type=calcType.value;
-var people=parseInt(calcPeople.value)||1;
-var days=parseInt(calcDays.value)||1;
-var tariff=calcTariff.value;
+var people=Math.max(1,Math.min(50,parseInt(calcPeople.value,10)||4));
+var days=Math.max(1,Math.min(14,parseInt(calcDays.value,10)||2));
 var total=0, details='';
-if(type==='raft'){
-var rate=tariff==='weekday'?29000:33000;
+if(calcType.value==='raft'){
+var rate=calcTariff.value==='weekend'?33000:29000;
 var rafts=Math.ceil(people/12);
 total=rafts*rate*days;
-details=rafts+' плот(ов) × '+rate.toLocaleString('ru-RU')+' ₽ × '+days+' сут.';
-} else {
-if(currentMode==='car'){
+details=rafts+' плот(ов) × '+fmt(rate)+' ₽ × '+days+' сут';
+} else if(currentMode==='car'){
 var cars=Math.ceil(people/4);
 total=cars*1000*days;
-details=cars+' машин(ы) × 1 000 ₽ × '+days+' сут.';
-if(people%4!==0){ details+=' (в последней машине '+(people%4)+' чел.)'; }
+details=cars+' машин(ы) × 1 000 ₽ × '+days+' сут';
 } else {
 total=people*250*days;
-details=people+' чел. × 250 ₽ × '+days+' сут.';
+details=people+' чел × 250 ₽ × '+days+' сут';
 }
-}
-calcTotal.textContent=total.toLocaleString('ru-RU')+' ₽';
+calcTotal.textContent=fmt(total);
 calcDetails.textContent=details;
 }
 calcType.addEventListener('change',function(){ updateUI(); calculate(); });
-calcPeople.addEventListener('input',calculate);
-calcDays.addEventListener('input',calculate);
+[calcPeople,calcDays].forEach(function(el){ el.addEventListener('input',calculate); });
 calcTariff.addEventListener('change',calculate);
-updateUI();
-calculate();
-var statCounters=document.querySelectorAll('.stat-counter');
-var observer=new IntersectionObserver(function(entries){
-entries.forEach(function(entry){
-if(entry.isIntersecting){
-var el=entry.target;
-var target=parseInt(el.getAttribute('data-target'));
-var current=0;
-var increment=target/50;
-var timer=setInterval(function(){
-current+=increment;
-if(current>=target){ el.textContent=target; clearInterval(timer); }
-else { el.textContent=Math.floor(current); }
-},30);
-observer.unobserve(el);
+updateUI(); calculate();
+/* FAQ */
+var faqItems=[].slice.call(document.querySelectorAll('.faq-item'));
+faqItems.forEach(function(item){
+item.querySelector('.faq-question').addEventListener('click',function(){
+var open=item.classList.contains('open');
+faqItems.forEach(function(i){ i.classList.remove('open'); });
+if(!open) item.classList.add('open');
+});
+});
+/* Счётчики */
+var counters=[].slice.call(document.querySelectorAll('.stat-counter'));
+if('IntersectionObserver' in window){
+var io=new IntersectionObserver(function(es){
+es.forEach(function(e){
+if(e.isIntersecting){
+var el=e.target, target=parseInt(el.getAttribute('data-target'),10), cur=0, inc=target/50;
+var t=setInterval(function(){ cur+=inc; if(cur>=target){ el.textContent=target; clearInterval(t); } else { el.textContent=Math.floor(cur); } },30);
+io.unobserve(el);
 }
 });
-},{threshold:0.5});
-statCounters.forEach(function(c){ observer.observe(c); });
+},{threshold:.5});
+counters.forEach(function(c){ io.observe(c); });
+}
 })();
 </script>
 </body>
