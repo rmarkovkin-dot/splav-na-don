@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>10 ошибок новичков на сплаве: как избежать проблем и сделать отдых безопасным</title>
-<meta name="description" content="10 главных ошибок новичков на сплаве: неправильный маршрут, выбор стоянки, упаковка вещей, безопасность и погода. Как подготовиться к сплаву и избежать проблем.">
-<link rel="canonical" href="https://rostur.expert/10-oshibok-novichkov-na-splave">
+<title>10 ошибок новичков на сплаве — как избежать проблем и сделать отдых ярким и безопасным</title>
+<meta name="description" content="Разбираем 10 главных ошибок новичков на сплаве по Дону: от спасжилета «для фото» до алкоголя на воде. Интерактивный фарватер со шкалой опасности, советы гида и чек-лист безопасного отдыха.">
+<link rel="canonical" href="https://rostur.expert/10-oshibok-novichkov-na-splave/">
 <meta name="theme-color" content="#0c4a6e">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:site_name" content="РосТур Эксперт">
-<meta property="og:url" content="https://rostur.expert/10-oshibok-novichkov-na-splave">
-<meta property="og:title" content="10 ошибок новичков на сплаве: как избежать проблем и сделать отдых безопасным">
-<meta property="og:description" content="10 главных ошибок новичков на сплаве: неправильный маршрут, выбор стоянки, упаковка вещей, безопасность и погода. Как подготовиться к сплаву и избежать проблем.">
+<meta property="og:url" content="https://rostur.expert/10-oshibok-novichkov-na-splave/">
+<meta property="og:title" content="10 ошибок новичков на сплаве — как избежать проблем и сделать отдых ярким и безопасным">
+<meta property="og:description" content="Интерактивный фарватер со шкалой опасности: 10 ошибок, которые портят отдых на воде, и как их обойти. Советы гида с 8 сезонами практики на Дону.">
 <meta property="og:image" content="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/a3ff64dc-9370-4783-999f-8a88e13941bd/a3ff64dc-9370-4783-999f-8a88e13941bd-15767608.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="10 ошибок новичков на сплаве: как избежать проблем и сделать отдых безопасным">
-<meta name="twitter:description" content="10 главных ошибок новичков на сплаве: неправильный маршрут, выбор стоянки, упаковка вещей, безопасность и погода. Как подготовиться к сплаву и избежать проблем.">
+<meta name="twitter:title" content="10 ошибок новичков на сплаве — как избежать проблем и сделать отдых ярким и безопасным">
+<meta name="twitter:description" content="Интерактивный фарватер со шкалой опасности: 10 ошибок, которые портят отдых на воде, и как их обойти. Советы гида с 8 сезонами практики на Дону.">
 <meta name="twitter:image" content="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/a3ff64dc-9370-4783-999f-8a88e13941bd/a3ff64dc-9370-4783-999f-8a88e13941bd-15767608.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230c4a6e'/%3E%3Cpath d='M20 62h60l-8 16H28z' fill='%23fbbf24'/%3E%3Crect x='34' y='40' width='32' height='18' rx='3' fill='%23fff'/%3E%3Cpath d='M50 22c6 8 10 12 10 16a10 10 0 1 1-20 0c0-4 4-8 10-16z' fill='%23fb7185'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://cdn.tailwindcss.com">
@@ -49,8 +49,9 @@ card: '0 8px 30px -12px rgba(8,47,73,.18)'
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
 <style>
 [x-cloak]{display:none!important}
+html,body{ overflow-x:clip; }
 body{ font-family:Manrope,system-ui,sans-serif; }
-.h-hero{ font-size:clamp(1.75rem,3vw + 1rem,3.25rem); line-height:1.1; letter-spacing:-.02em; text-wrap:balance; }
+.h-hero{ font-size:clamp(1.6rem,2.6vw + 1rem,2.9rem); line-height:1.15; letter-spacing:-.02em; text-wrap:balance; }
 .h-sec{ font-size:clamp(1.35rem,1.8vw + .8rem,2.1rem); line-height:1.2; letter-spacing:-.01em; text-wrap:balance; }
 .ratio-16-9{ aspect-ratio:16/9; }
 .mark-yellow{
@@ -58,8 +59,21 @@ background-image:linear-gradient(100deg, rgba(251,191,36,0) .5%, rgba(251,191,36
 background-repeat:no-repeat; background-size:100% .52em; background-position:0 88%;
 -webkit-box-decoration-break:clone; box-decoration-break:clone; padding:0 .18em; margin:0 -.1em;
 }
-.err-num{ font-variant-numeric:tabular-nums; }
 .mobile-cta{ padding-bottom:max(8px,env(safe-area-inset-bottom)); }
+.mistake-card{ transition:all .3s; }
+.mistake-card.done{ opacity:.55; border-color:#16a34a; background:#f0fdf4; }
+.mistake-card.done .mistake-num{ background:#16a34a; border-color:#16a34a; }
+.dot{ width:10px; height:10px; border-radius:9999px; background:#e2e8f0; display:inline-block; }
+.dot.on{ background:#ea580c; }
+.dot.on.max{ background:#dc2626; }
+.ok-btn{ transition:all .2s; }
+.ok-btn:hover{ transform:translateY(-1px); }
+.article-card{ transition:all .25s; }
+.article-card:hover{ transform:translateY(-4px); box-shadow:0 18px 40px -16px rgba(8,47,73,.25); }
+.article-card:hover img{ transform:scale(1.05); }
+.article-card img{ transition:transform .5s; }
+@keyframes pulse-cta{ 0%,100%{box-shadow:0 10px 30px -8px rgba(234,88,12,.5);} 50%{box-shadow:0 10px 40px -8px rgba(234,88,12,.8);} }
+.pulse-cta{ animation:pulse-cta 2s ease-in-out infinite; }
 </style>
 <script type="application/ld+json">
 {
@@ -67,20 +81,21 @@ background-repeat:no-repeat; background-size:100% .52em; background-position:0 8
 "@graph": [
 {
 "@type": "Article",
-"headline": "10 ошибок новичков на сплаве: как избежать проблем и сделать отдых безопасным",
-"description": "10 главных ошибок новичков на сплаве: неправильный маршрут, выбор стоянки, упаковка вещей, безопасность и погода. Как подготовиться к сплаву и избежать проблем.",
+"headline": "10 ошибок новичков на сплаве: как избежать проблем и сделать отдых ярким и безопасным",
+"description": "Интерактивный разбор 10 главных ошибок новичков на сплаве по Дону со шкалой опасности и советами гида.",
 "image": ["https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/a3ff64dc-9370-4783-999f-8a88e13941bd/a3ff64dc-9370-4783-999f-8a88e13941bd-15767608.png"],
-"mainEntityOfPage": "https://rostur.expert/10-oshibok-novichkov-na-splave",
-"inLanguage": "ru",
-"author": { "@type": "Organization", "name": "РосТур Эксперт" },
-"publisher": { "@id": "https://rostur.expert/#business" }
+"inLanguage": "ru-RU",
+"datePublished": "2026-10-08",
+"dateModified": "2026-10-08",
+"author": { "@type": "Person", "name": "Александр Марков", "jobTitle": "Гид-инструктор, РосТур Эксперт" },
+"publisher": { "@id": "https://rostur.expert/#org" },
+"mainEntityOfPage": "https://rostur.expert/10-oshibok-novichkov-na-splave/"
 },
 {
 "@type": "BreadcrumbList",
 "itemListElement": [
 { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://rostur.expert/" },
-{ "@type": "ListItem", "position": 2, "name": "Сплав на плоту по Дону", "item": "https://rostur.expert/splav-po-dony-na-ploty" },
-{ "@type": "ListItem", "position": 3, "name": "10 ошибок новичков на сплаве" }
+{ "@type": "ListItem", "position": 2, "name": "10 ошибок новичков на сплаве" }
 ]
 }
 ]
@@ -90,508 +105,345 @@ background-repeat:no-repeat; background-size:100% .52em; background-position:0 8
 <body class="bg-white text-slate-800 antialiased pb-[52px] md:pb-0">
 <!-- ═══ Header ═══ -->
 <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm" x-data="{ m:false }">
-<div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
+<div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-3">
 <a href="../" class="flex items-center gap-2 font-extrabold text-river-deep text-lg leading-none shrink-0">
 <span class="grid place-items-center w-9 h-9 rounded-xl bg-river text-white text-sm">РТ</span>
-<span>РосТур Эксперт</span>
+<span class="text-base sm:text-lg whitespace-nowrap">РосТур Эксперт</span>
 </a>
-<nav aria-label="Основная навигация" class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
-<a href="../" class="hover:text-ember transition">Главная</a>
-<a href="../splav-po-dony-na-ploty/" class="hover:text-ember transition">Сплав на плоту</a>
-<a href="../camp/" class="hover:text-ember transition">Кемпинг</a>
+<nav class="hidden lg:flex items-center gap-5 text-sm font-semibold text-slate-600" aria-label="Навигация по статье">
+<a href="#farwater" class="hover:text-ember transition">Фарватер ошибок</a>
+<a href="#itog" class="hover:text-ember transition">Итоги</a>
+<a href="#also" class="hover:text-ember transition">Читайте также</a>
 </nav>
-<div class="flex items-center gap-3">
-<a href="../splav-po-dony-na-ploty/#zayavka" class="hidden sm:inline-flex items-center gap-2 bg-ember hover:bg-ember-dark text-white font-bold px-5 py-2.5 rounded-xl shadow-cta transition active:scale-95">Забронировать</a>
-<button type="button" @click="m=!m" :aria-expanded="m" aria-label="Открыть меню" class="md:hidden grid place-items-center w-11 h-11 rounded-xl border border-slate-200 text-river-deep">
+<div class="flex items-center gap-2">
+<a href="tel:+79950320002" class="hidden md:inline-flex items-center gap-1.5 border border-river/30 text-river font-bold text-xs px-3 py-2 rounded-lg hover:bg-river hover:text-white transition">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3l2 5-2.5 1.5a11 11 0 005 5L13 12l5 2v3a2 2 0 01-2 2A16 16 0 013 5z"/></svg>
+<span class="hidden xl:inline">+7 (995) 032-00-02</span>
+</a>
+<a href="../splav-po-dony-na-ploty/#zayavka" class="hidden sm:inline-flex items-center gap-2 bg-ember hover:bg-ember-dark text-white font-bold px-4 py-2 rounded-xl shadow-cta transition active:scale-95 text-sm">Хочу на сплав</a>
+<button type="button" @click="m=!m" :aria-expanded="m" aria-label="Меню" class="lg:hidden grid place-items-center w-11 h-11 rounded-xl border border-slate-200 text-river-deep">
 <svg x-show="!m" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
 <svg x-show="m" x-cloak class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
 </button>
 </div>
 </div>
-<div x-show="m" x-cloak x-transition class="md:hidden border-t border-slate-200 bg-white px-4 pb-4 pt-2 space-y-1 text-base font-semibold">
-<a @click="m=false" href="../" class="block py-3 border-b border-slate-100">Главная</a>
-<a @click="m=false" href="../splav-po-dony-na-ploty/" class="block py-3 border-b border-slate-100">Сплав на плоту</a>
-<a @click="m=false" href="../camp/" class="block py-3 border-b border-slate-100">Кемпинг</a>
-<a @click="m=false" href="../splav-po-dony-na-ploty/#zayavka" class="block text-center bg-ember text-white font-bold py-3 rounded-xl mt-2">Забронировать</a>
+<div x-show="m" x-cloak x-transition class="lg:hidden border-t border-slate-200 bg-white px-4 pb-4 pt-2 space-y-1 text-base font-semibold">
+<a @click="m=false" href="#farwater" class="block py-3 border-b border-slate-100">Фарватер ошибок</a>
+<a @click="m=false" href="#itog" class="block py-3 border-b border-slate-100">Итоги</a>
+<a @click="m=false" href="#also" class="block py-3 border-b border-slate-100">Читайте также</a>
+<a href="tel:+79950320002" class="block py-3 border-b border-slate-100 text-river font-bold">📞 +7 (995) 032-00-02</a>
+<a @click="m=false" href="../splav-po-dony-na-ploty/#zayavka" class="block text-center bg-ember text-white font-bold py-3 rounded-xl mt-2">Хочу на сплав</a>
 </div>
 </header>
 <main>
 <!-- ═══ Hero статьи ═══ -->
-<section class="bg-sand">
-<div class="max-w-4xl mx-auto px-4 pt-10 md:pt-16 pb-8 md:pb-12">
-<nav aria-label="Хлебные крошки" class="text-xs font-semibold text-slate-500">
+<section class="relative isolate overflow-hidden bg-river-deep text-white">
+<img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/a3ff64dc-9370-4783-999f-8a88e13941bd/a3ff64dc-9370-4783-999f-8a88e13941bd-15767608.png"
+alt="Плот на Дону на закате: безопасность на сплаве"
+width="1600" height="900" fetchpriority="high" decoding="async"
+class="absolute inset-0 -z-10 h-full w-full object-cover opacity-35">
+<div class="absolute inset-0 -z-10 bg-gradient-to-b from-river-deep/90 via-river-deep/75 to-river-deep/90" aria-hidden="true"></div>
+<div class="max-w-5xl mx-auto px-4 pt-12 md:pt-20 pb-14 md:pb-20">
+<nav aria-label="Хлебные крошки" class="text-xs font-semibold text-white/70">
 <ol class="flex flex-wrap items-center gap-1.5">
-<li><a href="../" class="hover:text-ember transition">Главная</a></li>
+<li><a href="../" class="hover:text-gold transition">Главная</a></li>
 <li aria-hidden="true">/</li>
-<li><a href="../splav-po-dony-na-ploty/" class="hover:text-ember transition">Сплав на плоту</a></li>
-<li aria-hidden="true">/</li>
-<li class="text-slate-700">10 ошибок новичков</li>
+<li class="text-gold">10 ошибок новичков на сплаве</li>
 </ol>
 </nav>
-<h1 class="h-hero font-extrabold text-river-deep mt-4">10 ошибок новичков на сплаве: <span class="mark-yellow">как избежать проблем</span> и сделать отдых безопасным</h1>
-<p class="mt-4 text-lg text-slate-600 leading-relaxed">Что может быть лучше сплава по реке? Свобода движения, смена пейзажей, тишина, прерываемая лишь плеском воды. Но эта идиллия обманчива для новичка, впервые оказавшегося на течении, — самые частые ошибки здесь не просто портят настроение, а ставят под угрозу весь маршрут. Осторожность здесь — не паранойя.</p>
-<div class="mt-6 ratio-16-9 rounded-3xl overflow-hidden shadow-card">
-<img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/a3ff64dc-9370-4783-999f-8a88e13941bd/a3ff64dc-9370-4783-999f-8a88e13941bd-15767608.png"
-alt="Плот на спокойной воде Дона: разбор типичных ошибок новичков на сплаве"
-width="1600" height="900" fetchpriority="high" decoding="async"
-class="h-full w-full object-cover">
-</div>
-<div class="mt-6 rounded-2xl bg-ember/10 border border-ember/25 p-5 flex flex-col sm:flex-row sm:items-center gap-4">
-<p class="flex-1 text-sm md:text-base font-semibold text-river-deep">Собрали главные промахи, которые повторяются из года в год. Их причина — в незнании или в легкомысленном отношении к силе воды.</p>
-<a href="../splav-po-dony-na-ploty/#zayavka" class="shrink-0 text-center bg-ember hover:bg-ember-dark text-white font-extrabold px-6 py-3 rounded-xl shadow-cta transition active:scale-95">Забронировать плот →</a>
+<p class="mt-4 inline-flex items-center gap-2 rounded-full bg-gold/15 border border-gold/40 text-gold px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest">🛟 Безопасность · интерактивный фарватер</p>
+<h1 class="h-hero font-extrabold mt-4">10 ошибок новичков на сплаве: <span class="mark-yellow">как избежать проблем</span> и сделать отдых ярким</h1>
+<p class="mt-4 text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl">За 8 сезонов на Дону мы видели сотни первых сплавов — и почти все грабли повторяются. Собрали их в интерактивный «фарватер»: у каждой ошибки шкала опасности от 1 до 5 и короткий рецепт «как правильно». Отмечайте прочитанное кнопкой «Учту» — прогресс покажет, готовы ли вы к воде.</p>
+<div class="mt-6 flex flex-wrap items-center gap-3 text-xs font-bold text-white/70">
+<span class="rounded-full bg-white/10 border border-white/20 px-3 py-1.5">Автор: Александр Марков, гид-инструктор</span>
+<span class="rounded-full bg-white/10 border border-white/20 px-3 py-1.5">Обновлено 08.10.2026</span>
+<span class="rounded-full bg-white/10 border border-white/20 px-3 py-1.5">6 минут чтения</span>
 </div>
 </div>
 </section>
-<!-- ═══ Текст статьи ═══ -->
-<article class="max-w-4xl mx-auto px-4 py-10 md:py-14">
-<h2 class="h-sec font-extrabold text-river-deep">Почему новички совершают ошибки на сплаве?</h2>
-<div class="mt-4 space-y-4 text-slate-700 leading-relaxed">
-<p>Мы собрали главные промахи, которые повторяются из года в год. Их причина — в незнании или в легкомысленном отношении к силе воды. Понимание этих тонкостей до выхода на маршрут превратит вашу поездку из рискованного испытания в уверенное и яркое путешествие.</p>
-<p>Представьте себя на плоту. Мир иной. Здесь ваши действия должны быть согласованы с характером реки: её темпом, поворотами, глубиной. Неверно закреплённый груз или неверная оценка потока у берега запускают череду событий, способных за минуты изменить всё. Учиться лучше на чужих ошибках.</p>
-<p>Главная ловушка — иллюзия полной безопасности. Спокойная гладь воды скрывает переменчивый нрав. Внезапная отмель, торчащая коряга или резкий поворот русла требуют постоянного внимания и готовности к манёвру. <strong>Расслабленность здесь — ваш главный противник.</strong> Истинное спокойствие рождается не из беспечности, а из уважения к стихии и умения чувствовать её ритм.</p>
-</div>
-<!-- ══ БЛОК ОШИБОК: «ФАРВАТЕР» ══ -->
-<h2 class="h-sec font-extrabold text-river-deep mt-12">Самые распространённые ошибки новичков на сплаве</h2>
-<p class="mt-3 text-slate-600">Мы провели вас по «фарватеру» от первой ошибки к десятой. Капли рядом с заголовком — уровень опасности: чем их больше, тем цена промаха выше.</p>
-<div class="mt-8 rounded-3xl bg-sand p-5 md:p-10">
-<div class="flex items-center gap-3">
-<div class="flex-1 h-2 rounded-full bg-white overflow-hidden shadow-card" aria-hidden="true">
-<div id="err-progress" class="h-full w-0 bg-gradient-to-r from-river-mid to-ember transition-all duration-500"></div>
-</div>
-<p class="text-xs font-extrabold text-river-mid whitespace-nowrap err-num"><span id="err-counter">0 / 10</span> прочитано</p>
-</div>
-<ol class="mt-8 relative space-y-6 pl-10 md:pl-14 before:content-[''] before:absolute before:left-4 md:before:left-5 before:top-2 before:bottom-2 before:w-1 before:rounded-full before:bg-gradient-to-b before:from-river-mid before:via-river before:to-ember/70">
-<li class="relative err-card">
-<span class="err-num absolute -left-10 md:-left-14 top-4 grid place-items-center w-9 h-9 md:w-11 md:h-11 rounded-full bg-river text-white font-extrabold ring-4 ring-sand shadow-card">1</span>
-<section class="relative overflow-hidden rounded-2xl border border-slate-200 shadow-card bg-white p-6 md:p-8 hover:-translate-y-1 hover:shadow-lg transition duration-300">
-<span class="err-num absolute -top-5 -right-2 text-[92px] md:text-[120px] font-extrabold text-river/5 leading-none select-none" aria-hidden="true">1</span>
-<div class="flex flex-wrap items-center justify-between gap-3">
-<h3 class="text-xl font-extrabold text-river-deep">Недооценка течения и особенностей реки</h3>
-<p class="flex items-center gap-1 text-[11px] font-extrabold uppercase tracking-wide text-rose-600" title="Уровень опасности: 3 из 3"><span class="sr-only">Уровень опасности: 3 из 3</span>опасность
-<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-</p>
-</div>
-<p class="mt-3 text-slate-700">Даже спокойный Дон может преподнести сюрпризы: участки с быстрым течением, обратки, коряги, подводные ямы.</p>
-<div class="mt-4 grid md:grid-cols-2 gap-4">
-<div class="rounded-xl bg-rose-50 border border-rose-100 p-4">
-<p class="text-sm font-extrabold text-rose-600">Почему это опасно:</p>
-<ul class="mt-2 list-disc pl-5 space-y-1 text-sm text-slate-700">
-<li>плот может увести к берегу или в заросли;</li>
-<li>сложнее контролировать движение;</li>
-<li>возрастает риск столкновений.</li>
-</ul>
-</div>
-<div class="rounded-xl bg-emerald-50 border border-emerald-100 p-4">
-<p class="text-sm font-extrabold text-emerald-600">Как избежать:</p>
-<ul class="mt-2 list-disc pl-5 space-y-1 text-sm text-slate-700">
-<li>изучить карту участка заранее;</li>
-<li>держаться середины русла;</li>
-<li>учитывать ветер и уровень воды.</li>
-</ul>
+<!-- ═══ Фарватер ошибок ═══ -->
+<section id="farwater" class="py-12 md:py-16">
+<div class="max-w-6xl mx-auto px-4">
+<div class="grid lg:grid-cols-[1fr_300px] gap-8 items-start">
+<div class="min-w-0 space-y-5">
+<!-- Ошибка 1 -->
+<article class="mistake-card rounded-3xl border-2 border-slate-200 bg-white p-6 md:p-7 shadow-card" data-idx="1">
+<div class="flex items-start gap-4">
+<span class="mistake-num shrink-0 grid place-items-center w-11 h-11 rounded-2xl bg-ember text-white text-lg font-extrabold">1</span>
+<div class="min-w-0">
+<h2 class="font-extrabold text-river-deep text-lg md:text-xl leading-snug">Спасжилет «для фото»: надел и снял</h2>
+<p class="mt-2 text-sm text-slate-600 leading-relaxed">Жилет надевают на старте для фотографии и снимают «до стоянки». Но борт, мокрая палуба и ночной поход к воде — это моменты, когда человек за борт попадает чаще всего.</p>
+<p class="mt-2 text-sm text-slate-700"><b class="text-emerald-700">Как правильно:</b> жилет надет всё время на воде и у кромки воды. Детские — по размеру, не «на вырост»: капитан проверяет посадку перед отходом.</p>
+<div class="mt-3 flex flex-wrap items-center gap-3">
+<span class="text-[10px] font-extrabold uppercase tracking-widest text-slate-500">Опасность</span>
+<span class="flex gap-1" aria-label="Опасность 5 из 5"><span class="dot on max"></span><span class="dot on max"></span><span class="dot on max"></span><span class="dot on max"></span><span class="dot on max"></span></span>
+<button type="button" class="ok-btn ml-auto rounded-xl border-2 border-slate-200 px-4 py-2 text-xs font-extrabold text-slate-600 hover:border-emerald-500 hover:text-emerald-600">Учту ✓</button>
 </div>
 </div>
-</section>
-</li>
-<li class="relative err-card">
-<span class="err-num absolute -left-10 md:-left-14 top-4 grid place-items-center w-9 h-9 md:w-11 md:h-11 rounded-full bg-river text-white font-extrabold ring-4 ring-sand shadow-card">2</span>
-<section class="relative overflow-hidden rounded-2xl border border-slate-200 shadow-card bg-white p-6 md:p-8 hover:-translate-y-1 hover:shadow-lg transition duration-300">
-<span class="err-num absolute -top-5 -right-2 text-[92px] md:text-[120px] font-extrabold text-river/5 leading-none select-none" aria-hidden="true">2</span>
-<div class="flex flex-wrap items-center justify-between gap-3">
-<h3 class="text-xl font-extrabold text-river-deep">Неправильный выбор маршрута</h3>
-<p class="flex items-center gap-1 text-[11px] font-extrabold uppercase tracking-wide text-rose-600" title="Уровень опасности: 2 из 3"><span class="sr-only">Уровень опасности: 2 из 3</span>опасность
-<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-<svg class="w-3.5 h-3.5 opacity-25" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-</p>
-</div>
-<p class="mt-3 text-slate-700">Новички часто выбирают слишком длинный маршрут или участок, не подходящий по уровню сложности.</p>
-<div class="mt-4 grid md:grid-cols-2 gap-4">
-<div class="rounded-xl bg-rose-50 border border-rose-100 p-4">
-<p class="text-sm font-extrabold text-rose-600">К чему приводит:</p>
-<ul class="mt-2 list-disc pl-5 space-y-1 text-sm text-slate-700">
-<li>усталость;</li>
-<li>поздний приход на стоянку;</li>
-<li>стресс и спешка.</li>
-</ul>
-</div>
-<div class="rounded-xl bg-emerald-50 border border-emerald-100 p-4">
-<p class="text-sm font-extrabold text-emerald-600">Как правильно:</p>
-<ul class="mt-2 list-disc pl-5 space-y-1 text-sm text-slate-700">
-<li>для первого раза — 10–20 км в день;</li>
-<li>выбирать маршруты с большим количеством стоянок;</li>
-<li>учитывать опыт и физическую форму группы.</li>
-</ul>
-</div>
-</div>
-</section>
-</li>
-<li class="relative err-card">
-<span class="err-num absolute -left-10 md:-left-14 top-4 grid place-items-center w-9 h-9 md:w-11 md:h-11 rounded-full bg-river text-white font-extrabold ring-4 ring-sand shadow-card">3</span>
-<section class="relative overflow-hidden rounded-2xl border border-slate-200 shadow-card bg-white p-6 md:p-8 hover:-translate-y-1 hover:shadow-lg transition duration-300">
-<span class="err-num absolute -top-5 -right-2 text-[92px] md:text-[120px] font-extrabold text-river/5 leading-none select-none" aria-hidden="true">3</span>
-<div class="flex flex-wrap items-center justify-between gap-3">
-<h3 class="text-xl font-extrabold text-river-deep">Переоценка своих сил</h3>
-<p class="flex items-center gap-1 text-[11px] font-extrabold uppercase tracking-wide text-rose-600" title="Уровень опасности: 2 из 3"><span class="sr-only">Уровень опасности: 2 из 3</span>опасность
-<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-<svg class="w-3.5 h-3.5 opacity-25" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-</p>
-</div>
-<p class="mt-3 text-slate-700">Новички пытаются пройти максимум километров.</p>
-<div class="mt-4 grid md:grid-cols-2 gap-4">
-<div class="rounded-xl bg-rose-50 border border-rose-100 p-4">
-<p class="text-sm font-extrabold text-rose-600">Ошибка приводит к:</p>
-<ul class="mt-2 list-disc pl-5 space-y-1 text-sm text-slate-700">
-<li>усталости;</li>
-<li>раздражению;</li>
-<li>потере удовольствия.</li>
-</ul>
-</div>
-<div class="rounded-xl bg-emerald-50 border border-emerald-100 p-4">
-<p class="text-sm font-extrabold text-emerald-600">Как избежать:</p>
-<ul class="mt-2 list-disc pl-5 space-y-1 text-sm text-slate-700">
-<li>планировать 4–6 часов движения в день;</li>
-<li>делать остановки на купание;</li>
-<li>наслаждаться природой, а не гнаться за километрами.</li>
-</ul>
-</div>
-</div>
-</section>
-</li>
-<li class="relative err-card">
-<span class="err-num absolute -left-10 md:-left-14 top-4 grid place-items-center w-9 h-9 md:w-11 md:h-11 rounded-full bg-river text-white font-extrabold ring-4 ring-sand shadow-card">4</span>
-<section class="relative overflow-hidden rounded-2xl border border-slate-200 shadow-card bg-white p-6 md:p-8 hover:-translate-y-1 hover:shadow-lg transition duration-300">
-<span class="err-num absolute -top-5 -right-2 text-[92px] md:text-[120px] font-extrabold text-river/5 leading-none select-none" aria-hidden="true">4</span>
-<div class="flex flex-wrap items-center justify-between gap-3">
-<h3 class="text-xl font-extrabold text-river-deep">Отсутствие распределения обязанностей</h3>
-<p class="flex items-center gap-1 text-[11px] font-extrabold uppercase tracking-wide text-rose-600" title="Уровень опасности: 1 из 3"><span class="sr-only">Уровень опасности: 1 из 3</span>опасность
-<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-<svg class="w-3.5 h-3.5 opacity-25" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-<svg class="w-3.5 h-3.5 opacity-25" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-</p>
-</div>
-<p class="mt-3 text-slate-700">Новички часто плывут «как получится».</p>
-<div class="mt-4 grid md:grid-cols-2 gap-4">
-<div class="rounded-xl bg-rose-50 border border-rose-100 p-4">
-<p class="text-sm font-extrabold text-rose-600">Что происходит:</p>
-<ul class="mt-2 list-disc pl-5 space-y-1 text-sm text-slate-700">
-<li>хаос на плоту;</li>
-<li>никто не отвечает за маршрут;</li>
-<li>задержки и ошибки.</li>
-</ul>
-</div>
-<div class="rounded-xl bg-emerald-50 border border-emerald-100 p-4">
-<p class="text-sm font-extrabold text-emerald-600">Как правильно:</p>
-<ul class="mt-2 list-disc pl-5 space-y-1 text-sm text-slate-700">
-<li>назначить капитана;</li>
-<li>распределить обязанности: кухня, швартовка, навигация;</li>
-<li>договориться о правилах заранее.</li>
-</ul>
-</div>
-</div>
-</section>
-</li>
-<li class="relative err-card">
-<span class="err-num absolute -left-10 md:-left-14 top-4 grid place-items-center w-9 h-9 md:w-11 md:h-11 rounded-full bg-river text-white font-extrabold ring-4 ring-sand shadow-card">5</span>
-<section class="relative overflow-hidden rounded-2xl border border-slate-200 shadow-card bg-white p-6 md:p-8 hover:-translate-y-1 hover:shadow-lg transition duration-300">
-<span class="err-num absolute -top-5 -right-2 text-[92px] md:text-[120px] font-extrabold text-river/5 leading-none select-none" aria-hidden="true">5</span>
-<div class="flex flex-wrap items-center justify-between gap-3">
-<h3 class="text-xl font-extrabold text-river-deep">Игнорирование прогноза погоды</h3>
-<p class="flex items-center gap-1 text-[11px] font-extrabold uppercase tracking-wide text-rose-600" title="Уровень опасности: 2 из 3"><span class="sr-only">Уровень опасности: 2 из 3</span>опасность
-<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-<svg class="w-3.5 h-3.5 opacity-25" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-</p>
-</div>
-<p class="mt-3 text-slate-700">Погода на Дону меняется быстро: ветер, дождь, жара — всё влияет на маршрут.</p>
-<div class="mt-4 grid md:grid-cols-2 gap-4">
-<div class="rounded-xl bg-rose-50 border border-rose-100 p-4">
-<p class="text-sm font-extrabold text-rose-600">Ошибка приводит к:</p>
-<ul class="mt-2 list-disc pl-5 space-y-1 text-sm text-slate-700">
-<li>сносу плота;</li>
-<li>перегреву или переохлаждению;</li>
-<li>сложностям со швартовкой.</li>
-</ul>
-</div>
-<div class="rounded-xl bg-emerald-50 border border-emerald-100 p-4">
-<p class="text-sm font-extrabold text-emerald-600">Как избежать:</p>
-<ul class="mt-2 list-disc pl-5 space-y-1 text-sm text-slate-700">
-<li>проверять прогноз на 2–3 дня;</li>
-<li>иметь тент от солнца и дождя;</li>
-<li>учитывать направление ветра.</li>
-</ul>
-</div>
-</div>
-</section>
-</li>
-<li class="relative err-card">
-<span class="err-num absolute -left-10 md:-left-14 top-4 grid place-items-center w-9 h-9 md:w-11 md:h-11 rounded-full bg-river text-white font-extrabold ring-4 ring-sand shadow-card">6</span>
-<section class="relative overflow-hidden rounded-2xl border border-slate-200 shadow-card bg-white p-6 md:p-8 hover:-translate-y-1 hover:shadow-lg transition duration-300">
-<span class="err-num absolute -top-5 -right-2 text-[92px] md:text-[120px] font-extrabold text-river/5 leading-none select-none" aria-hidden="true">6</span>
-<div class="flex flex-wrap items-center justify-between gap-3">
-<h3 class="text-xl font-extrabold text-river-deep">Поздний выход на воду</h3>
-<p class="flex items-center gap-1 text-[11px] font-extrabold uppercase tracking-wide text-rose-600" title="Уровень опасности: 1 из 3"><span class="sr-only">Уровень опасности: 1 из 3</span>опасность
-<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-<svg class="w-3.5 h-3.5 opacity-25" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-<svg class="w-3.5 h-3.5 opacity-25" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-</p>
-</div>
-<p class="mt-3 text-slate-700">Новички часто стартуют в обед, думая, что «успеют».</p>
-<div class="mt-4 grid md:grid-cols-2 gap-4">
-<div class="rounded-xl bg-rose-50 border border-rose-100 p-4">
-<p class="text-sm font-extrabold text-rose-600">Почему это плохо:</p>
-<ul class="mt-2 list-disc pl-5 space-y-1 text-sm text-slate-700">
-<li>меньше времени на поиск стоянки;</li>
-<li>выше риск идти в сумерках;</li>
-<li>группа быстрее устаёт.</li>
-</ul>
-</div>
-<div class="rounded-xl bg-emerald-50 border border-emerald-100 p-4">
-<p class="text-sm font-extrabold text-emerald-600">Как правильно:</p>
-<ul class="mt-2 list-disc pl-5 space-y-1 text-sm text-slate-700">
-<li>выходить до обеда;</li>
-<li>планировать маршрут с запасом.</li>
-</ul>
-</div>
-</div>
-</section>
-</li>
-<li class="relative err-card">
-<span class="err-num absolute -left-10 md:-left-14 top-4 grid place-items-center w-9 h-9 md:w-11 md:h-11 rounded-full bg-river text-white font-extrabold ring-4 ring-sand shadow-card">7</span>
-<section class="relative overflow-hidden rounded-2xl border border-slate-200 shadow-card bg-white p-6 md:p-8 hover:-translate-y-1 hover:shadow-lg transition duration-300">
-<span class="err-num absolute -top-5 -right-2 text-[92px] md:text-[120px] font-extrabold text-river/5 leading-none select-none" aria-hidden="true">7</span>
-<div class="flex flex-wrap items-center justify-between gap-3">
-<h3 class="text-xl font-extrabold text-river-deep">Неправильный выбор стоянки</h3>
-<p class="flex items-center gap-1 text-[11px] font-extrabold uppercase tracking-wide text-rose-600" title="Уровень опасности: 2 из 3"><span class="sr-only">Уровень опасности: 2 из 3</span>опасность
-<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-<svg class="w-3.5 h-3.5 opacity-25" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-</p>
-</div>
-<p class="mt-3 text-slate-700">Выбор первой попавшейся поляны — частая ошибка.</p>
-<div class="mt-4 grid md:grid-cols-2 gap-4">
-<div class="rounded-xl bg-rose-50 border border-rose-100 p-4">
-<p class="text-sm font-extrabold text-rose-600">К чему приводит:</p>
-<ul class="mt-2 list-disc pl-5 space-y-1 text-sm text-slate-700">
-<li>комары и мошка;</li>
-<li>неудобный заход в воду;</li>
-<li>отсутствие дров;</li>
-<li>опасность обвала с меловых обрывов.</li>
-</ul>
-</div>
-<div class="rounded-xl bg-emerald-50 border border-emerald-100 p-4">
-<p class="text-sm font-extrabold text-emerald-600">Как выбрать хорошую стоянку:</p>
-<ul class="mt-2 list-disc pl-5 space-y-1 text-sm text-slate-700">
-<li>ровная площадка;</li>
-<li>песчаный берег;</li>
-<li>отсутствие коряг;</li>
-<li>защита от ветра;</li>
-<li>доступ к дровам.</li>
-</ul>
-</div>
-</div>
-</section>
-</li>
-<li class="relative err-card">
-<span class="err-num absolute -left-10 md:-left-14 top-4 grid place-items-center w-9 h-9 md:w-11 md:h-11 rounded-full bg-river text-white font-extrabold ring-4 ring-sand shadow-card">8</span>
-<section class="relative overflow-hidden rounded-2xl border border-slate-200 shadow-card bg-white p-6 md:p-8 hover:-translate-y-1 hover:shadow-lg transition duration-300">
-<span class="err-num absolute -top-5 -right-2 text-[92px] md:text-[120px] font-extrabold text-river/5 leading-none select-none" aria-hidden="true">8</span>
-<div class="flex flex-wrap items-center justify-between gap-3">
-<h3 class="text-xl font-extrabold text-river-deep">Отсутствие аптечки и базовых навыков безопасности</h3>
-<p class="flex items-center gap-1 text-[11px] font-extrabold uppercase tracking-wide text-rose-600" title="Уровень опасности: 2 из 3"><span class="sr-only">Уровень опасности: 2 из 3</span>опасность
-<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-<svg class="w-3.5 h-3.5 opacity-25" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-</p>
-</div>
-<p class="mt-3 text-slate-700">Даже мелкая царапина может стать проблемой.</p>
-<div class="mt-4 grid md:grid-cols-2 gap-4">
-<div class="rounded-xl bg-rose-50 border border-rose-100 p-4">
-<p class="text-sm font-extrabold text-rose-600">Приводит к:</p>
-<ul class="mt-2 list-disc pl-5 space-y-1 text-sm text-slate-700">
-<li>невозможности обработать рану;</li>
-<li>аллергическим реакциям;</li>
-<li>панике в группе.</li>
-</ul>
-</div>
-<div class="rounded-xl bg-emerald-50 border border-emerald-100 p-4">
-<p class="text-sm font-extrabold text-emerald-600">Что должно быть:</p>
-<ul class="mt-2 list-disc pl-5 space-y-1 text-sm text-slate-700">
-<li>бинт, пластырь, антисептики;</li>
-<li>средства от укусов;</li>
-<li>обезболивающее;</li>
-<li>индивидуальные лекарства.</li>
-</ul>
-</div>
-</div>
-</section>
-</li>
-<li class="relative err-card">
-<span class="err-num absolute -left-10 md:-left-14 top-4 grid place-items-center w-9 h-9 md:w-11 md:h-11 rounded-full bg-river text-white font-extrabold ring-4 ring-sand shadow-card">9</span>
-<section class="relative overflow-hidden rounded-2xl border border-slate-200 shadow-card bg-white p-6 md:p-8 hover:-translate-y-1 hover:shadow-lg transition duration-300">
-<span class="err-num absolute -top-5 -right-2 text-[92px] md:text-[120px] font-extrabold text-river/5 leading-none select-none" aria-hidden="true">9</span>
-<div class="flex flex-wrap items-center justify-between gap-3">
-<h3 class="text-xl font-extrabold text-river-deep">Неправильная упаковка вещей</h3>
-<p class="flex items-center gap-1 text-[11px] font-extrabold uppercase tracking-wide text-rose-600" title="Уровень опасности: 1 из 3"><span class="sr-only">Уровень опасности: 1 из 3</span>опасность
-<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-<svg class="w-3.5 h-3.5 opacity-25" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-<svg class="w-3.5 h-3.5 opacity-25" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-</p>
-</div>
-<p class="mt-3 text-slate-700">Обычные сумки и пакеты — плохой выбор для сплава.</p>
-<div class="mt-4 grid md:grid-cols-2 gap-4">
-<div class="rounded-xl bg-rose-50 border border-rose-100 p-4">
-<p class="text-sm font-extrabold text-rose-600">Что происходит:</p>
-<ul class="mt-2 list-disc pl-5 space-y-1 text-sm text-slate-700">
-<li>вещи намокают;</li>
-<li>сложно найти нужное;</li>
-<li>плот перегружается.</li>
-</ul>
-</div>
-<div class="rounded-xl bg-emerald-50 border border-emerald-100 p-4">
-<p class="text-sm font-extrabold text-emerald-600">Как правильно:</p>
-<ul class="mt-2 list-disc pl-5 space-y-1 text-sm text-slate-700">
-<li>использовать гермомешки;</li>
-<li>распределять вес равномерно;</li>
-<li>брать только необходимое.</li>
-</ul>
-</div>
-</div>
-</section>
-</li>
-<li class="relative err-card">
-<span class="err-num absolute -left-10 md:-left-14 top-4 grid place-items-center w-9 h-9 md:w-11 md:h-11 rounded-full bg-ember text-white font-extrabold ring-4 ring-sand shadow-cta">10</span>
-<section class="relative overflow-hidden rounded-2xl border-2 border-ember/40 shadow-card bg-white p-6 md:p-8 hover:-translate-y-1 hover:shadow-lg transition duration-300">
-<span class="err-num absolute -top-5 -right-2 text-[92px] md:text-[120px] font-extrabold text-ember/10 leading-none select-none" aria-hidden="true">10</span>
-<div class="flex flex-wrap items-center justify-between gap-3">
-<h3 class="text-xl font-extrabold text-river-deep">Игнорирование спасжилетов <span class="ml-1 align-middle text-[10px] font-extrabold uppercase tracking-wide bg-ember text-white rounded-full px-2.5 py-1">самая опасная</span></h3>
-<p class="flex items-center gap-1 text-[11px] font-extrabold uppercase tracking-wide text-rose-600" title="Уровень опасности: 3 из 3"><span class="sr-only">Уровень опасности: 3 из 3</span>опасность
-<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c5 6.2 8 9.7 8 13.2A8 8 0 1 1 4 15.2C4 11.7 7 8.2 12 2z"/></svg>
-</p>
-</div>
-<p class="mt-3 text-slate-700">Самая частая и самая опасная ошибка.</p>
-<div class="mt-4 grid md:grid-cols-2 gap-4">
-<div class="rounded-xl bg-rose-50 border border-rose-100 p-4">
-<p class="text-sm font-extrabold text-rose-600">Почему:</p>
-<ul class="mt-2 list-disc pl-5 space-y-1 text-sm text-slate-700">
-<li>даже на спокойной воде можно упасть;</li>
-<li>течение усиливается при ветре;</li>
-<li>плот может зацепиться за корягу.</li>
-</ul>
-</div>
-<div class="rounded-xl bg-emerald-50 border border-emerald-100 p-4">
-<p class="text-sm font-extrabold text-emerald-600">Как избежать:</p>
-<ul class="mt-2 list-disc pl-5 space-y-1 text-sm text-slate-700">
-<li>спасжилет должен быть «под рукой» у каждого участника;</li>
-<li>застёгивать полностью;</li>
-<li>подбирать по размеру.</li>
-</ul>
-</div>
-</div>
-</section>
-</li>
-</ol>
-<div class="mt-8 relative overflow-hidden rounded-2xl bg-river-deep text-white p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center gap-5">
-<span class="absolute -top-6 -right-3 text-[100px] leading-none select-none opacity-10" aria-hidden="true">🏁</span>
-<div class="flex-1">
-<p class="font-extrabold text-gold text-lg">Финиш списка!</p>
-<p class="mt-1 text-white/85 text-sm md:text-base leading-relaxed">Вы дочитали до конца — значит, на воде будете спокойнее половины новичков. Осталось собрать рюкзак по чек-листу и занять свои даты на плоту.</p>
-</div>
-<div class="flex flex-col sm:flex-row gap-3 shrink-0">
-<a href="../chto-vzyat-na-splav/" class="text-center border-2 border-white/50 hover:border-white hover:bg-white/10 text-white font-bold px-6 py-3 rounded-xl transition">Собрать рюкзак →</a>
-<a href="../splav-po-dony-na-ploty/#zayavka" class="text-center bg-ember hover:bg-ember-dark text-white font-extrabold px-6 py-3 rounded-xl shadow-cta transition active:scale-95">Выбрать даты</a>
-</div>
-</div>
-</div>
-<h2 class="h-sec font-extrabold text-river-deep mt-12">Итоги: как избежать ошибок и сделать сплав комфортным</h2>
-<div class="mt-4 space-y-4 text-slate-700 leading-relaxed">
-<p>Сплав — это не испытание, а возвращение. К простому ритму волны и шелесту ветра в прибрежных ивах. В этом движении по воде повседневная суета остаётся позади, уступая место другому, более размеренному времени.</p>
-<p>Главная ошибка новичка — ждать от реки сложного экзамена. На деле стоит избежать лишь нескольких промахов: перегруженной лодки, непогоды и излишней спешки. Тогда маршрут подарит не борьбу, а последовательность открытий. За каждым поворотом будут новые виды, спокойная стоянка и улов для ухи. Так и рождается настоящее путешествие.</p>
-<p>Для первого раза хорошо подходит Дон. Его течение неторопливо, берега пологи, а просторы донских низовий кажутся бескрайними. Отправляйтесь в путь без лишнего напряжения, позвольте реке вести ваш катамаран или байдарку. Она ответит тишиной, плеском о борт и ровным загаром. Здесь можно наконец выспаться под шум прибоя и поймать на крючок сазана.</p>
-<p>Это и есть отдых в чистом виде. Безопасный, комфортный и по-настоящему насыщенный. Всё, что требуется, — довериться течению и смотреть по сторонам. Ваша река уже здесь.</p>
-</div>
-<div class="mt-10 rounded-3xl bg-river-deep text-white p-8 md:p-10 text-center">
-<p class="text-sm font-extrabold uppercase tracking-widest text-gold">Мы делаем отдых</p>
-<p class="h-sec font-extrabold mt-1">ЯРКИМ! Без глупых ошибок.</p>
-<p class="mt-3 text-white/80">Организованный сплав на плоту по Дону: капитан, баня, коптильня и всё снаряжение — уже на борту.</p>
-<div class="mt-6 flex flex-col sm:flex-row justify-center gap-3">
-<a href="../splav-po-dony-na-ploty/#zayavka" class="bg-ember hover:bg-ember-dark text-white font-extrabold px-8 py-4 rounded-2xl shadow-cta transition active:scale-95">Забронировать плот →</a>
-<a href="tel:+79950320002" class="border-2 border-white/50 hover:border-white hover:bg-white/10 text-white font-bold px-8 py-4 rounded-2xl transition">+7 (995) 032-00-02</a>
-</div>
-</div>
-<!-- ═══ Читайте также ═══ -->
-<h2 class="h-sec font-extrabold text-river-deep mt-14">Читайте также</h2>
-<div class="mt-6 grid sm:grid-cols-3 gap-5">
-<a href="../chto-vzyat-na-splav/" class="group rounded-2xl border border-slate-200 hover:border-ember p-6 transition hover:shadow-card">
-<p class="text-xs font-extrabold uppercase text-ember">Снаряжение</p>
-<h3 class="mt-2 font-extrabold text-river-deep group-hover:text-ember transition">Что взять с собой на сплав</h3>
-<p class="mt-2 text-sm text-slate-600">Полный список одежды, аптечки и снаряжения + советы по упаковке.</p>
-</a>
-<a href="../stoimost-arendy-plota/" class="group rounded-2xl border border-slate-200 hover:border-ember p-6 transition hover:shadow-card">
-<p class="text-xs font-extrabold uppercase text-ember">Цены</p>
-<h3 class="mt-2 font-extrabold text-river-deep group-hover:text-ember transition">Сколько стоит аренда плота</h3>
-<p class="mt-2 text-sm text-slate-600">Из чего складывается цена и как сэкономить без потери комфорта.</p>
-</a>
-<a href="../polnyj-gid-po-splavu-po-donu/" class="group rounded-2xl border border-slate-200 hover:border-ember p-6 transition hover:shadow-card">
-<p class="text-xs font-extrabold uppercase text-ember">Гид</p>
-<h3 class="mt-2 font-extrabold text-river-deep group-hover:text-ember transition">Полный гид по сплаву по Дону</h3>
-<p class="mt-2 text-sm text-slate-600">Маршруты, стоянки, сезонность и безопасность — всё в одном месте.</p>
-</a>
 </div>
 </article>
+<!-- Ошибка 2 -->
+<article class="mistake-card rounded-3xl border-2 border-slate-200 bg-white p-6 md:p-7 shadow-card" data-idx="2">
+<div class="flex items-start gap-4">
+<span class="mistake-num shrink-0 grid place-items-center w-11 h-11 rounded-2xl bg-ember text-white text-lg font-extrabold">2</span>
+<div class="min-w-0">
+<h2 class="font-extrabold text-river-deep text-lg md:text-xl leading-snug">Алкоголь «до и во время» сплава</h2>
+<p class="mt-2 text-sm text-slate-600 leading-relaxed">Пиво на старте и «по глотку» на переходе: реакция падает, солнце и качка усиливают опьянение, а вода ошибок не прощает. Половина всех ЧП на реке — с этим пунктом.</p>
+<p class="mt-2 text-sm text-slate-700"><b class="text-emerald-700">Как правильно:</b> напитки с градусом — только на стоянке, после швартовки и только у костра. На переходах — вода и чай из термоса.</p>
+<div class="mt-3 flex flex-wrap items-center gap-3">
+<span class="text-[10px] font-extrabold uppercase tracking-widest text-slate-500">Опасность</span>
+<span class="flex gap-1" aria-label="Опасность 5 из 5"><span class="dot on max"></span><span class="dot on max"></span><span class="dot on max"></span><span class="dot on max"></span><span class="dot on max"></span></span>
+<button type="button" class="ok-btn ml-auto rounded-xl border-2 border-slate-200 px-4 py-2 text-xs font-extrabold text-slate-600 hover:border-emerald-500 hover:text-emerald-600">Учту ✓</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Ошибка 3 -->
+<article class="mistake-card rounded-3xl border-2 border-slate-200 bg-white p-6 md:p-7 shadow-card" data-idx="3">
+<div class="flex items-start gap-4">
+<span class="mistake-num shrink-0 grid place-items-center w-11 h-11 rounded-2xl bg-ember text-white text-lg font-extrabold">3</span>
+<div class="min-w-0">
+<h2 class="font-extrabold text-river-deep text-lg md:text-xl leading-snug">Сланцы и шлёпанцы без задника</h2>
+<p class="mt-2 text-sm text-slate-600 leading-relaxed">Мокрые камни, скользкая палуба, коряги на берегу — сланец слетает в первый час, а босиком по камням поход заканчивается травмой.</p>
+<p class="mt-2 text-sm text-slate-700"><b class="text-emerald-700">Как правильно:</b> закрытая обувь с нескользящей подошвой, которую не жалко намочить: сандали с задником или старые кроссовки. Вторые — сухие — в гермомешок.</p>
+<div class="mt-3 flex flex-wrap items-center gap-3">
+<span class="text-[10px] font-extrabold uppercase tracking-widest text-slate-500">Опасность</span>
+<span class="flex gap-1" aria-label="Опасность 4 из 5"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></span>
+<button type="button" class="ok-btn ml-auto rounded-xl border-2 border-slate-200 px-4 py-2 text-xs font-extrabold text-slate-600 hover:border-emerald-500 hover:text-emerald-600">Учту ✓</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Ошибка 4 -->
+<article class="mistake-card rounded-3xl border-2 border-slate-200 bg-white p-6 md:p-7 shadow-card" data-idx="4">
+<div class="flex items-start gap-4">
+<span class="mistake-num shrink-0 grid place-items-center w-11 h-11 rounded-2xl bg-ember text-white text-lg font-extrabold">4</span>
+<div class="min-w-0">
+<h2 class="font-extrabold text-river-deep text-lg md:text-xl leading-snug">Без головного убора и SPF в июльскую жару</h2>
+<p class="mt-2 text-sm text-slate-600 leading-relaxed">Вода отражает солнце: обгореть «в тенёчке» и получить тепловой удар на переходе — классика первого дня. Плюс блики мешают смотреть на воду и рыбу.</p>
+<p class="mt-2 text-sm text-slate-700"><b class="text-emerald-700">Как правильно:</b> кепка или панама с полями, SPF 50 на открытые зоны, солнцезащитные очки на страховочном шнурке.</p>
+<div class="mt-3 flex flex-wrap items-center gap-3">
+<span class="text-[10px] font-extrabold uppercase tracking-widest text-slate-500">Опасность</span>
+<span class="flex gap-1" aria-label="Опасность 3 из 5"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span></span>
+<button type="button" class="ok-btn ml-auto rounded-xl border-2 border-slate-200 px-4 py-2 text-xs font-extrabold text-slate-600 hover:border-emerald-500 hover:text-emerald-600">Учту ✓</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Ошибка 5 -->
+<article class="mistake-card rounded-3xl border-2 border-slate-200 bg-white p-6 md:p-7 shadow-card" data-idx="5">
+<div class="flex items-start gap-4">
+<span class="mistake-num shrink-0 grid place-items-center w-11 h-11 rounded-2xl bg-ember text-white text-lg font-extrabold">5</span>
+<div class="min-w-0">
+<h2 class="font-extrabold text-river-deep text-lg md:text-xl leading-snug">Телефон в кармане без гермоупаковки</h2>
+<p class="mt-2 text-sm text-slate-600 leading-relaxed">Один всплеск под бортом или дождь на переходе — и вы без связи, навигации и всех фото отпуска. Чинится за 300 ₽, игнорируется почти всеми.</p>
+<p class="mt-2 text-sm text-slate-700"><b class="text-emerald-700">Как правильно:</b> телефон и документы — в гермочехол или гермомешок с двойной скруткой; пауэрбанк туда же. Полный список — в <a href="../chto-vzyat-na-splav/" class="text-ember font-bold underline underline-offset-2 hover:no-underline">чек-листе «Гермомешок»</a>.</p>
+<div class="mt-3 flex flex-wrap items-center gap-3">
+<span class="text-[10px] font-extrabold uppercase tracking-widest text-slate-500">Опасность</span>
+<span class="flex gap-1" aria-label="Опасность 3 из 5"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span></span>
+<button type="button" class="ok-btn ml-auto rounded-xl border-2 border-slate-200 px-4 py-2 text-xs font-extrabold text-slate-600 hover:border-emerald-500 hover:text-emerald-600">Учту ✓</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Средний CTA -->
+<div class="rounded-3xl bg-gradient-to-br from-river-deep via-river to-river-mid text-white p-6 md:p-8 shadow-card">
+<p class="text-xs font-extrabold uppercase tracking-widest text-gold">Половина фарватера пройдена</p>
+<h2 class="mt-2 text-xl md:text-2xl font-extrabold">5 ошибок позади — самые страшные уже не ваши</h2>
+<p class="mt-2 text-sm text-white/85 leading-relaxed">На нашем плоту первые пять пунктов закрыты по умолчанию: спасжилеты всех размеров, капитан следит за дисциплиной на воде, а гермомешки можно взять у администратора.</p>
+<a href="../splav-po-dony-na-ploty/" class="mt-4 inline-flex items-center gap-2 bg-ember hover:bg-ember-dark text-white font-extrabold px-6 py-3 rounded-xl shadow-cta transition active:scale-95">Посмотреть плот «Бульбусик» →</a>
+</div>
+<!-- Ошибка 6 -->
+<article class="mistake-card rounded-3xl border-2 border-slate-200 bg-white p-6 md:p-7 shadow-card" data-idx="6">
+<div class="flex items-start gap-4">
+<span class="mistake-num shrink-0 grid place-items-center w-11 h-11 rounded-2xl bg-ember text-white text-lg font-extrabold">6</span>
+<div class="min-w-0">
+<h2 class="font-extrabold text-river-deep text-lg md:text-xl leading-snug">«Воду и еду купим на месте»</h2>
+<p class="mt-2 text-sm text-slate-600 leading-relaxed">На реке нет магазина за углом: ближайший — в хуторе, в 20–40 минутах от стоянки. Обезвоживание в жару приходит быстрее, чем голод.</p>
+<p class="mt-2 text-sm text-slate-700"><b class="text-emerald-700">Как правильно:</b> 3–4 л воды на человека в сутки + перекусы (орехи, сухофрукты, сыр). На плоту есть морозилка 200 л — продукты можно привезти заранее.</p>
+<div class="mt-3 flex flex-wrap items-center gap-3">
+<span class="text-[10px] font-extrabold uppercase tracking-widest text-slate-500">Опасность</span>
+<span class="flex gap-1" aria-label="Опасность 2 из 5"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
+<button type="button" class="ok-btn ml-auto rounded-xl border-2 border-slate-200 px-4 py-2 text-xs font-extrabold text-slate-600 hover:border-emerald-500 hover:text-emerald-600">Учту ✓</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Ошибка 7 -->
+<article class="mistake-card rounded-3xl border-2 border-slate-200 bg-white p-6 md:p-7 shadow-card" data-idx="7">
+<div class="flex items-start gap-4">
+<span class="mistake-num shrink-0 grid place-items-center w-11 h-11 rounded-2xl bg-ember text-white text-lg font-extrabold">7</span>
+<div class="min-w-0">
+<h2 class="font-extrabold text-river-deep text-lg md:text-xl leading-snug">Игнор прогноза погоды и слов капитана</h2>
+<p class="mt-2 text-sm text-slate-600 leading-relaxed">«Гроза где-то там» превращается в шквал над вашим плёсом за 15 минут. Спорить с капитаном о том, где вставать на якорь, — значит спорить с рекой.</p>
+<p class="mt-2 text-sm text-slate-700"><b class="text-emerald-700">Как правильно:</b> прогноз смотрим утром и перед выходом; при шквале — сразу к берегу и в жилеты. Решения капитана по воде окончательны: это правило хорошего тона и безопасности.</p>
+<div class="mt-3 flex flex-wrap items-center gap-3">
+<span class="text-[10px] font-extrabold uppercase tracking-widest text-slate-500">Опасность</span>
+<span class="flex gap-1" aria-label="Опасность 4 из 5"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></span>
+<button type="button" class="ok-btn ml-auto rounded-xl border-2 border-slate-200 px-4 py-2 text-xs font-extrabold text-slate-600 hover:border-emerald-500 hover:text-emerald-600">Учту ✓</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Ошибка 8 -->
+<article class="mistake-card rounded-3xl border-2 border-slate-200 bg-white p-6 md:p-7 shadow-card" data-idx="8">
+<div class="flex items-start gap-4">
+<span class="mistake-num shrink-0 grid place-items-center w-11 h-11 rounded-2xl bg-ember text-white text-lg font-extrabold">8</span>
+<div class="min-w-0">
+<h2 class="font-extrabold text-river-deep text-lg md:text-xl leading-snug">Чемодан вместо рюкзака и гермомешка</h2>
+<p class="mt-2 text-sm text-slate-600 leading-relaxed">Жёсткий чемодан не влезает в рундук, не амортизирует и тонет красиво. Половина вещей в нём всё равно мокрая к вечеру первого дня.</p>
+<p class="mt-2 text-sm text-slate-700"><b class="text-emerald-700">Как правильно:</b> мягкий рюкзак + гермомешок 40–60 л:压缩 вещей, сухость и удобная переноска по трапу. Собирайтесь по <a href="../chto-vzyat-na-splav/" class="text-ember font-bold underline underline-offset-2 hover:no-underline">интерактивному чек-листу</a>.</p>
+<div class="mt-3 flex flex-wrap items-center gap-3">
+<span class="text-[10px] font-extrabold uppercase tracking-widest text-slate-500">Опасность</span>
+<span class="flex gap-1" aria-label="Опасность 2 из 5"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
+<button type="button" class="ok-btn ml-auto rounded-xl border-2 border-slate-200 px-4 py-2 text-xs font-extrabold text-slate-600 hover:border-emerald-500 hover:text-emerald-600">Учту ✓</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Ошибка 9 -->
+<article class="mistake-card rounded-3xl border-2 border-slate-200 bg-white p-6 md:p-7 shadow-card" data-idx="9">
+<div class="flex items-start gap-4">
+<span class="mistake-num shrink-0 grid place-items-center w-11 h-11 rounded-2xl bg-ember text-white text-lg font-extrabold">9</span>
+<div class="min-w-0">
+<h2 class="font-extrabold text-river-deep text-lg md:text-xl leading-snug">Дети у воды без присмотра «на минутку»</h2>
+<p class="mt-2 text-sm text-slate-600 leading-relaxed">Минутка у реки — это много. Ребёнок в жилете не означает ребёнка в безопасности: борт, трап и кромка воды требуют взрослых глаз постоянно.</p>
+<p class="mt-2 text-sm text-slate-700"><b class="text-emerald-700">Как правильно:</b> правило одного взрослого: кто-то один всегда отвечает за конкретного ребёнка. На переходах дети — в жилетах и в центре палубы, купание — только на стоянках и рядом со взрослым.</p>
+<div class="mt-3 flex flex-wrap items-center gap-3">
+<span class="text-[10px] font-extrabold uppercase tracking-widest text-slate-500">Опасность</span>
+<span class="flex gap-1" aria-label="Опасность 5 из 5"><span class="dot on max"></span><span class="dot on max"></span><span class="dot on max"></span><span class="dot on max"></span><span class="dot on max"></span></span>
+<button type="button" class="ok-btn ml-auto rounded-xl border-2 border-slate-200 px-4 py-2 text-xs font-extrabold text-slate-600 hover:border-emerald-500 hover:text-emerald-600">Учту ✓</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Ошибка 10 -->
+<article class="mistake-card rounded-3xl border-2 border-slate-200 bg-white p-6 md:p-7 shadow-card" data-idx="10">
+<div class="flex items-start gap-4">
+<span class="mistake-num shrink-0 grid place-items-center w-11 h-11 rounded-2xl bg-ember text-white text-lg font-extrabold">10</span>
+<div class="min-w-0">
+<h2 class="font-extrabold text-river-deep text-lg md:text-xl leading-snug">Молчать о страхах, здоровье и неумении плавать</h2>
+<p class="mt-2 text-sm text-slate-600 leading-relaxed">«Плыву нормально» при уверенных 5 метрах от берега — самая частая причина паники на глубокой воде. Капитан не экстрасенс: ему нужно знать заранее.</p>
+<p class="mt-2 text-sm text-slate-700"><b class="text-emerald-700">Как правильно:</b> на инструктаже честно скажите: не плаваю / боюсь глубины / давление / спина. Маршрут и место на борту подстроим — река большая, всем хватит комфортной воды.</p>
+<div class="mt-3 flex flex-wrap items-center gap-3">
+<span class="text-[10px] font-extrabold uppercase tracking-widest text-slate-500">Опасность</span>
+<span class="flex gap-1" aria-label="Опасность 3 из 5"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot"></span><span class="dot"></span></span>
+<button type="button" class="ok-btn ml-auto rounded-xl border-2 border-slate-200 px-4 py-2 text-xs font-extrabold text-slate-600 hover:border-emerald-500 hover:text-emerald-600">Учту ✓</button>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Липкая панель прогресса -->
+<aside class="hidden lg:block lg:sticky lg:top-24 self-start rounded-3xl bg-river-deep text-white p-6 shadow-card" aria-label="Прогресс прочтения фарватера">
+<p class="text-xs font-extrabold uppercase tracking-widest text-gold">🛟 Фарватер безопасности</p>
+<p class="mt-4 text-5xl font-extrabold text-gold err-num leading-none"><span id="done-count">0</span>/10</p>
+<p class="mt-2 text-sm text-white/80" id="done-label">ошибок учтено</p>
+<div class="mt-4 h-2 rounded-full bg-white/15 overflow-hidden" aria-hidden="true">
+<div id="done-bar" class="h-full w-0 bg-gradient-to-r from-gold to-ember transition-all duration-500"></div>
+</div>
+<p class="mt-4 text-xs text-white/60 leading-relaxed" id="done-hint">Отмечайте карточки кнопкой «Учту» — когда счёт дойдёт до 10, можно бронировать даты: вы готовы к воде.</p>
+<a href="../splav-po-dony-na-ploty/#zayavka" id="done-cta" class="mt-4 hidden w-full justify-center inline-flex bg-ember hover:bg-ember-dark text-white font-extrabold text-sm px-5 py-3 rounded-xl shadow-cta transition active:scale-95 pulse-cta">Фарватер пройден: бронировать →</a>
+</aside>
+</div>
+<!-- Мобильный прогресс -->
+<div class="lg:hidden mt-6 rounded-2xl bg-river-deep text-white p-5 shadow-card">
+<p class="text-xs font-extrabold uppercase tracking-widest text-gold">🛟 Фарватер безопасности</p>
+<p class="mt-2 text-2xl font-extrabold text-gold err-num"><span id="done-count-m">0</span>/10 <span class="text-sm font-bold text-white/70">ошибок учтено</span></p>
+<div class="mt-3 h-2 rounded-full bg-white/15 overflow-hidden" aria-hidden="true">
+<div id="done-bar-m" class="h-full w-0 bg-gradient-to-r from-gold to-ember transition-all duration-500"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- ═══ Итоги ═══ -->
+<section id="itog" class="py-12 md:py-16 bg-sand">
+<div class="max-w-5xl mx-auto px-4">
+<h2 class="h-sec font-extrabold text-river-deep text-center">Итог: <span class="mark-yellow">безопасность — это скучно ровно до первого раза</span></h2>
+<p class="mt-4 text-center text-slate-600 max-w-2xl mx-auto leading-relaxed">Все десять ошибок объединяет одно: они экономят пять минут и крадут весь отдых. Хорошая новость — закрыться по всем пунктам можно за один вечер сборов: жилет, обувь, герма, вода, прогноз и честный разговор с капитаном.</p>
+<div class="mt-8 grid sm:grid-cols-3 gap-4">
+<div class="rounded-2xl bg-white border border-slate-200 p-5 text-center shadow-card"><p class="text-3xl" aria-hidden="true">🦺</p><p class="mt-2 font-extrabold text-river-deep text-sm">Жилет и обувь</p><p class="mt-1 text-xs text-slate-600">Закрывают ошибки №1, №3 и половину №9</p></div>
+<div class="rounded-2xl bg-white border border-slate-200 p-5 text-center shadow-card"><p class="text-3xl" aria-hidden="true">🎒</p><p class="mt-2 font-extrabold text-river-deep text-sm">Герма и запас воды</p><p class="mt-1 text-xs text-slate-600">Закрывают №5, №6 и №8</p></div>
+<div class="rounded-2xl bg-white border border-slate-200 p-5 text-center shadow-card"><p class="text-3xl" aria-hidden="true">🗣</p><p class="mt-2 font-extrabold text-river-deep text-sm">Диалог с капитаном</p><p class="mt-1 text-xs text-slate-600">Закрывает №2, №7 и №10</p></div>
+</div>
+<div class="mt-8 flex flex-col sm:flex-row justify-center gap-3">
+<a href="../chto-vzyat-na-splav/" class="text-center bg-ember hover:bg-ember-dark text-white font-extrabold px-8 py-4 rounded-2xl shadow-cta transition active:scale-95">Собраться по чек-листу →</a>
+<a href="../splav-po-dony-na-ploty/#zayavka" class="text-center border-2 border-river text-river hover:bg-river hover:text-white font-bold px-8 py-4 rounded-2xl transition">Забронировать плот</a>
+</div>
+</div>
+</section>
+<!-- ═══ Читайте также ═══ -->
+<section id="also" class="py-12 md:py-16">
+<div class="max-w-6xl mx-auto px-4">
+<h2 class="h-sec font-extrabold text-river-deep text-center mb-8">Читайте также: <span class="mark-yellow">кластер «Плоты»</span></h2>
+<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+<a href="../chto-vzyat-na-splav/" class="article-card rounded-2xl border-2 border-slate-200 bg-white overflow-hidden flex flex-col">
+<div class="ratio-16-9 overflow-hidden"><img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/91b9146d-3f34-40e4-8247-c6156c521649/91b9146d-3f34-40e4-8247-c6156c521649-15767499.png" alt="Чек-лист снаряжения для сплава по Дону" width="800" height="450" loading="lazy" decoding="async" class="h-full w-full object-cover"></div>
+<div class="p-5 flex-1 flex flex-col"><h3 class="font-extrabold text-river-deep leading-snug">Что взять с собой на сплав</h3><p class="mt-2 text-xs text-slate-600">Чек-лист «Гермомешок»: отмечайте и печатайте.</p><p class="mt-auto pt-3 text-xs font-extrabold text-ember">Открыть →</p></div>
+</a>
+<a href="../recepty-na-plotu/" class="article-card rounded-2xl border-2 border-slate-200 bg-white overflow-hidden flex flex-col">
+<div class="ratio-16-9 overflow-hidden"><img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/22dad369-6ae9-4a91-b665-14c11ee5df46/22dad369-6ae9-4a91-b665-14c11ee5df46-16622070.png" alt="Гастро-меню для мангала на плоту" width="800" height="450" loading="lazy" decoding="async" class="h-full w-full object-cover"></div>
+<div class="p-5 flex-1 flex flex-col"><h3 class="font-extrabold text-river-deep leading-snug">5 блюд для мангала на плоту</h3><p class="mt-2 text-xs text-slate-600">Чтобы ошибка №6 не случилась вкусно.</p><p class="mt-auto pt-3 text-xs font-extrabold text-ember">Смотреть →</p></div>
+</a>
+<a href="../splav-po-donu-na-plotah/" class="article-card rounded-2xl border-2 border-slate-200 bg-white overflow-hidden flex flex-col">
+<div class="ratio-16-9 overflow-hidden"><img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/41bee1e5-c0c2-4d21-984b-e58b7e85084e/41bee1e5-c0c2-4d21-984b-e58b7e85084e-16582868.png" alt="Русская Амазонка: почему стоит сплавиться по Дону" width="800" height="450" loading="lazy" decoding="async" class="h-full w-full object-cover"></div>
+<div class="p-5 flex-1 flex flex-col"><h3 class="font-extrabold text-river-deep leading-snug">Русская Амазонка: 5 причин</h3><p class="mt-2 text-xs text-slate-600">Зачем вообще ехать на сплав по Дону.</p><p class="mt-auto pt-3 text-xs font-extrabold text-ember">Читать →</p></div>
+</a>
+<a href="../foto-na-plotu-idei/" class="article-card rounded-2xl border-2 border-slate-200 bg-white overflow-hidden flex flex-col">
+<div class="ratio-16-9 overflow-hidden"><img src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site669980/99dba1f2-e3a8-4c29-8885-9f4330784abb/99dba1f2-e3a8-4c29-8885-9f4330784abb-15917310.jpeg" alt="Закат на Дону: идеи для фото на сплаве" width="800" height="450" loading="lazy" decoding="async" class="h-full w-full object-cover"></div>
+<div class="p-5 flex-1 flex flex-col"><h3 class="font-extrabold text-river-deep leading-snug">7 идей для фото на плоту</h3><p class="mt-2 text-xs text-slate-600">Кадр-квест: снимите все 7 за один сплав.</p><p class="mt-auto pt-3 text-xs font-extrabold text-ember">Начать →</p></div>
+</a>
+</div>
+</div>
+</section>
 </main>
 <!-- ═══ Footer ═══ -->
 <footer class="bg-river-deep text-white/70 border-t border-white/10">
-<div class="max-w-7xl mx-auto px-4 py-12 grid gap-8 md:grid-cols-3">
-<div>
-<p class="font-extrabold text-white text-lg">РосТур Эксперт</p>
-<p class="mt-2 text-sm">Сплавы по Дону на плотах, байдарках и катамаранах, кемпинг «Парк Вертячий». 8 лет на реке, с 2018 года.</p>
+<div class="max-w-7xl mx-auto px-4 py-12">
+<div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+<div><p class="font-extrabold text-white text-lg mb-2">РосТур Эксперт</p><p class="text-sm">Сплавы по Дону на плотах и кемпинг «Парк Вертячий». Независимый проект: работаем с 2018 года.</p></div>
+<div><p class="font-extrabold text-white text-lg mb-2">Контакты</p><p class="text-sm">🚢 <a href="tel:+79950320002" class="hover:text-gold transition font-bold text-white/90">+7 (995) 032-00-02</a> (плоты, 10:00–20:00)</p><p class="text-sm mt-1">🏕 <a href="tel:+79965117659" class="hover:text-gold transition font-bold text-white/90">+7 (996) 511-76-59</a> (кемпинг, 10:00–19:00)</p><p class="text-sm mt-1">📍 х. Вертячий, Волгоградская область</p><p class="text-sm mt-1"><a href="https://vk.com/o_t_d_ix" target="_blank" rel="noopener" class="hover:text-gold transition">Мы ВКонтакте</a></p></div>
+<div><p class="font-extrabold text-white text-lg mb-2">Разделы</p><p class="text-sm"><a href="../splav-po-dony-na-ploty/" class="hover:text-gold transition">Сплав на плоту с баней</a> · <a href="../camp/" class="hover:text-gold transition">Кемпинг «Парк Вертячий»</a></p><p class="text-sm mt-1"><a href="../camping/" class="hover:text-gold transition">Рейтинг кемпингов области</a> · <a href="../fishing-volgograd-oblast/" class="hover:text-gold transition">Рыбалка в области</a></p></div>
 </div>
-<div>
-<p class="font-extrabold text-white">Контакты</p>
-<ul class="mt-2 text-sm space-y-2">
-<li>Плоты: <a href="tel:+79950320002" class="hover:text-gold transition font-bold text-white/90">+7 (995) 032-00-02</a> (Пн–Вс: 10:00–20:00)</li>
-<li>Кемпинг: <a href="tel:+79965117659" class="hover:text-gold transition font-bold text-white/90">+7 (996) 511-76-59</a> (10:00–19:00)</li>
-<li>Старт маршрутов: х. Вертячий, Волгоградская область</li>
-<li><a href="https://vk.com/o_t_d_ix" target="_blank" rel="noopener" class="hover:text-gold transition">Мы ВКонтакте</a></li>
-</ul>
+<div class="border-t border-white/10 mt-8 pt-6 text-center text-xs text-white/50"><p>© 2026 РосТур Эксперт · Волгоградская обл., х. Вертячий · Цены на сайте не являются публичной офертой</p></div>
 </div>
-<div>
-<p class="font-extrabold text-white">Разделы</p>
-<ul class="mt-2 text-sm space-y-2">
-<li><a href="../splav-po-dony-na-ploty/" class="hover:text-gold transition">Сплав на плоту</a></li>
-<li><a href="../camp/" class="hover:text-gold transition">Кемпинг «Парк Вертячий»</a></li>
-<li><a href="../camping/" class="hover:text-gold transition">Рейтинг кемпингов области</a></li>
-<li><a href="../" class="hover:text-gold transition">Главная</a></li>
-</ul>
-</div>
-</div>
-<div class="border-t border-white/10 py-4 text-center text-xs text-white/50">© 2026 РосТур Эксперт · Волгоградская обл., х. Вертячий · Цены на сайте не являются публичной офертой</div>
 </footer>
 <!-- ══ Sticky mobile CTA ══ -->
-<div class="mobile-cta md:hidden fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-t border-slate-200/70 px-3 py-1.5 flex gap-2 shadow-[0_-4px_18px_-10px_rgba(8,47,73,.28)]">
-<a href="tel:+79950320002" class="flex-1 text-center border border-river/35 text-river font-bold text-sm py-2 rounded-lg active:scale-95 transition">Позвонить</a>
-<a href="../splav-po-dony-na-ploty/#zayavka" class="flex-1 text-center bg-ember text-white font-bold text-sm py-2 rounded-lg shadow-cta active:scale-95 transition">Забронировать</a>
+<div class="mobile-cta md:hidden fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-t border-slate-200/70 px-2 py-1.5 flex gap-1.5 shadow-[0_-4px_18px_-10px_rgba(8,47,73,.28)]">
+<a href="tel:+79950320002" class="flex-1 text-center border border-river/35 text-river font-bold text-xs py-2.5 rounded-lg active:scale-95 transition flex items-center justify-center gap-1">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3l2 5-2.5 1.5a11 11 0 005 5L13 12l5 2v3a2 2 0 01-2 2A16 16 0 013 5z"/></svg>
+Позвонить
+</a>
+<a href="../splav-po-dony-na-ploty/#zayavka" class="flex-[1.4] text-center bg-ember text-white font-bold text-xs py-2.5 rounded-lg shadow-cta active:scale-95 transition">Хочу на сплав</a>
 </div>
-<!-- Прогресс прочтения блока ошибок -->
 <script>
 (function(){
-var cards=[].slice.call(document.querySelectorAll('.err-card'));
-var bar=document.getElementById('err-progress');
-var cnt=document.getElementById('err-counter');
-if(!cards.length||!bar||!cnt) return;
-if(!('IntersectionObserver' in window)){ bar.style.width='100%'; cnt.textContent=cards.length+' / '+cards.length; return; }
-var io=new IntersectionObserver(function(entries){
-entries.forEach(function(e){ if(e.isIntersecting){ e.target.setAttribute('data-seen','1'); io.unobserve(e.target); } });
-var n=cards.filter(function(c){ return c.getAttribute('data-seen')==='1'; }).length;
-bar.style.width=Math.round(n/cards.length*100)+'%';
-cnt.textContent=n+' / '+cards.length;
-},{threshold:.35});
-cards.forEach(function(c){ io.observe(c); });
+/* Фарватер: прогресс «Учту» */
+var cards=[].slice.call(document.querySelectorAll('.mistake-card'));
+var done=0;
+var dc=document.getElementById('done-count'), dl=document.getElementById('done-label'), db=document.getElementById('done-bar'), dh=document.getElementById('done-hint'), dcta=document.getElementById('done-cta');
+var dcm=document.getElementById('done-count-m'), dbm=document.getElementById('done-bar-m');
+function render(){
+var pct=Math.round(done/cards.length*100);
+if(dc) dc.textContent=done;
+if(dcm) dcm.textContent=done;
+if(db) db.style.width=pct+'%';
+if(dbm) dbm.style.width=pct+'%';
+if(dl) dl.textContent = done===cards.length ? 'фарватер пройден — вы готовы к воде!' : 'ошибок учтено';
+if(dh) dh.textContent = done===cards.length ? 'Осталось выбрать даты: сезон 2027 открыт, предоплата 30% фиксирует цену.' : 'Отмечайте карточки кнопкой «Учту» — когда счёт дойдёт до 10, можно бронировать даты: вы готовы к воде.';
+if(dcta) dcta.classList.toggle('hidden', done!==cards.length);
+}
+cards.forEach(function(card){
+var btn=card.querySelector('.ok-btn');
+if(!btn) return;
+btn.addEventListener('click',function(){
+var isDone=card.classList.toggle('done');
+btn.textContent=isDone?'Учтено ✓':'Учту ✓';
+done+=isDone?1:-1;
+render();
+});
+});
+render();
 })();
 </script>
 </body>
