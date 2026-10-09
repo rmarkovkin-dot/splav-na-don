@@ -862,5 +862,85 @@ entries.forEach(function(en){ io.observe(en); });
   },true);
 })();
 </script>
+<script>
+/* === Калькулятор v4: посуточно Пн–Чт 29000 / Пт–Вс 33000 + группы 12+ + акцент и высокий комментарий === */
+(function(){
+  var dateIn=document.querySelector('input[type="date"]');
+  var nums=document.querySelectorAll('input[type="number"]');
+  if(!dateIn||nums.length<2)return;
+  var daysIn=nums[0],peopleIn=nums[1];
+  var noteEl=null,all=document.querySelectorAll('p,div,span');
+  for(var i=0;i<all.length;i++){var t=(all[i].textContent||'');if(t.indexOf('предоплата 30%')>-1&&t.indexOf('₽')>-1&&all[i].children.length===0){noteEl=all[i];break;}}
+  if(!noteEl)return;
+  var totalEl=noteEl.previousElementSibling;if(!totalEl)return;
+  var tariffEl=totalEl.previousElementSibling;
+  /* 1) Убираем поле «Желаемые даты» */
+  var form=document.querySelector('form');
+  var datesField=form?form.querySelector('input[name="dates"]'):null;
+  if(!datesField&&form){var ins=form.querySelectorAll('input');for(var k=0;k<ins.length;k++){var ph=(ins[k].getAttribute('placeholder')||'');if(ph.indexOf('июня')>-1||ph.indexOf('выходные июля')>-1){datesField=ins[k];break;}}}
+  if(datesField)datesField.style.display='none';
+  var caps=document.querySelectorAll('label,span,p,div,legend');
+  for(var m=0;m<caps.length;m++){var ct=(caps[m].textContent||'').trim();if(ct.indexOf('Желаемые даты')>-1&&ct.length<45){caps[m].style.display='none';break;}}
+  /* 2) Комментарий: выше и пропорциональнее калькулятору */
+  var comment=form?form.querySelector('textarea'):null;
+  if(comment){
+    comment.rows=8;
+    comment.style.minHeight='210px';
+    comment.style.resize='vertical';
+    comment.placeholder='Пожелания: компания с детьми, нужна баня, продуктовый набор… Если даты плавающие — напишите здесь, например: «конец июля» или «первые выходные августа».';
+  }
+  /* 3) Вступление: первая фраза — жёлтым маркером */
+  var ps=document.querySelectorAll('p');
+  for(var j=0;j<ps.length;j++){if(ps[j].textContent.indexOf('Оставьте имя, телефон')>-1){ps[j].innerHTML='<span class="mark-yellow font-extrabold">Оставьте имя и телефон и выберите даты в калькуляторе.</span> Если даты плавающие — укажите их в комментарии свободной формой. Перезвоним, подберём маршрут и зафиксируем плот за вами.';break;}}
+  /* 4) Панель 12+ */
+  var oldPanel=document.getElementById('over12panel');if(oldPanel)oldPanel.remove();
+  var panel=document.createElement('div');
+  panel.id='over12panel';
+  panel.style.display='none';
+  panel.className='mt-3 text-sm bg-river-light/10 border border-gold/40 rounded-xl p-3';
+  panel.innerHTML='<p class="font-semibold text-gold">Вас <span id="o12n"></span> человек — чуть больше 12</p><p class="mt-1 opacity-90">Плот рассчитан на 12 человек, но если в группе дети и вас чуть больше — все комфортно разместятся на одном плоту: дети занимают мало места, спасжилеты есть всех размеров. Если места нужно гарантированно больше — рассчитаем второй плот.</p><label class="inline-flex items-center gap-2 mt-2 cursor-pointer"><input type="radio" name="rafts" value="1" checked class="accent-ember"> Уместимся на одном плоту</label><label class="inline-flex items-center gap-2 mt-2 ml-4 cursor-pointer"><input type="radio" name="rafts" value="2" class="accent-ember"> Нужно два плота (расчёт ×2)</label>';
+  noteEl.parentNode.insertBefore(panel,noteEl.nextSibling);
+  /* 5) Посуточный расчёт */
+  var DN=['вс','пн','вт','ср','чт','пт','сб'];
+  function rate(d){var w=d.getDay();return(w===5||w===6||w===0)?33000:29000;}
+  function fm(n){return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,' ');}
+  function pad(x){return(x<10?'0':'')+x;}
+  function recalc(){
+    var dd=Math.max(1,parseInt(daysIn.value,10)||1);
+    var pp=Math.max(1,parseInt(peopleIn.value,10)||1);
+    var r=1,rc=document.querySelector('input[name="rafts"]:checked');if(rc)r=parseInt(rc.value,10)||1;
+    if(pp>12){panel.style.display='';var on=document.getElementById('o12n');if(on)on.textContent=pp;}
+    else{panel.style.display='none';r=1;var r1=document.querySelector('input[name="rafts"][value="1"]');if(r1)r1.checked=true;}
+    var start=dateIn.value?new Date(dateIn.value+'T00:00:00'):null;
+    var sum=0,parts=[],wk=0,we=0;
+    for(var i2=0;i2<dd;i2++){var rr=29000;if(start){var d=new Date(start.getTime()+i2*86400000);rr=rate(d);parts.push(DN[d.getDay()]+' '+fm(rr));}if(rr===33000)we++;else wk++;sum+=rr;}
+    sum*=r;
+    if(tariffEl){tariffEl.textContent=!start?'Тариф: выберите дату посадки':(we&&wk?'Тариф: смешанный — будни 29 000 ₽, Пт–Вс 33 000 ₽':(we?'Тариф: выходные (Пт–Вс) — 33 000 ₽/сутки':'Тариф: будни (Пн–Чт) — 29 000 ₽/сутки'));}
+    totalEl.textContent=fm(sum)+' ₽';
+    var base=!start?('ориентировочно по будням: '+r+' плот(ов) × 29 000 ₽ × '+dd+' сут'):(dd<=5?parts.join(' + '):('будни '+wk+' × 29 000 + выходные '+we+' × 33 000'));
+    noteEl.textContent=(r===2?'2 плота × ('+base+')':base)+' · предоплата 30% = '+fm(Math.round(sum*0.3))+' ₽';
+    if(datesField&&start){var end=new Date(start.getTime()+(dd-1)*86400000);datesField.value='Посадка '+pad(start.getDate())+'.'+pad(start.getMonth()+1)+', '+dd+' сут (по '+pad(end.getDate())+'.'+pad(end.getMonth()+1)+')';}
+  }
+  [dateIn,daysIn,peopleIn].forEach(function(el){el.addEventListener('input',recalc);el.addEventListener('change',recalc);});
+  document.addEventListener('change',function(e){if(e.target&&e.target.name==='rafts')recalc();});
+  recalc();
+})();
+</script>
+<script>
+/* === Фикс v5: акцент золотым цветом + пропорциональный комментарий === */
+(function(){
+  var ps=document.querySelectorAll('p');
+  for(var j=0;j<ps.length;j++){
+    var t=ps[j].textContent||'';
+    if(t.indexOf('Оставьте имя и телефон')>-1){
+      ps[j].innerHTML='<span class="text-gold font-extrabold">Оставьте имя и телефон и выберите даты в калькуляторе.</span> Если даты плавающие — укажите их в комментарии свободной формой. Перезвоним, подберём маршрут и зафиксируем плот за вами.';
+      break;
+    }
+  }
+  var form=document.querySelector('form');
+  var comment=form?form.querySelector('textarea'):null;
+  if(comment){comment.rows=6;comment.style.minHeight='150px';}
+})();
+</script>
 </body>
 </html>
