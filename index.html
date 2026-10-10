@@ -147,7 +147,7 @@ background-repeat:no-repeat; background-size:100% .52em; background-position:0 8
 "@type": "FAQPage",
 "mainEntity": [
 {"@type":"Question","name":"Чем плот отличается от кемпинга и что выбрать?","acceptedAnswer":{"@type":"Answer","text":"Плот — это плавучий дом с баней и капитаном: вы ночуете на воде и каждый день новая стоянка. Кемпинг — стационарная охраняемая поляна на берегу с туалетами, умывальниками и мангалами. Хотите движения и бани на воде — плот; хотите палатку у воды с комфортом и бюджетом от 250 ₽ — кемпинг."}},
-{"@type":"Question","name":"Сколько стоит отдых?","acceptedAnswer":{"@type":"Answer","text":"Плот: 29 000 ₽/сутки в будни и 33 000 ₽/сутки в выходные за весь плот до 12 человек. Кемпинг: 250 ₽/чел/сутки пеший, 750 ₽/сутки машина во 2-й линии, 1 000 ₽/сутки машина в 1-й линии у воды."}},
+{"@type":"Question","name":"Сколько стоит отдых?","acceptedAnswer":{"@type":"Answer","text":"Плот: 29 000 ₽/сутки в будни и 33 000 ₽/сутки в выходные за весь плот 12–15 человек. Кемпинг: 250 ₽/чел/сутки пеший, 750 ₽/сутки машина во 2-й линии, 1 000 ₽/сутки машина в 1-й линии у воды."}},
 {"@type":"Question","name":"Как далеко от Волгограда?","acceptedAnswer":{"@type":"Answer","text":"50 км от центра Волгограда, 38 минут на машине. Старт обоих направлений — хутор Вертячий, Волгоградская область."}},
 {"@type":"Question","name":"Нужна ли предоплата?","acceptedAnswer":{"@type":"Answer","text":"Для плота — предоплата 30% фиксирует дату и маршрут. Для кемпинга предоплата 30% снимает поляну с продажи, остаток при заезде."}},
 {"@type":"Question","name":"Можно ли с детьми и животными?","acceptedAnswer":{"@type":"Answer","text":"Да. На плоту детские спасжилеты всех размеров и огороженная палуба. В кемпинге питомцы — по предварительному согласованию с администратором."}},
@@ -177,8 +177,8 @@ background-repeat:no-repeat; background-size:100% .52em; background-position:0 8
 <a href="#faq" class="hover:text-ember transition">Вопросы</a>
 </nav>
 <div class="flex items-center gap-2">
-<a href="tel:+79950320002" class="hidden md:inline-flex items-center gap-1.5 border border-river/30 text-river font-bold text-xs px-3 py-2 rounded-lg hover:bg-river hover:text-white transition">🚢 Плоты</a>
-<a href="tel:+79965117659" class="hidden md:inline-flex items-center gap-1.5 border border-river/30 text-river font-bold text-xs px-3 py-2 rounded-lg hover:bg-river hover:text-white transition">🏕 Кемпинг</a>
+<a href="tel:+79950320002" class="hidden md:inline-flex items-center gap-1.5 border border-river/30 text-river font-bold text-xs px-3 py-2 rounded-lg hover:bg-river hover:text-white transition">📞 Плоты</a>
+<a href="tel:+79965117659" class="hidden md:inline-flex items-center gap-1.5 border border-river/30 text-river font-bold text-xs px-3 py-2 rounded-lg hover:bg-river hover:text-white transition">📞 Кемпинг</a>
 <a href="#quiz" class="hidden sm:inline-flex items-center gap-2 bg-ember hover:bg-ember-dark text-white font-bold px-4 py-2 rounded-xl shadow-cta transition active:scale-95 text-sm">Найти отдых ↓</a>
 <button type="button" @click="m=!m" :aria-expanded="m" aria-label="Меню" class="lg:hidden grid place-items-center w-11 h-11 rounded-xl border border-slate-200 text-river-deep">
 <svg x-show="!m" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -194,8 +194,8 @@ background-repeat:no-repeat; background-size:100% .52em; background-position:0 8
 <a @click="m=false" href="#gallery" class="block py-3 border-b border-slate-100">Фото</a>
 <a @click="m=false" href="#articles" class="block py-3 border-b border-slate-100">Статьи</a>
 <a @click="m=false" href="#faq" class="block py-3 border-b border-slate-100">Вопросы</a>
-<a href="tel:+79950320002" class="block py-3 border-b border-slate-100 text-river font-bold">🚢 Плоты: +7 (995) 032-00-02</a>
-<a href="tel:+79965117659" class="block py-3 border-b border-slate-100 text-river font-bold">🏕 Кемпинг: +7 (996) 511-76-59</a>
+<a href="tel:+79950320002" class="block py-3 border-b border-slate-100 text-river font-bold">📞 Плоты: +7 (995) 032-00-02</a>
+<a href="tel:+79965117659" class="block py-3 border-b border-slate-100 text-river font-bold">📞 Кемпинг: +7 (996) 511-76-59</a>
 <a @click="m=false" href="#quiz" class="block text-center bg-ember text-white font-bold py-3 rounded-xl mt-2">Найти отдых ↓</a>
 </div>
 </header>
@@ -261,10 +261,10 @@ background-repeat:no-repeat; background-size:100% .52em; background-position:0 8
 <section class="bg-sand py-10 md:py-14">
 <div class="max-w-6xl mx-auto px-4">
 <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-<div class="text-center"><p class="text-4xl md:text-5xl font-extrabold text-river-deep stat-counter" data-target="18">0</p><p class="mt-2 text-sm text-slate-600 font-semibold">семей отдохнули в 2026</p></div>
+<div class="text-center"><p class="text-4xl md:text-5xl font-extrabold text-river-deep stat-counter" data-target="560">0</p><p class="mt-2 text-sm text-slate-600 font-semibold">семей отдохнули в 2026 на плоту и в кемпинге</p></div>
 <div class="text-center"><p class="text-4xl md:text-5xl font-extrabold text-river-deep stat-counter" data-target="8">0</p><p class="mt-2 text-sm text-slate-600 font-semibold">лет на реке, с 2018 года</p></div>
 <div class="text-center"><p class="text-4xl md:text-5xl font-extrabold text-river-deep stat-counter" data-target="50">0</p><p class="mt-2 text-sm text-slate-600 font-semibold">км от Волгограда</p></div>
-<div class="text-center"><p class="text-4xl md:text-5xl font-extrabold text-river-deep">5.0 ★</p><p class="mt-2 text-sm text-slate-600 font-semibold">18 отзывов гостей</p></div>
+<div class="text-center"><p class="text-4xl md:text-5xl font-extrabold text-river-deep">5.0 ★</p><p class="mt-2 text-sm text-slate-600 font-semibold">оценка гостей</p></div>
 </div>
 </div>
 </section>
@@ -284,7 +284,7 @@ background-repeat:no-repeat; background-size:100% .52em; background-position:0 8
 <span class="text-xs font-bold text-slate-500">Направление №1</span>
 </div>
 <h3 class="text-2xl font-extrabold text-river-deep mb-2">Плот с баней на Дону</h3>
-<p class="text-sm text-slate-600 mb-4 leading-relaxed">«Бульбусик» — плавучий дом 96 м². Баня на воде, коптильня, капитан, рыбалка с палубы. До 12 человек.</p>
+<p class="text-sm text-slate-600 mb-4 leading-relaxed">«Бульбусик» — плавучий дом 96 м². Баня на воде, коптильня, капитан, рыбалка с палубы. 12–15 человек на плоту, до 30 на двух.</p>
 <ul class="space-y-1.5 text-sm text-slate-700 mb-5">
 <li class="flex items-start gap-2"><span class="text-ember font-bold">✓</span> Баня, мангал, коптильня — всё на борту</li>
 <li class="flex items-start gap-2"><span class="text-ember font-bold">✓</span> 🎣 Трофейная рыбалка: судак, сом, щука, лещ</li>
@@ -324,7 +324,7 @@ background-repeat:no-repeat; background-size:100% .52em; background-position:0 8
 <div class="grid md:grid-cols-2 gap-8 items-center">
 <div class="min-w-0">
 <h3 class="text-2xl md:text-3xl font-extrabold mb-4">Сплав на плоту по Дону</h3>
-<p class="text-white/85 mb-6 leading-relaxed">Двухэтажный плот «Бульбусик» — ваш плавучий дом на 96 м². Баня, мангал, коптильня, рыбалка прямо с борта. До 12 человек, маршруты от 1 до 7 суток.</p>
+<p class="text-white/85 mb-6 leading-relaxed">Двухэтажный плот «Бульбусик» — ваш плавучий дом на 96 м². Баня, мангал, коптильня, рыбалка прямо с борта. До 15 человек на плоту, маршруты от 1 до 7 суток.</p>
 <div class="space-y-3 mb-6">
 <div class="flex items-center gap-3"><span class="text-2xl" aria-hidden="true">🧖</span><div><p class="font-extrabold">Баня на борту</p><p class="text-sm text-white/70">Настоящая парная с вениками</p></div></div>
 <div class="flex items-center gap-3"><span class="text-2xl" aria-hidden="true">🎣</span><div><p class="font-extrabold">Трофейная рыбалка</p><p class="text-sm text-white/70">Судак, сом, щука, лещ</p></div></div>
@@ -337,7 +337,7 @@ background-repeat:no-repeat; background-size:100% .52em; background-position:0 8
 <p class="text-3xl font-extrabold mb-1">29 000 ₽ <span class="text-base font-normal text-white/70">/ сутки (будни)</span></p>
 <p class="text-3xl font-extrabold mb-4">33 000 ₽ <span class="text-base font-normal text-white/70">/ сутки (выходные)</span></p>
 <div class="space-y-2 text-sm text-white/80 pt-4 border-t border-white/20">
-<p>✓ До 12 человек на плоту</p>
+<p>✓ До 15 человек на одном плоту</p>
 <p>✓ Баня, мангал, коптильня включены</p>
 <p>✓ Предоплата 30% фиксирует дату</p>
 </div>
@@ -389,7 +389,7 @@ background-repeat:no-repeat; background-size:100% .52em; background-position:0 8
 <label class="calc-label block mb-2" for="calc-type">Тип отдыха</label>
 <select id="calc-type" class="calc-input-dark">
 <option value="raft">🚢 Плот с баней</option>
-<option value="camp">🏕 Кемпинг</option>
+<option value="camp">📞 Кемпинг</option>
 </select>
 </div>
 <div id="camp-mode-wrap" style="display:none">
@@ -456,9 +456,9 @@ background-repeat:no-repeat; background-size:100% .52em; background-position:0 8
 </div>
 </div>
 <div class="min-w-0 space-y-4">
-<div class="rounded-2xl bg-white/10 border border-white/20 backdrop-blur p-5"><p class="font-extrabold text-gold text-lg">✓ Готовая программа под ключ</p><p class="text-sm text-white/85 mt-1">Маршрут, питание, активности, вечерняя программа — всё включено. Вам нужно только привезти команду.</p></div>
+<div class="rounded-2xl bg-white/10 border border-white/20 backdrop-blur p-5"><p class="font-extrabold text-gold text-lg">✓ Готовая программа под ключ</p><p class="text-sm text-white/85 mt-1">Маршрут, активности, вечерняя программа — всё включено. Вам нужно только привезти команду.</p></div>
 <div class="rounded-2xl bg-white/10 border border-white/20 backdrop-blur p-5"><p class="font-extrabold text-gold text-lg">✓ Отчётные документы</p><p class="text-sm text-white/85 mt-1">Договор, акт, счёт-фактура — работаем с юрлицами и ИП. Безналичный расчёт.</p></div>
-<div class="rounded-2xl bg-white/10 border border-white/20 backdrop-blur p-5"><p class="font-extrabold text-gold text-lg">✓ Безопасность по ГОСТ</p><p class="text-sm text-white/85 mt-1">Капитан с 8-летним стажем на реке, спасжилеты на каждого, аптечка, инструктаж. Страхование включено.</p></div>
+<div class="rounded-2xl bg-white/10 border border-white/20 backdrop-blur p-5"><p class="font-extrabold text-gold text-lg">✓ Безопасность по ГОСТ</p><p class="text-sm text-white/85 mt-1">Опытный капитан, спасжилеты на каждого, аптечка, инструктаж.</p></div>
 </div>
 </div>
 </div>
@@ -495,15 +495,15 @@ background-repeat:no-repeat; background-size:100% .52em; background-position:0 8
 <h2 class="h-sec font-extrabold text-river-deep text-center mb-4">Живые <span class="mark-yellow">моменты</span> с отдыха на Дону</h2>
 <p class="text-center text-slate-600 mb-8">Реальные фото гостей обоих направлений — без фотошопа и стоков.</p>
 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-<div class="ratio-4-3 rounded-2xl overflow-hidden shadow-card"><img src="https://rostur.expert/assets/img/41bee1e5-c0c2-4d21-984b-e58b7e85084e-16582868.webp" alt="Двухэтажный плот на Дону с высоты" width="800" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover hover:scale-105 transition duration-500"></div>
+<div class="ratio-4-3 rounded-2xl overflow-hidden shadow-card"><img src="https://rostur.expert/assets/img/raft-dawn.webp" alt="Плот «Бульбусик» на рассвете" width="800" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover hover:scale-105 transition duration-500"></div><div class="ratio-4-3 rounded-2xl overflow-hidden shadow-card"><img src="https://rostur.expert/assets/img/41bee1e5-c0c2-4d21-984b-e58b7e85084e-16582868.webp" alt="Двухэтажный плот на Дону с высоты" width="800" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover hover:scale-105 transition duration-500"></div>
 <div class="ratio-4-3 rounded-2xl overflow-hidden shadow-card"><img src="https://rostur.expert/assets/img/8bb1474b-a50d-44aa-9a55-fde931c85572-13865644.webp" alt="Кемпинг Парк Вертячий на берегу Дона" width="800" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover hover:scale-105 transition duration-500"></div>
 <div class="ratio-4-3 rounded-2xl overflow-hidden shadow-card"><img src="https://rostur.expert/assets/img/2d2a920c-1ba8-47f4-8f5f-ca884bd334d7-15917195.webp" alt="Трофейная рыбалка на Дону" width="800" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover hover:scale-105 transition duration-500"></div>
 <div class="ratio-4-3 rounded-2xl overflow-hidden shadow-card"><img src="https://rostur.expert/assets/img/99dba1f2-e3a8-4c29-8885-9f4330784abb-15917310.webp" alt="Закат на Дону с палубы плота" width="800" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover hover:scale-105 transition duration-500"></div>
 <div class="ratio-4-3 rounded-2xl overflow-hidden shadow-card"><img src="https://rostur.expert/assets/img/e1c1449b-1841-440b-bf12-3ecc5a2aa076-14399211.webp" alt="Приготовление ухи на мангале плота" width="800" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover hover:scale-105 transition duration-500"></div>
 <div class="ratio-4-3 rounded-2xl overflow-hidden shadow-card"><img src="https://rostur.expert/assets/img/330f560b-55a7-49de-9c3e-82bcb3ccda80-14290296.webp" alt="Общий вид кемпинга Парк Вертячий" width="800" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover hover:scale-105 transition duration-500"></div>
 <div class="ratio-4-3 rounded-2xl overflow-hidden shadow-card"><img src="https://rostur.expert/assets/img/c6a20da7-a9bc-455b-86cc-969ba8f04a40-15917332.webp" alt="Ночёвка на плоту: палатки на палубе" width="800" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover hover:scale-105 transition duration-500"></div>
-<div class="ratio-4-3 rounded-2xl overflow-hidden shadow-card"><img src="https://rostur.expert/assets/img/5bc54447-6afe-4251-9ab8-b2fcf969bd27-4737840.webp" alt="Вечерний костёр на стоянке сплава" width="800" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover hover:scale-105 transition duration-500"></div>
-<div class="ratio-4-3 rounded-2xl overflow-hidden shadow-card"><img src="https://rostur.expert/assets/img/a55743de-5007-4613-9837-85647f2f006b-4737841.webp" alt="Панорама Дона с дрона" width="800" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover hover:scale-105 transition duration-500"></div>
+
+
 </div>
 </div>
 </section>
@@ -560,7 +560,7 @@ background-repeat:no-repeat; background-size:100% .52em; background-position:0 8
 <div class="p-6 flex-1 flex flex-col"><h3 class="font-extrabold text-river-deep text-lg leading-snug">Рыбалка в Волгоградской области</h3><p class="mt-2 text-sm text-slate-600">Карта рыбных мест и 8 проверенных баз с контактами.</p><p class="mt-auto pt-3 text-xs font-extrabold text-ember">Открыть карту →</p></div>
 </a>
 <a href="polnyj-gid-po-splavu-po-donu/" class="article-card rounded-2xl border-2 border-slate-200 bg-white overflow-hidden flex flex-col">
-<div class="ratio-16-9 overflow-hidden"><img src="https://rostur.expert/assets/img/a55743de-5007-4613-9837-85647f2f006b-4737841.webp" alt="Панорама Дона с дрона: полный гид по маршрутам" width="800" height="450" loading="lazy" decoding="async" class="h-full w-full object-cover"></div>
+<div class="ratio-16-9 overflow-hidden"><img src="https://rostur.expert/assets/img/raft-dawn.webp" alt="Плот «Бульбусик» на рассвете: полный гид по маршрутам" width="800" height="450" loading="lazy" decoding="async" class="h-full w-full object-cover"></div>
 <div class="p-6 flex-1 flex flex-col"><h3 class="font-extrabold text-river-deep text-lg leading-snug">Полный гид по маршрутам Дона</h3><p class="mt-2 text-sm text-slate-600">Стоянки, километраж, сезонность и безопасность.</p><p class="mt-auto pt-3 text-xs font-extrabold text-ember">Читать гид →</p></div>
 </a>
 <a href="stoimost-arendy-plota/" class="article-card rounded-2xl border-2 border-slate-200 bg-white overflow-hidden flex flex-col">
@@ -586,7 +586,7 @@ background-repeat:no-repeat; background-size:100% .52em; background-position:0 8
 <h2 class="h-sec font-extrabold text-river-deep text-center mb-8">Частые <span class="mark-yellow">вопросы</span></h2>
 <div class="space-y-4">
 <div class="faq-item bg-white rounded-2xl border border-slate-200 overflow-hidden"><button type="button" class="faq-question w-full text-left px-6 py-4 flex items-center justify-between gap-4"><span class="font-extrabold text-river-deep">Чем плот отличается от кемпинга и что выбрать?</span><span class="faq-icon text-2xl text-slate-400" aria-hidden="true">⌄</span></button><div class="faq-answer px-6"><p class="text-slate-600 leading-relaxed pb-4">Плот — это плавучий дом с баней и капитаном: вы ночуете на воде и каждый день новая стоянка. Кемпинг — стационарная охраняемая поляна на берегу с туалетами, умывальниками и мангалами. Хотите движения и бани на воде — плот; хотите палатку у воды с комфортом и бюджетом от 250 ₽ — кемпинг.</p></div></div>
-<div class="faq-item bg-white rounded-2xl border border-slate-200 overflow-hidden"><button type="button" class="faq-question w-full text-left px-6 py-4 flex items-center justify-between gap-4"><span class="font-extrabold text-river-deep">Сколько стоит отдых?</span><span class="faq-icon text-2xl text-slate-400" aria-hidden="true">⌄</span></button><div class="faq-answer px-6"><p class="text-slate-600 leading-relaxed pb-4">Плот: 29 000 ₽/сутки в будни и 33 000 ₽/сутки в выходные за весь плот до 12 человек. Кемпинг: 250 ₽/чел/сутки пеший, 750 ₽/сутки машина во 2-й линии, 1 000 ₽/сутки машина в 1-й линии у воды.</p></div></div>
+<div class="faq-item bg-white rounded-2xl border border-slate-200 overflow-hidden"><button type="button" class="faq-question w-full text-left px-6 py-4 flex items-center justify-between gap-4"><span class="font-extrabold text-river-deep">Сколько стоит отдых?</span><span class="faq-icon text-2xl text-slate-400" aria-hidden="true">⌄</span></button><div class="faq-answer px-6"><p class="text-slate-600 leading-relaxed pb-4">Плот: 29 000 ₽/сутки в будни и 33 000 ₽/сутки в выходные за весь плот 12–15 человек. Кемпинг: 250 ₽/чел/сутки пеший, 750 ₽/сутки машина во 2-й линии, 1 000 ₽/сутки машина в 1-й линии у воды.</p></div></div>
 <div class="faq-item bg-white rounded-2xl border border-slate-200 overflow-hidden"><button type="button" class="faq-question w-full text-left px-6 py-4 flex items-center justify-between gap-4"><span class="font-extrabold text-river-deep">Как далеко от Волгограда?</span><span class="faq-icon text-2xl text-slate-400" aria-hidden="true">⌄</span></button><div class="faq-answer px-6"><p class="text-slate-600 leading-relaxed pb-4">50 км от центра Волгограда, 38 минут на машине. Старт обоих направлений — хутор Вертячий, Волгоградская область.</p></div></div>
 <div class="faq-item bg-white rounded-2xl border border-slate-200 overflow-hidden"><button type="button" class="faq-question w-full text-left px-6 py-4 flex items-center justify-between gap-4"><span class="font-extrabold text-river-deep">Нужна ли предоплата?</span><span class="faq-icon text-2xl text-slate-400" aria-hidden="true">⌄</span></button><div class="faq-answer px-6"><p class="text-slate-600 leading-relaxed pb-4">Для плота — предоплата 30% фиксирует дату и маршрут. Для кемпинга предоплата 30% снимает поляну с продажи, остаток — при заезде.</p></div></div>
 <div class="faq-item bg-white rounded-2xl border border-slate-200 overflow-hidden"><button type="button" class="faq-question w-full text-left px-6 py-4 flex items-center justify-between gap-4"><span class="font-extrabold text-river-deep">Можно ли с детьми и животными?</span><span class="faq-icon text-2xl text-slate-400" aria-hidden="true">⌄</span></button><div class="faq-answer px-6"><p class="text-slate-600 leading-relaxed pb-4">Да. На плоту детские спасжилеты всех размеров и огороженная палуба. В кемпинге питомцы — по предварительному согласованию с администратором.</p></div></div>
@@ -621,8 +621,8 @@ background-repeat:no-repeat; background-size:100% .52em; background-position:0 8
 </footer>
 <!-- ══ Sticky mobile CTA ══ -->
 <div class="mobile-cta md:hidden fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-t border-slate-200/70 px-2 py-1.5 flex gap-1.5 shadow-[0_-4px_18px_-10px_rgba(8,47,73,.28)]">
-<a href="tel:+79950320002" class="flex-1 text-center border border-river/35 text-river font-bold text-xs py-2.5 rounded-lg active:scale-95 transition">🚢 Плоты</a>
-<a href="tel:+79965117659" class="flex-1 text-center border border-river/35 text-river font-bold text-xs py-2.5 rounded-lg active:scale-95 transition">🏕 Кемпинг</a>
+<a href="tel:+79950320002" class="flex-1 text-center border border-river/35 text-river font-bold text-xs py-2.5 rounded-lg active:scale-95 transition">📞 Плоты</a>
+<a href="tel:+79965117659" class="flex-1 text-center border border-river/35 text-river font-bold text-xs py-2.5 rounded-lg active:scale-95 transition">📞 Кемпинг</a>
 <a href="#quiz" class="flex-[1.2] text-center bg-ember text-white font-bold text-xs py-2.5 rounded-lg shadow-cta active:scale-95 transition">Подобрать</a>
 </div>
 <script>
@@ -660,7 +660,7 @@ else if(answers['3']==='premium'){ rec='raft'; link='splav-po-dony-na-ploty/'; t
 else if(answers['1']==='corporate'||answers['1']==='friends'){ rec='raft'; link='splav-po-dony-na-ploty/'; text='Забронировать плот →'; }
 else { rec='camp'; link='camp/'; text='Забронировать кемпинг →'; }
 var titles={raft:'Сплав на плоту по Дону',camp:'Кемпинг «Парк Вертячий»'};
-var descs={raft:'Двухэтажный плот с баней, мангалом и коптильней. До 12 человек, маршруты от 1 до 7 суток. Трофейная рыбалка прямо с борта.',camp:'Охраняемый кемпинг на берегу Дона: 39 полян, туалеты, мангалы, пирс. Рыбалка в 50 метрах от палатки.'};
+var descs={raft:'Двухэтажный плот с баней, мангалом и коптильней. До 15 человек на плоту, маршруты от 1 до 7 суток. Трофейная рыбалка прямо с борта.',camp:'Охраняемый кемпинг на берегу Дона: 39 полян, туалеты, мангалы, пирс. Рыбалка в 50 метрах от палатки.'};
 document.getElementById('quiz-result').innerHTML='<div class="bg-white/20 backdrop-blur rounded-2xl p-6 text-center"><p class="text-xs font-extrabold uppercase tracking-widest text-gold mb-2">Ваш идеальный отдых</p><h3 class="text-2xl font-extrabold mb-3">'+titles[rec]+'</h3><p class="text-white/90 mb-6">'+descs[rec]+'</p><a href="'+link+'" class="inline-block bg-ember hover:bg-ember-dark text-white font-extrabold px-8 py-4 rounded-2xl shadow-cta transition active:scale-95">'+text+'</a></div>';
 showStep('result');
 }
@@ -703,9 +703,9 @@ var days=Math.max(1,Math.min(14,parseInt(calcDays.value,10)||2));
 var total=0, details='';
 if(calcType.value==='raft'){
 var rate=calcTariff.value==='weekend'?33000:29000;
-var rafts=Math.ceil(people/12);
+var rafts=((people<=15)?1:2);
 total=rafts*rate*days;
-details=rafts+' плот(ов) × '+fmt(rate)+' ₽ × '+days+' сут';
+details=rafts+' плот(ов) × '+fmt(rate)+' ₽ × '+days+' сут'+(people>=13&&people<=15?' · 13–15 чел: разместим на одном плоту по согласованию (с детьми комфортно, добавим сиденья)':(people>=16&&people<=30?' · 16–30 чел: два плота идут рядом':(people>30?' · больше 30: позвоните — соберём флотилию':'')));
 } else if(currentMode==='car'){
 var cars=Math.ceil(people/4);
 total=cars*1000*days;
