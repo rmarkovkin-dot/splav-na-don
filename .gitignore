@@ -1,5 +1,10 @@
 send.php
 .envrc
+envrc.txt
 .twbak/
 .imgbak/
+.imgbak2/
 .imgmap.json
+fix-*.php
+img-*.php
+audit-*.php
