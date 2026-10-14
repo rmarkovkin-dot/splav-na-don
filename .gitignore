@@ -1,0 +1,19 @@
+# Секреты
+.envrc
+.env
+
+# Бэкапы
+*.bak
+*.bak_*
+
+# Логи
+chat-logs/
+
+# Тестовые файлы
+test-*.php
+test-*.html
+
+# Временные файлы
+*.tmp
+*.swp
+.DS_Store
