@@ -64,3 +64,9 @@ Disallow: /.imgbak/
 Disallow: /.twbak/
 Disallow: /.imgmap.json
 
+Disallow: /view-chat-logs.php
+Disallow: /send-chat-logs.php
+Disallow: /chat-logs/
+Disallow: /test-
+Disallow: *.bak
+

@@ -1,20 +1,21 @@
-.imgbak/
-.imgbak2/
-.twbak/
-_constructor/
-*.bak
-*.bak_*
-chat-logs/
-send_errors.log
-send_requests.log
-test-*.php
-test-*.html
+# Секреты
 .envrc
 .env
-envrc.txt
-.imgmap.json
-*.yml
+
+# Бэкапы
+*.bak
+*.bak_*
+
+# Логи
+chat-logs/
+
+# Тестовые файлы
+test-*.php
+test-*.html
+
+# Временные файлы
+*.tmp
+*.swp
+.DS_Store
 view-chat-logs.php
 send-chat-logs.php
-OVERRIDES.md
-.DS_Store
