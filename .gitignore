@@ -1,19 +1,20 @@
-# Секреты
-.envrc
-.env
-
-# Бэкапы
+.imgbak/
+.imgbak2/
+.twbak/
+_constructor/
 *.bak
 *.bak_*
-
-# Логи
 chat-logs/
-
-# Тестовые файлы
+send_errors.log
+send_requests.log
 test-*.php
 test-*.html
-
-# Временные файлы
-*.tmp
-*.swp
+.envrc
+.env
+envrc.txt
+.imgmap.json
+*.yml
+view-chat-logs.php
+send-chat-logs.php
+OVERRIDES.md
 .DS_Store
