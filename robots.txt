@@ -70,3 +70,4 @@ Disallow: /chat-logs/
 Disallow: /test-
 Disallow: *.bak
 
+Disallow: /lab/

@@ -19,3 +19,10 @@ test-*.html
 .DS_Store
 view-chat-logs.php
 send-chat-logs.php
+.imgbak/
+.imgbak2/
+.twbak/
+_constructor/
+envrc.txt
+test-*.php
+*.bak_*

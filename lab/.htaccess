@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Style Lab"
+AuthUserFile /home/users/j/j24080170/domains/rostur.expert/.htpasswd
+Require valid-user
