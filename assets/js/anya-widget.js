@@ -6,7 +6,7 @@
 (function () {
     'use strict';
 
-    var EXCLUDED_PATHS = ['/camping/', '/fishing-volgograd-oblast/', '/auto-trip-volgograd/'];
+    var EXCLUDED_PATHS = ['/camping/', '/auto-trip-volgograd/'];
     var path = window.location.pathname;
     for (var i = 0; i < EXCLUDED_PATHS.length; i++) {
         if (path.indexOf(EXCLUDED_PATHS[i]) === 0) return;

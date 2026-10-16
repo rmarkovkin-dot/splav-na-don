@@ -1,4 +1,39 @@
 <?php
+<?php
+// Rate-limiting: 5 заявок с IP за 60 секунд
+function rate_limit_check($ip) {
+  $file = sys_get_temp_dir() . "/rate_limit_" . md5($ip) . ".json";
+  $now = time();
+  $window = 60;
+  $max = 5;
+  if (!file_exists($file)) {
+    file_put_contents($file, json_encode([$now]));
+    return true;
+  }
+  $requests = json_decode(file_get_contents($file), true);
+  $requests = array_filter($requests, function($t) use ($now, $window) {
+    return ($now - $t) < $window;
+  });
+  if (count($requests) >= $max) return false;
+  $requests[] = $now;
+  file_put_contents($file, json_encode($requests));
+  return true;
+}
+$client_ip = $_SERVER["HTTP_X_FORWARDED_FOR"] ?? $_SERVER["REMOTE_ADDR"];
+$client_ip = explode(",", $client_ip)[0];
+if (!rate_limit_check($client_ip)) {
+  http_response_code(429);
+  echo json_encode(["error" => "Too many requests. Try again in 1 minute."]);
+  exit;
+}
+// Honeypot check
+if (!empty($_POST["_gotcha"])) {
+  http_response_code(400);
+  echo json_encode(["error" => "Bot detected"]);
+  exit;
+}
+?>
+
 /**
 * Приёмник заявок rostur.expert → Telegram + Email
 * Версия: v7.1 (JSON + Form support) · 2026-10-12
