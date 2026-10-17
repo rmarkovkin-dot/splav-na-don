@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Style Lab · РосТур Эксперт (внутренняя)</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { river:{DEFAULT:'#155e75',deep:'#0c4a6e',mid:'#0e7490'}, ember:{DEFAULT:'#f97316',dark:'#ea580c'}, gold:'#fbbf24', sand:'#f6f1e7' },
+  boxShadow: { card:'0 8px 30px rgba(12,74,110,.10)', cta:'0 10px 25px rgba(249,115,22,.35)' }
+} } };
+</script>
+<style>
+.mark-yellow{background:#fde047;padding:0 .35em;border-radius:.3em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.h-hero{font-size:clamp(2rem,5vw,3.4rem);line-height:1.05}
+.h-sec{font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.15}
+.lab-note{font-family:ui-monospace,monospace;font-size:11px}
+</style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+<header class="bg-river-deep text-white py-8">
+  <div class="max-w-6xl mx-auto px-4">
+    <p class="lab-note text-gold mb-2">STYLE LAB · v1 · <span id="lab-date"></span> · не индексируется, только для команды</p>
+    <h1 class="h-hero font-extrabold">Песочница визуальных <span class="mark-yellow">эффектов</span></h1>
+    <p class="text-white/70 mt-3 max-w-2xl">Классы работают через Tailwind Play CDN (JIT в браузере): любые утилиты и arbitrary-значения без сборки. Одобренное переносим на прод и попадаем в tw.css через автобилд.</p>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-12 space-y-16">
+<section>
+  <h2 class="h-sec font-extrabold text-river-deep mb-6">1. Палитра и токены</h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div><div class="h-16 rounded-2xl bg-river-deep"></div><p class="lab-note mt-1">river-deep #0c4a6e</p></div>
+    <div><div class="h-16 rounded-2xl bg-river"></div><p class="lab-note mt-1">river #155e75</p></div>
+    <div><div class="h-16 rounded-2xl bg-ember"></div><p class="lab-note mt-1">ember #f97316</p></div>
+    <div><div class="h-16 rounded-2xl bg-gold"></div><p class="lab-note mt-1">gold #fbbf24</p></div>
+    <div><div class="h-16 rounded-2xl bg-sand border border-slate-200"></div><p class="lab-note mt-1">sand #f6f1e7</p></div>
+    <div><div class="h-16 rounded-2xl bg-sky-50 border border-sky-200"></div><p class="lab-note mt-1">sky-50 (семейный)</p></div>
+    <div><div class="h-16 rounded-2xl shadow-card bg-white"></div><p class="lab-note mt-1">shadow-card</p></div>
+    <div><div class="h-16 rounded-2xl bg-ember shadow-cta"></div><p class="lab-note mt-1">shadow-cta</p></div>
+  </div>
+  <p class="lab-note mt-3">классы: bg-river-deep · bg-ember · shadow-card · shadow-cta · rounded-2xl/3xl</p>
+</section>
+<section>
+  <h2 class="h-sec font-extrabold text-river-deep mb-6">2. Типографика</h2>
+  <p class="h-hero font-extrabold text-river-deep">h-hero clamp(2→3.4rem)</p>
+  <p class="h-sec font-extrabold text-river-deep mt-3">h-sec clamp(1.5→2.2rem)</p>
+  <p class="text-lg md:text-xl text-slate-600 mt-3 leading-relaxed max-w-2xl">Лид-параграф: text-lg md:text-xl leading-relaxed — ритм и сканируемость первого экрана.</p>
+  <p class="mt-3">Подсветка: <span class="mark-yellow">mark-yellow</span> — фирменный акцент заголовков.</p>
+</section>
+<section>
+  <h2 class="h-sec font-extrabold text-river-deep mb-6">3. Кнопки и CTA</h2>
+  <div class="flex flex-wrap gap-4 items-center">
+    <a href="#" class="bg-ember hover:bg-ember-dark text-white font-extrabold px-8 py-4 rounded-2xl shadow-cta transition active:scale-95">Забронировать плот →</a>
+    <a href="#" class="bg-white border-2 border-river-deep/15 text-river-deep font-extrabold px-8 py-4 rounded-2xl hover:border-ember hover:text-ember transition">Задать вопрос</a>
+    <a href="#" class="text-gold font-extrabold underline underline-offset-4 hover:no-underline">Ссылка на тёмном</a>
+  </div>
+  <p class="lab-note mt-3">primary: bg-ember hover:bg-ember-dark shadow-cta active:scale-95 · secondary: border-2 hover:border-ember</p>
+</section>
+<section>
+  <h2 class="h-sec font-extrabold text-river-deep mb-6">4. Карточки: четыре среды</h2>
+  <div class="grid md:grid-cols-2 gap-6">
+    <div class="relative bg-white rounded-3xl shadow-card border border-sky-100 p-8 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition">
+      <div class="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-sky-400 to-sky-600"></div>
+      <div class="w-14 h-14 rounded-2xl bg-sky-100 flex items-center justify-center text-3xl mb-5">🦺</div>
+      <h3 class="text-xl font-extrabold text-river-deep mb-3">Светлая с акцент-баром</h3>
+      <p class="text-slate-700 leading-relaxed">Прод-паттерн детской: плашка 64px, чип-факт внизу, hover-подъём.</p>
+      <p class="mt-4 inline-flex rounded-full bg-sky-50 border border-sky-200 text-sky-700 px-3 py-1 text-xs font-bold">чип-факт</p>
+    </div>
+    <div class="relative rounded-3xl bg-river-deep bg-white/10 backdrop-blur border border-white/15 p-8 pt-10 hover:bg-white/15 transition">
+      <span class="absolute -top-3 left-8 rounded-full bg-sky-400 text-river-deep px-4 py-1 text-xs font-extrabold uppercase tracking-wider">риббон</span>
+      <h3 class="text-xl font-extrabold text-white mb-3">Стекло на тёмном</h3>
+      <p class="text-white/80 leading-relaxed">Прод-паттерн маршрутов: bg-white/10 + backdrop-blur, риббон -top-3.</p>
+      <div class="flex flex-wrap gap-2 mt-5"><span class="rounded-full bg-white/10 border border-white/20 px-3 py-1 text-xs font-bold text-white">15 км/день</span><span class="rounded-full bg-white/10 border border-white/20 px-3 py-1 text-xs font-bold text-white">чип</span></div>
+    </div>
+    <div class="rounded-2xl shadow-card p-8 border-2 border-transparent hover:border-ember transition bg-white">
+      <h3 class="text-xl font-extrabold text-river-deep mb-3">Карточка хаба</h3>
+      <p class="text-slate-700 leading-relaxed mb-4">border-2 transparent → hover:border-ember: паттерн карточек городов.</p>
+      <p class="flex items-center gap-2 text-ember font-bold">Подробнее о маршруте <span>→</span></p>
+    </div>
+    <div class="rounded-3xl p-8 bg-gradient-to-br from-sky-50 to-white border border-sky-200">
+      <h3 class="text-xl font-extrabold text-river-deep mb-3">Градиент-пастель</h3>
+      <p class="text-slate-700 leading-relaxed">Кандидат для семейных блоков: from-sky-50 to-white, мягкая рамка.</p>
+    </div>
+  </div>
+</section>
+<section>
+  <h2 class="h-sec font-extrabold text-river-deep mb-6">5. Риббоны, бейджи, степпер</h2>
+  <div class="flex flex-wrap gap-6 items-start">
+    <div class="relative bg-white rounded-2xl shadow-card p-6 w-56"><span class="absolute -top-3 left-6 rounded-full bg-ember text-white px-4 py-1 text-xs font-extrabold uppercase">Выбор гостей</span><p class="mt-2 text-sm text-slate-600">риббон на карточке</p></div>
+    <span class="inline-flex items-center gap-2 rounded-full bg-sky-100 border border-sky-300 text-sky-700 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest">eyebrow-бейдж</span>
+    <div class="w-12 h-12 rounded-full bg-rose-100 text-rose-600 border-2 border-rose-300 flex items-center justify-center text-lg font-extrabold">0–2</div>
+    <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 border-2 border-emerald-300 flex items-center justify-center text-lg font-extrabold">7–12</div>
+  </div>
+</section>
+<section>
+  <h2 class="h-sec font-extrabold text-river-deep mb-6">6. Таблица → карточки на мобиле</h2>
+  <div class="lab-table hidden md:block rounded-3xl border border-slate-200 overflow-hidden bg-white">
+    <table class="w-full text-left"><thead><tr class="bg-river-deep text-white"><th class="py-3 px-5">Параметр</th><th class="py-3 px-5">Наш кемпинг</th></tr></thead>
+    <tbody><tr class="border-t border-slate-200"><td class="py-3 px-5 font-bold">Туалеты</td><td class="py-3 px-5">по периметру</td></tr>
+    <tr class="border-t border-slate-200"><td class="py-3 px-5 font-bold">Мангал</td><td class="py-3 px-5">только общая зона</td></tr></tbody></table>
+  </div>
+  <div class="lab-cards md:hidden space-y-3">
+    <div class="rounded-2xl bg-white border border-slate-200 p-5"><p class="font-extrabold text-river-deep">Туалеты</p><p class="text-sm text-slate-600">по периметру</p></div>
+    <div class="rounded-2xl bg-white border border-slate-200 p-5"><p class="font-extrabold text-river-deep">Мангал</p><p class="text-sm text-slate-600">только общая зона</p></div>
+  </div>
+  <style>@media (max-width:767px){.lab-table{display:none}}@media (min-width:768px){.lab-cards{display:none}}</style>
+  <p class="lab-note mt-3">паттерн: свои медиа-запросы, независимо от tw.css</p>
+</section>
+<section>
+  <h2 class="h-sec font-extrabold text-river-deep mb-6">7. FAQ-аккордеон</h2>
+  <div class="space-y-3 max-w-3xl">
+    <div class="lab-faq bg-white rounded-2xl border border-slate-200 overflow-hidden">
+      <button type="button" class="lab-faq-q w-full text-left px-6 py-4 flex items-center justify-between gap-4"><span class="font-extrabold text-river-deep">Как работает песочница?</span><span class="text-2xl text-slate-400">⌄</span></button>
+      <div class="lab-faq-a px-6 hidden"><p class="text-slate-600 leading-relaxed pb-4">Пробуем классы здесь, одобряем визуально, переносим разметку на прод.</p></div>
+    </div>
+    <div class="lab-faq bg-white rounded-2xl border border-slate-200 overflow-hidden">
+      <button type="button" class="lab-faq-q w-full text-left px-6 py-4 flex items-center justify-between gap-4"><span class="font-extrabold text-river-deep">Куда попадают классы после одобрения?</span><span class="text-2xl text-slate-400">⌄</span></button>
+      <div class="lab-faq-a px-6 hidden"><p class="text-slate-600 leading-relaxed pb-4">В разметку прод-страниц, затем в tw.css через автобилд GitHub Actions.</p></div>
+    </div>
+  </div>
+</section>
+<section>
+  <h2 class="h-sec font-extrabold text-river-deep mb-6">8. Hero: две среды</h2>
+  <div class="rounded-3xl overflow-hidden mb-6 bg-gradient-to-br from-river-deep via-river to-river-mid text-white p-10">
+    <h3 class="h-sec font-extrabold">Тёмный hero: <span class="mark-yellow">подложка на тёмном</span></h3>
+    <p class="text-white/80 mt-2 max-w-xl">Градиент прод-CTA: from-river-deep via-river to-river-mid.</p>
+  </div>
+  <div class="rounded-3xl p-10 bg-gradient-to-b from-sky-50 via-white to-sky-50 border border-sky-100">
+    <h3 class="h-sec font-extrabold text-river-deep">Светлый hero: семейный градиент</h3>
+    <p class="text-slate-600 mt-2 max-w-xl">from-sky-50 via-white to-sky-50 — паттерн секций детской.</p>
+  </div>
+</section>
+<section>
+  <h2 class="h-sec font-extrabold text-river-deep mb-6">Changelog «одобрено → перенесено»</h2>
+  <div class="rounded-2xl bg-white border border-slate-200 p-6 lab-note leading-relaxed">
+    v1 · 2026-10-15 · песочница создана, стенды 1–8.<br>    v1.1 · 2026-10-15 · bento-tariff (стенд 10) → /camp/: три среды + приват-баннер.<br>    v1.2 · 2026-10-15 · bento-city V1 (стенд 11) → хаб /splavy-po-donu-iz-gorodov/.<br>    v1.3 · 2026-10-15 · стенды 9–11 удалены (в бою); стенд 12 — bento главной (продукты/доверие/форматы).<br>    v1.4 · 2026-10-15 · стенд 12 C → index.html: bento-маршруты 12/28/45 км, ссылки на лендинг сплава.<br>    v1.5 · 2026-10-15 · стенд 13 A+B → /splav-po-dony-na-ploty/: 10 плиток «включено» + цены/гарантии.<br>    v1.6 · 2026-10-15 · P0-1 SEO-блок «плот с X» переодет в «Судовой манифест», перенесён после цен.<br>    v1.7 · 2026-10-15 · P0-2 syn-блок синонимов (водный поход/тур/спуск) + FAQ → лендинг плота.<br>    v1.8 · 2026-10-15 · P0-4 гео ×4: title/description + SEO-плитки после статей; P0-5: интенты ×3 (новички/купание/рыбалка) + блок гостей на лендинге плота; SEO-добивки переодеты в bento-плитки; инцидент: задвоение HTML гео ×4 — вылечено слиянием тело-A + хвост-B.<br>    v1.8 · 2026-10-15 · P0-3 схемы Product/Review; P0-4 гео ×4 (Влг/Врн/Рст/Мск); P0-5 интенты ×3 + блок гостей ×2. Fix: починка задвоения HTML-документов на 4 гео-страницах.<br>    v1.6 · 2026-10-15 · P0-1 SEO-блок «плот с X» переодет в «Судовой манифест», перенесён после цен.<br>    v1.7 · 2026-10-15 · P0-2 syn-блок синонимов (водный поход/тур/спуск) + FAQ → лендинг плота.<br>    v1.8 · 2026-10-15 · P0-4 гео ×4: title/description + SEO-плитки после статей; P0-5: интенты ×3 (новички/купание/рыбалка) + блок гостей на лендинге плота; SEO-добивки переодеты в bento-плитки; инцидент: задвоение HTML гео ×4 — вылечено слиянием тело-A + хвост-B.<br>
+    — · шаблон строки: дата · классы/разметка · прод-страница
+  </div>
+</section>
+<section>
+  <h2 class="h-sec font-extrabold text-river-deep mb-2">12. Bento главной: продукты · доверие · форматы</h2>
+  <p class="lab-note mb-8">Три блока для index.html. Большие цифры: площадь/удалённость/возраст; доверие — сезоны/рейтинг/guests/корпоративы; форматы — км маршрута.</p>
+  <style>.m-tile{position:relative;overflow:hidden;border-radius:24px;padding:28px;display:block;transition:transform .2s,box-shadow .2s}.m-tile:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(12,74,110,.18)}.m-grid{display:grid;gap:16px}@media (min-width:768px){.m-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.m-grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}}</style>
+  <h3 class="text-lg font-extrabold text-river-deep mb-4">A · Продукты</h3>
+  <div class="m-grid mb-10">
+    <a href="#" class="m-tile text-white" style="background:linear-gradient(135deg,#155e75 0%,#0e7490 100%)">
+      <div class="select-none pointer-events-none" style="position:absolute;bottom:-24px;right:-16px;font-size:110px;opacity:.15">🚢</div>
+      <span class="inline-flex rounded-full px-3 py-1 text-xs font-extrabold text-white" style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25)">Флагман · баня на борту</span>
+      <p class="mt-4 text-xs font-extrabold uppercase tracking-widest" style="color:#bae6fd">Плот «Бульбусик»</p>
+      <p class="mt-2 text-4xl font-extrabold">96 м² <span class="text-sm font-semibold" style="color:rgba(255,255,255,.6)">· 2 палубы</span></p>
+      <p class="mt-3 text-sm leading-relaxed" style="color:rgba(255,255,255,.8)">Плавучий дом: баня, мангал, коптильня, капитан 24/7.</p>
+      <p class="mt-5 font-bold" style="color:#fbbf24">Маршруты и цены →</p>
+    </a>
+    <a href="#" class="m-tile" style="background:linear-gradient(135deg,#f6f1e7 0%,#ffffff 100%);border:1px solid #f6f1e7">
+      <div class="select-none pointer-events-none" style="position:absolute;bottom:-24px;right:-16px;font-size:110px;opacity:.10">🏕️</div>
+      <span class="inline-flex rounded-full px-3 py-1 text-xs font-extrabold" style="background:#ffffff;border:1px solid #e2e8f0;color:#475569">Охрана · поляны у воды</span>
+      <p class="mt-4 text-xs font-extrabold uppercase tracking-widest" style="color:#64748b">Кемпинг «Парк Вертячий»</p>
+      <p class="mt-2 text-4xl font-extrabold" style="color:#0c4a6e">50 км <span class="text-sm font-semibold" style="color:#94a3b8">· 38 минут от Волгограда</span></p>
+      <p class="mt-3 text-sm leading-relaxed" style="color:#475569">Поляны у воды, общая мангальная зона, рыбалка в 50 м от палатки.</p>
+      <p class="mt-5 font-bold" style="color:#ea580c">Поляны и тарифы →</p>
+    </a>
+    <a href="#" class="m-tile" style="background:linear-gradient(135deg,#f0f9ff 0%,#ffffff 100%);border:1px solid rgba(56,189,248,.35)">
+      <div class="select-none pointer-events-none" style="position:absolute;bottom:-24px;right:-16px;font-size:110px;opacity:.10">🛟</div>
+      <span class="inline-flex rounded-full px-3 py-1 text-xs font-extrabold" style="background:rgba(56,189,248,.12);border:1px solid rgba(56,189,248,.4);color:#0369a1">Безопасно · жилеты всем</span>
+      <p class="mt-4 text-xs font-extrabold uppercase tracking-widest" style="color:#64748b">Сплав с детьми</p>
+      <p class="mt-2 text-4xl font-extrabold" style="color:#0c4a6e">от 3 лет <span class="text-sm font-semibold" style="color:#94a3b8">· мелководье</span></p>
+      <p class="mt-3 text-sm leading-relaxed" style="color:#475569">Маршруты под возраст ребёнка, капитан 24/7, родители рядом.</p>
+      <p class="mt-5 font-bold" style="color:#ea580c">Семейный формат →</p>
+    </a>
+  </div>
+  <h3 class="text-lg font-extrabold text-river-deep mb-4">B · Цифры доверия</h3>
+  <div class="m-grid m-grid-4 mb-10">
+    <div class="m-tile" style="background:#ffffff;border:1px solid #e2e8f0;padding:22px">
+      <p class="text-3xl font-extrabold" style="color:#0c4a6e">8 сезонов</p>
+      <p class="text-xs mt-1" style="color:#64748b">на Дону без происшествий</p>
+    </div>
+    <div class="m-tile" style="background:#ffffff;border:1px solid #e2e8f0;padding:22px">
+      <p class="text-3xl font-extrabold" style="color:#0c4a6e">5.0★</p>
+      <p class="text-xs mt-1" style="color:#64748b">средняя оценка гостей</p>
+    </div>
+    <div class="m-tile" style="background:#ffffff;border:1px solid #e2e8f0;padding:22px">
+      <p class="text-3xl font-extrabold" style="color:#0c4a6e">15 гостей</p>
+      <p class="text-xs mt-1" style="color:#64748b">комфортно на одном плоту</p>
+    </div>
+    <div class="m-tile" style="background:#ffffff;border:1px solid #e2e8f0;padding:22px">
+      <p class="text-3xl font-extrabold" style="color:#0c4a6e">50+</p>
+      <p class="text-xs mt-1" style="color:#64748b">корпоративов проведено</p>
+    </div>
+  </div>
+  <h3 class="text-lg font-extrabold text-river-deep mb-4">C · Форматы маршрутов</h3>
+  <div class="m-grid">
+    <a href="#" class="m-tile" style="background:linear-gradient(135deg,#f6f1e7 0%,#ffffff 100%);border:1px solid #f6f1e7">
+      <span class="inline-flex rounded-full px-3 py-1 text-xs font-extrabold" style="background:#ffffff;border:1px solid #e2e8f0;color:#475569">День · без ночёвки</span>
+      <p class="mt-3 text-4xl font-extrabold" style="color:#0c4a6e">12 км</p>
+      <p class="mt-2 text-sm" style="color:#475569">Семейный маршрут: рыбные точки и пляжная стоянка.</p>
+    </a>
+    <a href="#" class="m-tile text-white" style="background:linear-gradient(135deg,#155e75 0%,#0e7490 100%)">
+      <span class="inline-flex rounded-full px-3 py-1 text-xs font-extrabold text-white" style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25)">Выходные · ночёвка</span>
+      <p class="mt-3 text-4xl font-extrabold">28 км</p>
+      <p class="mt-2 text-sm" style="color:rgba(255,255,255,.8)">Баня под звёздами и рассвет над водой.</p>
+    </a>
+    <a href="#" class="m-tile text-white" style="background:linear-gradient(135deg,#0c4a6e 0%,#155e75 100%)">
+      <span class="inline-flex rounded-full px-3 py-1 text-xs font-extrabold text-white" style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25)">Экспедиция · 3–7 суток</span>
+      <p class="mt-3 text-4xl font-extrabold">45 км</p>
+      <p class="mt-2 text-sm" style="color:rgba(255,255,255,.8)">Меловые горы, трофейные ямы, ночёвки в диких полянах.</p>
+    </a>
+  </div>
+  <p class="lab-note mt-6">Порядок переноса на index: A (продукты) → C (форматы) → B (доверие). Среды сквозные с кемпингом и хабом: вода/песок/небо/тёмный.</p>
+</section>
+
+<section>
+  <h2 class="h-sec font-extrabold text-river-deep mb-2">13. Bento плота: «включено» + цены</h2>
+  <p class="lab-note mb-8">Сохранены ВСЕ текущие тексты лендинга плота. Меняется только визуальная оболочка: bento-плитки вместо grid-карточек.</p>
+  <style>.p-tile{position:relative;overflow:hidden;border-radius:20px;padding:22px;background:#ffffff;border:1px solid #e2e8f0;box-shadow:0 6px 24px rgba(12,74,110,.08);transition:transform .2s,box-shadow .2s}.p-tile:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(12,74,110,.15)}.p-grid-5{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}.p-grid-2,.p-grid-3{display:grid;gap:16px;grid-template-columns:1fr}@media (min-width:768px){.p-grid-5{grid-template-columns:repeat(5,minmax(0,1fr))}.p-grid-2{grid-template-columns:1fr 1fr;gap:20px}.p-grid-3{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}}.p-price{position:relative;overflow:hidden;border-radius:28px;padding:28px;transition:transform .2s,box-shadow .2s}.p-price:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(12,74,110,.20)}@media (min-width:768px){.p-banner{grid-column:1/-1}}</style>
+  <h3 class="text-lg font-extrabold text-river-deep mb-4">A · Что включено (10 плиток)</h3>
+  <div class="p-grid-5 mb-10">
+    <div class="p-tile text-center"><p class="text-3xl" aria-hidden="true">🍳</p><p class="mt-2 text-sm font-extrabold" style="color:#0c4a6e">Кухня и мангал</p><p class="text-[11px] mt-1" style="color:#64748b">Посуда, столы на всю компанию, мангал и коптильня</p></div>
+    <div class="p-tile text-center"><p class="text-3xl" aria-hidden="true">⛺</p><p class="mt-2 text-sm font-extrabold" style="color:#0c4a6e">Спальные места</p><p class="text-[11px] mt-1" style="color:#64748b">2- и 3-местные палатки, коврики, спальники</p></div>
+    <div class="p-tile text-center"><p class="text-3xl" aria-hidden="true">🧊</p><p class="mt-2 text-sm font-extrabold" style="color:#0c4a6e">Морозилка 200 л</p><p class="text-[11px] mt-1" style="color:#64748b">Продукты и напитки нужной температуры</p></div>
+    <div class="p-tile text-center"><p class="text-3xl" aria-hidden="true">🧖</p><p class="mt-2 text-sm font-extrabold" style="color:#0c4a6e">Баня на воде</p><p class="text-[11px] mt-1" style="color:#64748b">Парилка в любое время, без записи и соседей</p></div>
+    <div class="p-tile text-center"><p class="text-3xl" aria-hidden="true">🚤</p><p class="mt-2 text-sm font-extrabold" style="color:#0c4a6e">Мотор и капитан</p><p class="text-[11px] mt-1" style="color:#64748b">Куда захотели — там и встали</p></div>
+    <div class="p-tile text-center"><p class="text-3xl" aria-hidden="true">🦺</p><p class="mt-2 text-sm font-extrabold" style="color:#0c4a6e">Безопасность</p><p class="text-[11px] mt-1" style="color:#64748b">Спасжилеты на каждого, весла, инструктаж</p></div>
+    <div class="p-tile text-center"><p class="text-3xl" aria-hidden="true">🔊</p><p class="mt-2 text-sm font-extrabold" style="color:#0c4a6e">Музыка до утра</p><p class="text-[11px] mt-1" style="color:#64748b">Колонка: после 23:00 соседей нет</p></div>
+    <div class="p-tile text-center"><p class="text-3xl" aria-hidden="true">⚡</p><p class="mt-2 text-sm font-extrabold" style="color:#0c4a6e">Генератор</p><p class="text-[11px] mt-1" style="color:#64748b">Телефоны, пауэрбанки и свет работают всегда</p></div>
+    <div class="p-tile text-center"><p class="text-3xl" aria-hidden="true">🪑</p><p class="mt-2 text-sm font-extrabold" style="color:#0c4a6e">Мебель</p><p class="text-[11px] mt-1" style="color:#64748b">Столы и скамейки — место хватит всем</p></div>
+    <div class="p-tile text-center"><p class="text-3xl" aria-hidden="true">🌅</p><p class="mt-2 text-sm font-extrabold" style="color:#0c4a6e">Релакс-палуба</p><p class="text-[11px] mt-1" style="color:#64748b">Лежаки и коктейльный столик под звёздами</p></div>
+  </div>
+  <h3 class="text-lg font-extrabold text-river-deep mb-4">B · Цены 2027 (будни/выходные + гарантии)</h3>
+  <div class="p-grid-2">
+    <div class="p-price" style="background:#ffffff;border:2px solid #e2e8f0">
+      <p class="text-xs font-extrabold uppercase tracking-widest" style="color:#64748b">Выгодно · будни</p>
+      <p class="mt-1 text-sm font-bold" style="color:#475569">Понедельник — четверг</p>
+      <p class="mt-3 text-4xl font-extrabold" style="color:#0c4a6e">29 000 ₽ <span class="text-base font-normal" style="color:#94a3b8">/ сутки</span></p>
+      <ul class="mt-4 space-y-2 text-sm" style="color:#475569">
+        <li>✓ Капитан, знающий каждую излучину Дона</li>
+        <li>✓ Свободный выбор маршрута и мест стоянок</li>
+        <li>✓ Лучшие точки для рыбалки и купания</li>
+        <li>✓ Баня — доступна в любое время</li>
+      </ul>
+      <a href="#zayavka" class="mt-5 inline-flex w-full justify-center px-6 py-3 rounded-xl font-extrabold text-white transition active:scale-95" style="background:#155e75">Выбрать будни</a>
+    </div>
+    <div class="p-price" style="background:#ffffff;border:2px solid rgba(249,115,22,.6);box-shadow:0 10px 25px rgba(249,115,22,.15)">
+      <span class="inline-flex rounded-full px-3 py-1 text-[10px] font-extrabold uppercase tracking-wider text-white" style="background:#f97316">ТОП</span>
+      <p class="mt-2 text-xs font-extrabold uppercase tracking-widest" style="color:#f97316">Выходные и праздники</p>
+      <p class="mt-1 text-sm font-bold" style="color:#475569">Пятница — воскресенье</p>
+      <p class="mt-3 text-4xl font-extrabold" style="color:#0c4a6e">33 000 ₽ <span class="text-base font-normal" style="color:#94a3b8">/ сутки</span></p>
+      <ul class="mt-4 space-y-2 text-sm" style="color:#475569">
+        <li>✓ Всё из тарифа «будни» без изменений</li>
+        <li>✓ Идеально для тура выходного дня с пятницы</li>
+        <li>✓ Праздничные даты бронируйте за 2–3 месяца</li>
+        <li>✓ В 2027 году цены не повышали — оставили как в прошлом сезоне</li>
+      </ul>
+      <a href="#zayavka" class="mt-5 inline-flex w-full justify-center px-6 py-3 rounded-xl font-extrabold text-white transition active:scale-95" style="background:#f97316">Забронировать выходные</a>
+    </div>
+  </div>
+  <div class="p-grid-3" style="margin-top:20px">
+    <div class="p-tile"><p class="font-extrabold text-sm" style="color:#0c4a6e">Предоплата 30%</p><p class="mt-1 text-xs" style="color:#475569">После оплаты снимаем даты с продажи и оставляем их за вами.</p></div>
+    <div class="p-tile"><p class="font-extrabold text-sm" style="color:#0c4a6e">Перенос вместо потери</p><p class="mt-1 text-xs" style="color:#475569">Отмена позже 30 дней до старта — перенесём даты, предоплата сохранится.</p></div>
+    <div class="p-tile"><p class="font-extrabold text-sm" style="color:#0c4a6e">Договор заранее</p><p class="mt-1 text-xs" style="color:#475569">Присылаем типовой договор и ТБ на почту — знакомитесь спокойно.</p></div>
+  </div>
+  <p class="lab-note mt-6">Стили самодостаточные (inline), не зависят от старого tw.css. Все тексты (эмодзи/названия/описания/цены/буллеты/кнопки) сохранены из прода один к одному.</p>
+</section>
+
+</main>
+<footer class="bg-river-deep text-white/60 py-8 text-center text-sm">
+  Style Lab · не индексируется · доступ по паролю · регламент: тест → одобрение → перенос → автобилд tw.css
+</footer>
+<script>
+document.getElementById('lab-date').textContent = new Date().toISOString().slice(0,10);
+document.querySelectorAll('.lab-faq-q').forEach(function(b){
+  b.addEventListener('click', function(){
+    b.parentElement.querySelector('.lab-faq-a').classList.toggle('hidden');
+  });
+});
+</script>
+</body>
+</html>

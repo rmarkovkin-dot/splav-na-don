@@ -1,0 +1,68 @@
+{
+    "time": "2026-10-12 14:01:27",
+    "method": "POST",
+    "uri": "\/send.php",
+    "referer": "https:\/\/rostur.expert\/",
+    "user_agent": "(none)",
+    "remote_addr": "217.107.219.102",
+    "content_type": "application\/x-www-form-urlencoded",
+    "post_data": {
+        "name": "Тестовый Иван",
+        "phone": "+79991234567",
+        "comment": "Тестовая заявка от Ани (Dify AI)",
+        "source": "ai-consultant"
+    },
+    "raw_input": "name=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D1%8B%D0%B9+%D0%98%D0%B2%D0%B0%D0%BD&phone=%2B79991234567&comment=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%B0%D1%8F+%D0%B7%D0%B0%D1%8F%D0%B2%D0%BA%D0%B0+%D0%BE%D1%82+%D0%90%D0%BD%D0%B8+%28Dify+AI%29&source=ai-consultant"
+}
+---
+{
+    "time": "2026-10-12 14:02:43",
+    "method": "POST",
+    "uri": "\/send.php",
+    "referer": "(none)",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/154.0.0.0 Safari\/537.36",
+    "remote_addr": "89.249.230.211",
+    "content_type": "application\/x-www-form-urlencoded",
+    "post_data": {
+        "name": "ИВАН",
+        "phone": "89044006688",
+        "расчёт": "Тариф: выберите дату; 1 плот(ов) × 29 000 ₽ × 2 сут = 58 000 ₽; людей: 8",
+        "source": "\/splav-po-dony-na-ploty\/"
+    },
+    "raw_input": "name=%D0%98%D0%92%D0%90%D0%9D&phone=89044006688&%D1%80%D0%B0%D1%81%D1%87%D1%91%D1%82=%D0%A2%D0%B0%D1%80%D0%B8%D1%84%3A%20%D0%B2%D1%8B%D0%B1%D0%B5%D1%80%D0%B8%D1%82%D0%B5%20%D0%B4%D0%B0%D1%82%D1%83%3B%201%20%D0%BF%D0%BB%D0%BE%D1%82(%D0%BE%D0%B2)%20%C3%97%2029%C2%A0000%20%E2%82%BD%20%C3%97%202%20%D1%81%D1%83%D1%82%20%3D%2058%C2%A0000%20%E2%82%BD%3B%20%D0%BB%D1%8E%D0%B4%D0%B5%D0%B9%3A%208&source=%2Fsplav-po-dony-na-ploty%2F"
+}
+---
+{
+    "time": "2026-10-12 14:06:47",
+    "method": "POST",
+    "uri": "\/send.php",
+    "referer": "https:\/\/rostur.expert\/",
+    "user_agent": "(none)",
+    "remote_addr": "217.107.219.102",
+    "content_type": "application\/x-www-form-urlencoded",
+    "post_data": {
+        "name": "Тестовый Иван",
+        "phone": "+79991234567",
+        "comment": "Тестовая заявка от Ани (Dify AI)",
+        "source": "ai-consultant"
+    },
+    "raw_input": "name=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D1%8B%D0%B9+%D0%98%D0%B2%D0%B0%D0%BD&phone=%2B79991234567&comment=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%B0%D1%8F+%D0%B7%D0%B0%D1%8F%D0%B2%D0%BA%D0%B0+%D0%BE%D1%82+%D0%90%D0%BD%D0%B8+%28Dify+AI%29&source=ai-consultant"
+}
+---
+{
+    "time": "2026-10-12 14:07:17",
+    "method": "POST",
+    "uri": "\/send.php",
+    "referer": "https:\/\/rostur.expert\/",
+    "user_agent": "(none)",
+    "remote_addr": "217.107.219.102",
+    "content_type": "application\/x-www-form-urlencoded",
+    "post_data": {
+        "name": "Тестовый Иван",
+        "phone": "+79991234567",
+        "comment": "Тестовая заявка от Ани (Dify AI)",
+        "source": "ai-consultant"
+    },
+    "raw_input": "name=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D1%8B%D0%B9+%D0%98%D0%B2%D0%B0%D0%BD&phone=%2B79991234567&comment=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%B0%D1%8F+%D0%B7%D0%B0%D1%8F%D0%B2%D0%BA%D0%B0+%D0%BE%D1%82+%D0%90%D0%BD%D0%B8+%28Dify+AI%29&source=ai-consultant"
+}
+---
