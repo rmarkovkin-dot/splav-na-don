@@ -7,8 +7,8 @@
 <meta name="description" content="Сплав на плоту с баней из Волгограда: 50 км до старта, от 29 000 ₽/сутки за весь плот. Маршруты 12-45 км, 1-7 суток.">
 <link rel="canonical" href="https://rostur.expert/splav-iz-volgograda/">
 <meta name="theme-color" content="#0c4a6e">
-<script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=91421476','ym');ym(91421476,'init',{ssr:true,webvisor:true,trackHash:true,clickmap:true,referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/91421476" style="position:absolute;left:-9999px;" alt="" decoding="async" fetchpriority="high" /></div></noscript>
+<script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=91421507','ym');ym(91421507, 'init', {webvisor:true, clickmap:true, trackHash:true, referrer:document.referrer, url:location.href, accurateTrackBounce:true, trackLinks:true});</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/91421507" style="position:absolute;left:-9999px;" alt="" decoding="async" fetchpriority="high" /></div></noscript>
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:site_name" content="РосТур Эксперт">
@@ -124,7 +124,7 @@ body{font-family:Manrope,system-ui,sans-serif}
     </nav>
     <div class="mt-4 flex flex-wrap items-center gap-2">
       <p class="inline-flex items-center gap-2 rounded-full bg-gold/15 border border-gold/40 text-gold px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest">Волгоград · 50 км</p>
-      <p class="inline-flex items-center gap-2 rounded-full bg-ember/20 border border-ember/40 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest" style="color:#fdba74">⚡ 4 часа пути · сезон 2027 открыт</p>
+      <p class="inline-flex items-center gap-2 rounded-full bg-ember/20 border border-ember/40 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest" style="color:#fdba74">⚡ ~5 часов · сезон 2027 открыт</p>
     </div>
     <h1 class="h-hero font-extrabold mt-4 max-w-3xl">Сплав из Волгограда <span class="mark-yellow">на плоту с баней</span></h1>
     <p class="mt-4 text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl">50 км — 1 час пути. Успеете после работы в пятницу: ночёвка в кемпинге и утром в субботу старт сплава. Плот «Бульбусик» 96 м² с баней, мангалом и коптильней. <span class="text-gold font-extrabold">От 29 000 ₽/сутки за весь плот</span> на 12–15 человек.</p>
@@ -532,7 +532,7 @@ form.addEventListener('submit',function(e){
   status.textContent='Отправляем…';status.className='text-sm font-bold text-center text-slate-500';
   fetch('/send.php',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:p.toString()})
   .then(function(r){if(!r.ok)throw new Error('bad');
-    if(window.ym)ym(91421476,'reachGoal','lead_form_rostov');
+    if(window.ym)ym(91421507,'reachGoal','lead_form_rostov');
     status.textContent='✓ Заявка принята! Спасибо! Мы свяжемся с вами в течение рабочего дня (Пн–Вс, 10:00–20:00).';status.className='text-sm font-bold text-center text-emerald-600';
     form.reset();calc()})
   .catch(function(){
@@ -578,7 +578,7 @@ setTimeout(refresh,0);
 })();
 </script><script data-mtrk-goals>
 (function(){
-  function g(name,params){ if(window.ym){ try{ ym(91421476,'reachGoal',name,params||{page:location.pathname}); }catch(e){} } }
+  function g(name,params){ if(window.ym){ try{ ym(91421507,'reachGoal',name,params||{page:location.pathname}); }catch(e){} } }
   /* form_submit: любая форма заявки, кроме чата Ани */
   document.addEventListener('submit',function(e){
     var f=e.target; if(!f||f.tagName!=='FORM') return;
@@ -599,5 +599,8 @@ setTimeout(refresh,0);
   });
 })();
 </script>
+<script src="/assets/js/mf-hooks.js?v=1" defer></script>
+<div id="mobile-fixed-cta" style="position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#fff;border-top:1px solid #e2e8f0;box-shadow:0 -2px 12px rgba(15,43,61,.12);padding:6px 10px calc(6px + env(safe-area-inset-bottom,0px));display:flex;gap:6px"><a href="tel:+79950320002" style="flex:1;background:#ea580c;color:#fff;font-weight:800;font-size:13px;padding:10px 8px;border-radius:10px;text-align:center;text-decoration:none">📞 Позвонить</a><button type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Наверх" style="flex:1;background:#fff;color:#ea580c;font-weight:800;font-size:13px;padding:10px 8px;border-radius:10px;border:2px solid #ea580c;cursor:pointer">↑ Наверх</button></div>
+<style>@media(min-width:768px){#mobile-fixed-cta{display:none!important}}@media(max-width:767px){body{padding-bottom:58px}}</style>
 </body>
 </html>

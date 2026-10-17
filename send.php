@@ -1,5 +1,4 @@
 <?php
-<?php
 // Rate-limiting: 5 заявок с IP за 60 секунд
 function rate_limit_check($ip) {
   $file = sys_get_temp_dir() . "/rate_limit_" . md5($ip) . ".json";
@@ -32,8 +31,6 @@ if (!empty($_POST["_gotcha"])) {
   echo json_encode(["error" => "Bot detected"]);
   exit;
 }
-?>
-
 /**
 * Приёмник заявок rostur.expert → Telegram + Email
 * Версия: v7.1 (JSON + Form support) · 2026-10-12
